@@ -20,9 +20,9 @@ $link-decoration: none;
 $black: #121212;
 $white: #FFFBF5;
 
-$primary: #f1e4e4;
+$bg-white: #f6dddd;
 $secondary: #b0e3ac;
-$card: #ffffff;
+$primary: #ffffff;
 
 // 3. Include remainder of required Bootstrap stylesheets
 @import "../node_modules/bootstrap/scss/variables";
@@ -45,6 +45,8 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  background-color:$bg-white ;
+
 
 }
 //-------------------------------------//
