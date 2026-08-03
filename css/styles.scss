@@ -73,6 +73,7 @@ body {
   height: 100%;
   object-fit: cover;
   z-index: -1;
+  opacity: 75%;
 }
 
 #bubbleCanvas {
@@ -81,8 +82,9 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  pointer-events: none; /* Sikrer at man kan klikke igennem til knapperne */
-  z-index: 1; /* Ligger bag teksten (z-index: 10) */
+  pointer-events: none;
+  z-index: 1;
+  opacity: 50%;
 }
 
 .navbar {
@@ -97,79 +99,110 @@ body {
   width: auto;
 }
 
+/* Ny container der samler tekst og billede side-om-side */
+.hero-main-layout {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  margin-top: 2rem;
+  z-index: 10;
+}
+
 .hero-content {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  max-width: 600px;
-  margin: 2.5rem auto 0 auto;
-  z-index: 10;
+  align-items: flex-start; /* Venstrejusteret i stedet for center */
+  text-align: left;        /* Venstrejusteret tekst */
+  flex: 1;
 
   h1 {
-    font-size: 35px !important;
+    font-size: 26px !important; /* Lidt tilpasset så det passer bedre på linjerne */
     letter-spacing: 3px !important;
     font-weight: 800;
     color: $black;
-    line-height: 40px !important;
-    margin-bottom: 1.5rem;
+    line-height: 36px !important;
+    margin-bottom: 1rem;
   }
 
   .hero-subtitle {
-    font-size: 20px !important;
-    letter-spacing: 3px !important;
+    font-size: 14px !important;
+    letter-spacing: 2px !important;
     color: $black;
-    line-height: 30px !important;
+    line-height: 24px !important;
     font-weight: 600;
-    margin-bottom: 2.5rem;
-    max-width: 480px;
+    margin-bottom: 1.5rem;
+    max-width: 100%;
+  }
+}
+
+/* Højre side: Det nye billede */
+.hero-image-side {
+  flex: 0 0 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .hero-side-img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin-top: -130px ;
+    margin-right: 50px;
+    transform: rotate(7deg);
+    transition: transform 0.3s ease-in-out;
   }
 }
 
 .hero-buttons {
   display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
+  flex-direction: row;
+  gap: 20px;
   width: 100%;
-  align-items: center;
+  margin-top: 1rem;
 }
 
-/* Custom Knapper - Uden Bootstrap konflikter */
 .btn-custom {
-  display: flex !important;
+  display: inline-flex !important;
   justify-content: center !important;
   align-items: center !important;
-  width: 315px !important;
-  height: 79px !important;
-  border-radius: 15px !important;
+
+  /* Låser knapperne til en fast, ens størrelse */
+  min-width: 135px !important;
+  height: 44px !important;
+  padding: 0 12px !important;
+
+  border-radius: 12px !important;
   font-weight: 600 !important;
-  font-size: 20px !important;
-  letter-spacing: 1px !important;
-  cursor: pointer !important;
+  font-size: 13px !important;
+  letter-spacing: 0.5px !important;
   text-decoration: none !important;
   box-sizing: border-box !important;
   outline: none !important;
+  white-space: nowrap !important;
+  cursor: pointer !important;
   transition: transform 0.2s ease, opacity 0.2s ease !important;
 }
 
 .btn-custom-primary {
   background-color: $black !important;
   color: $primary !important;
-  border: none !important;
+  border: 2px solid $black !important;
   box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25) !important;
 }
 
-/* PRECISE FIGMA STYLING FOR "KONTAKT MIG" */
 .btn-custom-secondary {
-  background-color: rgba(255, 255, 255, 0.5) !important; /* Hvid med 50% opacity */
+  background-color: rgba(255, 255, 255, 0.5) !important;
   color: #000000 !important;
-  border: 3px solid #000000 !important;                   /* Stroke: 3px solid black */
-  box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.25) !important; /* Drop shadow */
+  border: 2px solid #000000 !important;
+  box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.25) !important;
 
   &:hover, &:focus, &:active {
     background-color: rgba(255, 255, 255, 0.7) !important;
     color: #000000 !important;
-    border: 3px solid #000000 !important;
+    border: 2px solid #000000 !important;
     transform: translateY(-2px);
   }
 }
@@ -218,7 +251,7 @@ body {
 }
 
 .modal-header-info {
-  font-size: 12px !important;
+  font-size: 14px !important;
   letter-spacing: 3px !important;
   color: #333;
   margin-bottom: 1.5rem;
@@ -230,7 +263,7 @@ body {
     display: block;
     margin-top: 0.8rem;
     color: #666;
-    font-size: 12px !important;
+    font-size: 14px !important;
     line-height: 25px !important;
     letter-spacing: 3px !important;
   }
@@ -241,7 +274,7 @@ body {
   flex-direction: column;
 
   label {
-    font-size: 12px !important;
+    font-size: 14px !important;
     line-height: 25px !important;
     letter-spacing: 3px !important;
     font-weight: 600;
@@ -256,14 +289,14 @@ body {
     border: 1px solid #ccc;
     border-radius: 6px;
     font-family: inherit;
-    font-size: 12px !important;
+    font-size: 14px !important;
     box-sizing: border-box;
   }
 }
 
 .btn-send {
-  background-color: #ffffff;
-  color: #000;
+  background-color: $black !important;
+  color: $white !important;
   border: 1px solid #000;
   border-radius: 20px;
   padding: 0.5rem 1.8rem;
@@ -286,7 +319,7 @@ body {
   max-width: 380px;
 
   h2 {
-    font-size: 12px !important;
+    font-size: 14px !important;
     letter-spacing: 3px !important;
     line-height: 25px !important;
     font-weight: 700;
@@ -295,7 +328,7 @@ body {
   }
 
   p {
-    font-size: 12px !important;
+    font-size: 14px !important;
     letter-spacing: 3px !important;
     line-height: 25px !important;
     color: #333;
@@ -305,8 +338,8 @@ body {
 
 /* LUK Knap */
 .btn-luk {
-  background-color: #f1e4e4;
-  color: #000;
+  background-color: $black !important;
+  color: $white;
   border: 1px solid #000;
   border-radius: 20px;
   padding: 0.5rem 2rem;
@@ -330,18 +363,18 @@ body {
 }
 
 .section-title {
-  font-size: 20px !important;
+  font-size: 25px !important;
   line-height: 32px !important;
-  letter-spacing: 2px !important;
+  letter-spacing: 3px !important;
   font-weight: 700;
-  color: #000000;
+  color: $black;
   margin-bottom: 2rem;
 }
 
 /* Horizontal Slider Container */
 .projects-slider {
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   padding: 0.5rem 1.5rem 2rem 1.5rem;
@@ -357,14 +390,14 @@ body {
 
 /* Ekstra Stort & Højere Kort */
 .project-card {
-  flex: 0 0 88vw; /* Øget fra 85vw så det fanger skærmen perfekt med lille kig til næste kort */
-  max-width: 380px; /* Hævet fra 360px */
-  min-height: auto; /* Fjernet fast min-height for at undgå unødvendigt hulrum i bunden */
+  flex: 0 0 100vw; /* Øget fra 85vw så det fanger skærmen perfekt med lille kig til næste kort */
+  max-width:500px; /* Hævet fra 360px */
+  min-height: 400px; /* Fjernet fast min-height for at undgå unødvendigt hulrum i bunden */
   scroll-snap-align: center;
-  background: #FFFFFF;
+  background:$white;
   border-radius: 32px;
   padding: 1.5rem;
-  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -411,17 +444,17 @@ body {
 
 /* Tekst og knap på kortet */
 .card-title {
-  font-size: 18px !important;
+  font-size: 20px !important;
   font-weight: 700;
-  color: #000000;
+  color: $black;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
 .btn-card {
-  background-color: #121212;
-  color: #FFFFFF !important;
-  font-size: 15px !important; /* Øget fra 12px til 15px */
+  background-color: $black !important;
+  color: $white !important;
+  font-size: 18px !important; /* Øget fra 12px til 15px */
   font-weight: 600;
   padding: 0.9rem 2.8rem; /* Øget padding for at gøre selve knappen større */
   border-radius: 16px;
@@ -454,18 +487,18 @@ body {
   }
 }
 
-/* Strammere sektion med tilpasset padding */
 .about-section {
   width: 100%;
   background-color: #ffffff;
-  padding: 2.5rem 1.25rem 2rem 1.25rem; /* Mindre tom luft top/bund */
+  padding: 2.5rem 1rem 2rem 1rem; /* Skåret ned i siderne så teksten får mere plads */
   display: flex;
   justify-content: center;
 }
 
 .about-container {
-  max-width: 500px; /* Øget lidt fra 430px så teksten kan brede sig mere ud */
   width: 100%;
+  max-width: 100%; /* Fjernet max-width begrænsningen så teksten strækker sig fuldt ud */
+  padding: 0 0.5rem; /* Minimal margin i siderne */
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -492,30 +525,39 @@ body {
 /* Overskrift matcher hero/kort bedre */
 .about-title {
   font-size: 1.5rem; /* Øget fra 1.25rem */
-  font-weight: 700;
-  margin-bottom: 0.6rem;
-  color: #121212;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  color: $black;
+
 }
 
-/* Intro-tekst nemmere at læse */
 .about-intro {
-  font-size: 1rem; /* Øget fra 0.95rem */
-  color: #333333;
-  line-height: 1.5;
-  margin-bottom: 1.2rem;
+  font-size: 16px !important;
+  line-height: 30px !important;
+  letter-spacing: 3px !important;
+  color: $black;
+  text-align: center;
+  width: 100%;
+  max-width: 100%; /* Lader teksten fylde helt ud til siderne */
+  margin-bottom: 1.8rem;
+  font-weight: 700;
 }
 
 .about-more-text {
   display: none;
-  font-size: 0.95rem;
-  color: #4a4a4a;
-  line-height: 1.6;
-  text-align: left;
-  margin-bottom: 1.2rem;
+  width: 100%;
+  max-width: 100%; /* Fjerner den smalle breddebegrænsning */
+  margin: 0 auto 1.2rem auto;
 }
 
 .about-more-text p {
-  margin-bottom: 0.8rem;
+  font-size: 16px !important;
+  line-height: 30px !important;
+  letter-spacing: 3px !important;
+  color: $black;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: 700;
 }
 
 .about-more-text.show {
