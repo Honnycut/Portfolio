@@ -20,7 +20,7 @@ $link-decoration: none;
 $black: #121212;
 $white: #FFFBF5;
 
-$bg-white: rgba(244, 190, 243, 0.68);
+$bg-white: #F1E4E4;
 $secondary: #b0e3ac;
 $primary: #ffffff;
 
@@ -125,16 +125,18 @@ body {
     color: $black;
     line-height: 36px !important;
     margin-bottom: 1rem;
+    margin-left: 20px;
   }
 
   .hero-subtitle {
-    font-size: 14px !important;
+    font-size: 16px !important;
     letter-spacing: 2px !important;
     color: $black;
     line-height: 24px !important;
     font-weight: 600;
     margin-bottom: 1.5rem;
     max-width: 100%;
+    margin-left: 20px;
   }
 }
 
@@ -184,6 +186,7 @@ body {
   white-space: nowrap !important;
   cursor: pointer !important;
   transition: transform 0.2s ease, opacity 0.2s ease !important;
+  margin-left: 20px;
 }
 
 .btn-custom-primary {
@@ -565,13 +568,13 @@ body {
 }
 
 .toggle-btn {
-  background-color: #121212;
-  color: #ffffff;
+  background-color:$black;
+  color: $white;
   border: none;
-  border-radius: 20px;
+  border-radius: 12px;
   padding: 0.65rem 1.4rem;
-  font-size: 0.9rem;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 500;
   display: flex;
   align-items: center;
   gap: 0.5rem;
