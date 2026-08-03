@@ -206,3 +206,31 @@ function toggleAbout() {
         btnText.textContent = "Se mere";
     }
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const slider = document.querySelector('.projects-slider');
+    const dots = document.querySelectorAll('.slider-dots .dot');
+
+    if (!slider || dots.length === 0) return;
+
+    slider.addEventListener('scroll', () => {
+        const scrollPosition = slider.scrollLeft;
+        const maxScroll = slider.scrollWidth - slider.clientWidth;
+        const cardWidth = slider.querySelector('.project-card').offsetWidth;
+        const gap = 24;
+
+        let activeIndex;
+
+        // Hvis brugeren har scrollet helt til højre, aktiver den sidste dot uanset hvad
+        if (Math.ceil(scrollPosition) >= maxScroll - 10) {
+            activeIndex = dots.length - 1;
+        } else {
+            activeIndex = Math.round(scrollPosition / (cardWidth + gap));
+        }
+
+        // Opdater .active klassen
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === activeIndex);
+        });
+    });
+});
