@@ -22,7 +22,7 @@ class db {
         $this->DB_SERVER = "mysql20.unoeuro.com";
         $this->DB_NAME = "honnycut_dk_db";
         $this->DB_USER = "honnycut_dk";
-        $this->DB_PASS = "Fega45Bn2MAcx369ztH";
+        $this->DB_PASS = "Fega45Bn2mAcx369zthH";
 
         $this->openConnection();
     }
