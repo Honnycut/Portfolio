@@ -1,6 +1,3 @@
-CREATE DATABASE IF NOT EXISTS webshop CHARACTER SET utf8mb4 COLLATE utf8mb4_danish_ci;
-
-USE webshop;
 
 /*
 CREATE TABLE IF NOT EXISTS produkter (
@@ -9,7 +6,3 @@ CREATE TABLE IF NOT EXISTS produkter (
 ) CHARACTER SET utf8mb4 COLLATE utf8mb4_danish_ci;
 
 INSERT INTO produkter (prodNavn) VALUES ('Bukser'), ('Bluse');*/
-
-CREATE USER IF NOT EXISTS 'user'@'%' IDENTIFIED BY 'password';
-GRANT ALL PRIVILEGES ON *.* TO 'user'@'%';
-FLUSH PRIVILEGES;

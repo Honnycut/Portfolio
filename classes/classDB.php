@@ -19,10 +19,10 @@ class db {
      */
     function __construct($DB_SERVER, $DB_NAME, $DB_USER, $DB_PASS) {
 
-        $this->DB_SERVER = $DB_SERVER;
-        $this->DB_NAME = $DB_NAME;
-        $this->DB_USER = $DB_USER;
-        $this->DB_PASS = $DB_PASS;
+        $this->DB_SERVER = "mysql20.unoeuro.com";
+        $this->DB_NAME = "honnycut_dk_db";
+        $this->DB_USER = "honnycut_dk";
+        $this->DB_PASS = "Fega45Bn2MAcx369ztH";
 
         $this->openConnection();
     }
