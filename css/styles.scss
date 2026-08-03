@@ -357,9 +357,9 @@ body {
 
 /* Ekstra Stort & Højere Kort */
 .project-card {
-  flex: 0 0 85vw;
-  max-width: 360px;
-  min-height: 580px; /* Øget fra 500px til 580px for mere højde */
+  flex: 0 0 88vw; /* Øget fra 85vw så det fanger skærmen perfekt med lille kig til næste kort */
+  max-width: 380px; /* Hævet fra 360px */
+  min-height: auto; /* Fjernet fast min-height for at undgå unødvendigt hulrum i bunden */
   scroll-snap-align: center;
   background: #FFFFFF;
   border-radius: 32px;
@@ -369,12 +369,13 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  gap: 1rem; /* Sikrer pæn fast afstand mellem elementerne */
 }
 
-/* Billedfeltet (Gjort højere) */
+/* Billedfeltet */
 .card-img-wrapper {
   width: 100%;
-  height: 400px; /* Øget fra 330px til 400px */
+  height: 320px; /* Justeret fra 400px til 320px for bedre proportioner på mobil */
   border-radius: 24px;
   display: flex;
   align-items: center;
@@ -451,4 +452,96 @@ body {
       background-color: #000000;
     }
   }
+}
+
+/* Strammere sektion med tilpasset padding */
+.about-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 2.5rem 1.25rem 2rem 1.25rem; /* Mindre tom luft top/bund */
+  display: flex;
+  justify-content: center;
+}
+
+.about-container {
+  max-width: 500px; /* Øget lidt fra 430px så teksten kan brede sig mere ud */
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Profilbillede gjort et nyk større */
+.profile-img-wrapper {
+  width: 105px; /* Øget fra 90px */
+  height: 105px;
+  border-radius: 50%;
+  background-color: #c8e6c9;
+  padding: 6px;
+  margin-bottom: 0.8rem;
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Overskrift matcher hero/kort bedre */
+.about-title {
+  font-size: 1.5rem; /* Øget fra 1.25rem */
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+  color: #121212;
+}
+
+/* Intro-tekst nemmere at læse */
+.about-intro {
+  font-size: 1rem; /* Øget fra 0.95rem */
+  color: #333333;
+  line-height: 1.5;
+  margin-bottom: 1.2rem;
+}
+
+.about-more-text {
+  display: none;
+  font-size: 0.95rem;
+  color: #4a4a4a;
+  line-height: 1.6;
+  text-align: left;
+  margin-bottom: 1.2rem;
+}
+
+.about-more-text p {
+  margin-bottom: 0.8rem;
+}
+
+.about-more-text.show {
+  display: block;
+}
+
+.toggle-btn {
+  background-color: #121212;
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  padding: 0.65rem 1.4rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  align-self: flex-end;
+  transition: background-color 0.2s ease;
+}
+
+.toggle-btn svg {
+  transition: transform 0.3s ease;
+}
+
+.toggle-btn.open svg {
+  transform: rotate(180deg);
 }
