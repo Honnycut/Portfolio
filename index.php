@@ -75,17 +75,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
     </nav>
 
-    <div class="hero-content">
-        <h1>Multimediestuderende<br>med fokus på<br>kreativ og digital<br>identitet.</h1>
+    <!-- Hoved-layout til venstre/højre split -->
+    <div class="hero-main-layout">
 
-        <p class="hero-subtitle">
-            Jeg skaber digitale oplevelser gennem design, UX, visuel identitet og kreativ udvikling.
-        </p>
+        <!-- Venstre side: Tekst & Knapper -->
+        <div class="hero-content">
+            <h1>Multimediestuderende<br>med fokus på<br>kreativ og digital<br>identitet.</h1>
 
-        <div class="hero-buttons">
-            <a href="Andre-projekter.php" class="btn-custom btn-custom-primary">Se mit arbejdet</a>
-            <button id="openModalBtn" type="button" class="btn-custom btn-custom-secondary">Kontakt mig</button>
+            <p class="hero-subtitle">
+                Jeg skaber digitale oplevelser gennem design, UX, visuel identitet og kreativ udvikling.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="Andre-projekter.php" class="btn-custom btn-custom-primary">Se mit arbejdet</a>
+                <button id="openModalBtn" type="button" class="btn-custom btn-custom-secondary">Kontakt mig</button>
+            </div>
         </div>
+
+        <!-- Højre side: Nyt lille billede -->
+        <div class="hero-image-side">
+            <img src="img/billeder/hero_billede.png" alt="Pia" class="hero-side-img">
+        </div>
+
     </div>
 </header>
 
@@ -96,8 +107,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <div class="modal-header-info">
             <p><strong>Du kan komme i kontakt med mig på flere måder:</strong></p>
-            <p>📞 +45 12 34 56 78</p>
-            <p>✉️ din-email@adresse.dk</p>
+            <p>📞 +45 4266074</p>
+            <p>✉️ piapetersen1979@live.dk</p>
             <small>Eller du kan udfylde nedenstående formular. Jeg glæder mig til at høre fra dig!</small>
         </div>
 
@@ -173,7 +184,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="about-container">
         <div class="profile-img-wrapper">
             <!-- Ret stien 'img/profile.jpg' til det rigtige navn på dit profilbillede -->
-            <img src="img/profile.jpg" alt="Pia - Multimediedesigner" class="profile-img">
+            <img src="img/billeder/Mig.png" alt="Pia - Multimediedesigner" class="profile-img">
         </div>
 
         <h2 class="about-title">Hvem er jeg?</h2>
