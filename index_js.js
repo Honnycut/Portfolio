@@ -191,3 +191,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     animate();
 });
+
+function toggleAbout() {
+    const moreText = document.getElementById("moreText");
+    const btnText = document.getElementById("btnText");
+    const toggleBtn = document.getElementById("toggleBtn");
+
+    moreText.classList.toggle("show");
+    toggleBtn.classList.toggle("open");
+
+    if (moreText.classList.contains("show")) {
+        btnText.textContent = "Se mindre";
+    } else {
+        btnText.textContent = "Se mere";
+    }
+}
