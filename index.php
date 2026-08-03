@@ -169,6 +169,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
 </section>
 
+<section class="about-section">
+    <div class="about-container">
+        <div class="profile-img-wrapper">
+            <!-- Ret stien 'img/profile.jpg' til det rigtige navn på dit profilbillede -->
+            <img src="img/profile.jpg" alt="Pia - Multimediedesigner" class="profile-img">
+        </div>
+
+        <h2 class="about-title">Hvem er jeg?</h2>
+
+        <p class="about-intro">
+            Godt design handler ikke kun om, hvordan det ser ud – men om, hvordan det føles at bruge.
+        </p>
+
+        <div class="about-more-text" id="moreText">
+            <p>
+                Jeg hedder Pia og studerer til multimediedesigner med fokus på UI/UX og brugervenlige digitale løsninger. Jeg brænder for at skabe intuitive designs, hvor funktionalitet, æstetik og brugeroplevelse går hånd i hånd.
+            </p>
+            <p>
+                Min erfaring fra kundeservice, procesoptimering og pædagogik har givet mig en stærk forståelse for mennesker og deres behov – en styrke, jeg tager med ind i hver eneste designproces.
+            </p>
+        </div>
+
+        <button class="toggle-btn" id="toggleBtn" onclick="toggleAbout()">
+            <span id="btnText">Se mere</span>
+            <svg id="btnIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m6 9 6 6 6-6"/>
+            </svg>
+        </button>
+    </div>
+</section>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="index_js.js"></script>
 
