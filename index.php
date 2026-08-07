@@ -270,8 +270,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <!-- Sociale ikoner i nederste højre hjørne -->
         <div class="skills-socials">
-            <a href="#" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+
+            <a href="https://www.facebook.com/pia.a.petersen"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/in/pia-petersen-5aa252395/"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+
+            <a href="https://github.com/Honnycut/Portfolio"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="GitHub">
+                <i class="fa-brands fa-github"></i>
+            </a>
+
         </div>
     </div>
 </section>
