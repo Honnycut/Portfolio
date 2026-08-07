@@ -117,26 +117,25 @@ body {
   align-items: flex-start; /* Venstrejusteret i stedet for center */
   text-align: left;        /* Venstrejusteret tekst */
   flex: 1;
+  padding-left: 20px;
 
   h1 {
-    font-size: 26px !important; /* Lidt tilpasset så det passer bedre på linjerne */
+    font-size: 32px !important; /* Lidt tilpasset så det passer bedre på linjerne */
     letter-spacing: 3px !important;
     font-weight: 800;
     color: $black;
     line-height: 36px !important;
     margin-bottom: 1rem;
-    margin-left: 20px;
   }
 
   .hero-subtitle {
     font-size: 16px !important;
-    letter-spacing: 2px !important;
+    letter-spacing: 1px !important;
     color: $black;
     line-height: 24px !important;
     font-weight: 600;
     margin-bottom: 1.5rem;
     max-width: 100%;
-    margin-left: 20px;
   }
 }
 
@@ -148,11 +147,11 @@ body {
   align-items: center;
 
   .hero-side-img {
-    width: 100%;
+    width: 125%;
     max-width: 600px;
     height: auto;
     margin-top: -130px ;
-    margin-right: 50px;
+    margin-right: 70px;
     transform: rotate(7deg);
     transition: transform 0.3s ease-in-out;
   }
@@ -161,7 +160,7 @@ body {
 .hero-buttons {
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 12px;
   width: 100%;
   margin-top: 1rem;
 }
@@ -178,7 +177,7 @@ body {
 
   border-radius: 12px !important;
   font-weight: 600 !important;
-  font-size: 13px !important;
+  font-size: 16px !important;
   letter-spacing: 0.5px !important;
   text-decoration: none !important;
   box-sizing: border-box !important;
@@ -186,7 +185,6 @@ body {
   white-space: nowrap !important;
   cursor: pointer !important;
   transition: transform 0.2s ease, opacity 0.2s ease !important;
-  margin-left: 20px;
 }
 
 .btn-custom-primary {
@@ -200,7 +198,7 @@ body {
   background-color: rgba(255, 255, 255, 0.5) !important;
   color: #000000 !important;
   border: 2px solid #000000 !important;
-  box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.25) !important;
+  box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.25) !important;
 
   &:hover, &:focus, &:active {
     background-color: rgba(255, 255, 255, 0.7) !important;
@@ -254,21 +252,21 @@ body {
 }
 
 .modal-header-info {
-  font-size: 14px !important;
-  letter-spacing: 3px !important;
+  font-size: 16px !important;
+  letter-spacing: 1px !important;
   color: #333;
   margin-bottom: 1.5rem;
   line-height: 25px !important;
-  font-weight: 700;
+  font-weight: 600;
 
   p { margin-bottom: 0.3rem; }
   small {
     display: block;
     margin-top: 0.8rem;
     color: #666;
-    font-size: 14px !important;
+    font-size: 16px !important;
     line-height: 25px !important;
-    letter-spacing: 3px !important;
+    letter-spacing: 1px !important;
   }
 }
 
@@ -277,9 +275,9 @@ body {
   flex-direction: column;
 
   label {
-    font-size: 14px !important;
+    font-size: 16px !important;
     line-height: 25px !important;
-    letter-spacing: 3px !important;
+    letter-spacing: 1px !important;
     font-weight: 600;
     margin-bottom: 0.2rem;
     color: #333;
@@ -292,7 +290,7 @@ body {
     border: 1px solid #ccc;
     border-radius: 6px;
     font-family: inherit;
-    font-size: 14px !important;
+    font-size: 16px !important;
     box-sizing: border-box;
   }
 }
@@ -310,8 +308,8 @@ body {
   transition: all 0.2s;
 
   &:hover {
-    background-color: #000;
-    color: #fff;
+    background-color: $black;
+    color: $white;
   }
 }
 
@@ -322,19 +320,19 @@ body {
   max-width: 380px;
 
   h2 {
-    font-size: 14px !important;
-    letter-spacing: 3px !important;
+    font-size: 24px !important;
+    letter-spacing: 2px !important;
     line-height: 25px !important;
     font-weight: 700;
     margin-bottom: 1rem;
-    color: #000;
+    color: $black;
   }
 
   p {
-    font-size: 14px !important;
-    letter-spacing: 3px !important;
+    font-size: 16px !important;
+    letter-spacing: 1px !important;
     line-height: 25px !important;
-    color: #333;
+    color: $black !important;
     margin-bottom: 1.8rem;
   }
 }
@@ -343,7 +341,7 @@ body {
 .btn-luk {
   background-color: $black !important;
   color: $white;
-  border: 1px solid #000;
+  border: 1px solid $black;
   border-radius: 20px;
   padding: 0.5rem 2rem;
   font-weight: 600;
@@ -352,8 +350,8 @@ body {
   transition: all 0.2s ease;
 
   &:hover {
-    background-color: #000;
-    color: #fff;
+    background-color: $black;
+    color: $white;
   }
 }
 
@@ -457,12 +455,12 @@ body {
 .btn-card {
   background-color: $black !important;
   color: $white !important;
-  font-size: 18px !important; /* Øget fra 12px til 15px */
+  font-size: 16px !important; /* Øget fra 12px til 15px */
   font-weight: 600;
   padding: 0.9rem 2.8rem; /* Øget padding for at gøre selve knappen større */
   border-radius: 16px;
   text-decoration: none;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s ease;
 
   &:hover {
@@ -485,14 +483,14 @@ body {
     display: inline-block;
 
     &.active {
-      background-color: #000000;
+      background-color: $black;
     }
   }
 }
 
 .about-section {
   width: 100%;
-  background-color: #ffffff;
+  background-color: $white;
   padding: 2.5rem 1rem 2rem 1rem; /* Skåret ned i siderne så teksten får mere plads */
   display: flex;
   justify-content: center;
@@ -536,14 +534,14 @@ body {
 
 .about-intro {
   font-size: 16px !important;
-  line-height: 30px !important;
-  letter-spacing: 3px !important;
+  line-height: 26px !important;
+  letter-spacing: 0.5px !important;
   color: $black;
   text-align: center;
   width: 100%;
   max-width: 100%; /* Lader teksten fylde helt ud til siderne */
   margin-bottom: 1.8rem;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .about-more-text {
@@ -555,12 +553,12 @@ body {
 
 .about-more-text p {
   font-size: 16px !important;
-  line-height: 30px !important;
-  letter-spacing: 3px !important;
+  line-height: 26px !important;
+  letter-spacing: 0.5px !important;
   color: $black;
   text-align: center;
   margin-bottom: 1rem;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .about-more-text.show {
@@ -574,7 +572,7 @@ body {
   border-radius: 12px;
   padding: 0.65rem 1.4rem;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -589,4 +587,88 @@ body {
 
 .toggle-btn.open svg {
   transform: rotate(180deg);
+}
+
+.skills-section {
+  position: relative;
+  width: 100%;
+  background-color: #bce3b5; /* Lysegrøn baggrund */
+  padding: 2.5rem 1.5rem 3rem 1.5rem;
+  box-sizing: border-box;
+}
+
+.skills-container {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-left: 20px;
+  box-sizing: border-box;
+}
+
+.skills-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #121212;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+/* Grid-layout for badges */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+/* Styling af de enkelte hvide badges - NU MED ENS STØRRELSE */
+.skill-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start; /* Venstrejusterer ikon og tekst inde i knappen */
+  gap: 0.6rem;
+  background-color: $white;
+  width: 100%; /* Tvinger alle brikker til samme bredde (justér evt. tallet) */
+  max-width: 185px;
+  height: 52px; /* Fast højde */
+  min-width: 55px;
+  padding: 0.5rem 0.8rem;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+  .skill-icon {
+    width: 30px !important;
+    height: 30px !important;
+    object-fit: contain;
+    flex-shrink: 0;           /* Forhindrer ikonet i at skrumpe */
+  }
+
+  span {
+    font-size: 16px !important;  /* Skriftstørrelse 12px */
+    font-weight: 600 !important; /* Semi-bold */
+    color: #121212;
+    line-height: 1.2;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;  /* Tilføjer '...' hvis en tekst mod forventning er for lang */
+  }
+}
+
+/* SoMe-ikoner placeret i bunden til højre */
+.skills-socials {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+
+  a {
+    color: #121212;
+    font-size: 1.8rem;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.7;
+      transform: translateY(-2px);
+    }
+  }
 }
