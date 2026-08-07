@@ -211,6 +211,71 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
 </section>
 
+<section class="skills-section">
+    <div class="skills-container">
+        <h2 class="skills-title">Mine kompetencer</h2>
+
+        <!-- Grid med kompetence-badges -->
+        <div class="skills-grid">
+            <div class="skill-badge">
+                <img src="img/icon/figma_logo_icon_147289.png" class="skill-icon" alt="Figma">
+                <span>Figma</span>
+            </div>
+            <div class="skill-badge">
+                <img src="img/icon/image (7-1).png" class="skill-icon" alt="UI/UX">
+                <span>UI/UX</span>
+            </div>
+            <div class="skill-badge">
+                <img src="img/icon/optimering.png" class="skill-icon" alt="Procesoptimering">
+                <span>Proces<br>optimering</span>
+            </div>
+            <div class="skill-badge">
+                <img src="img/icon/adobe-illustrator-icon-free-png.webp" class="skill-icon" alt="Adobe Illustrator">
+                <span>Adobe Illustrator</span>
+            </div>
+            <div class="skill-badge">
+                <img src="img/icon/Logo-Adobe-Photoshop-CC-Vector-PNG.png" class="skill-icon" alt="Photoshop">
+                <span>Photoshop</span>
+            </div>
+            <div class="skill-badge">
+                <img src="img/icon/VN.png" class="skill-icon" alt="Video editor">
+                <span>Video editor</span>
+            </div>
+            <div class="skill-badge">
+                <img src="img/icon/images.png" class="skill-icon" alt="HTML/CSS">
+                <span>HTML/CSS<br>Javascript</span>
+            </div>
+
+            <div class="skill-badge">
+                <img src="img/icon/php-file-format-icon-php-file-format-3d-render-icon-with-transparent-background-php-file-format-document-color-icon-vector.png" class="skill-icon" alt="PHP">
+                <span>PHP SaaS</span>
+            </div>
+            <div class="skill-badge">
+                <img src="img/icon/SCSS-File-Flat-Icon-Vector-Graphics-14768656-1-1-580x348.png" class="skill-icon" alt="Scss">
+                <span>Scss</span>
+            </div>
+            <div class="skill-badge">
+                <img src="img/icon/bootstrap-logo-rounded-free-png.webp" class="skill-icon" alt="Bootstrap">
+                <span>Bootstrap</span>
+            </div>
+            <div class="skill-badge">
+                <img src="img/icon/frontend.png" class="skill-icon" alt="Front">
+                <span>Frontend</span>
+            </div>
+            <div class="skill-badge">
+                <img src="img/icon/Backend.png" class="skill-icon" alt="Back">
+                <span>Backend</span>
+            </div>
+        </div>
+
+        <!-- Sociale ikoner i nederste højre hjørne -->
+        <div class="skills-socials">
+            <a href="#" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+    </div>
+</section>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="index_js.js"></script>
 
