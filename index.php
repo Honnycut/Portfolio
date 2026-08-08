@@ -3,6 +3,9 @@
  * @var db $db
  */
 require "settings/init.php";
+
+$statusMsg = "";
+
 ?>
 
 <!DOCTYPE html>
