@@ -1,0 +1,56 @@
+[
+  {
+    "id": "street-culture",
+    "category": "tema",
+    "title": "STREET CULTURE",
+    "thumbnail": "assets/img/street-thumb.png",
+    "images": [
+      "img/billeder/tema-street.png"
+    ],
+    "description": "Udvikling af en turistapp til Nykøbing Falster med fokus på UI/UX og brugervenlighed. Gennem Design Thinking, Figma, brugertest og HTML/CSS skabte vi en intuitiv app med klar navigation."
+  },
+  {
+    "id": "event",
+    "category": "tema",
+    "title": "EVENT",
+    "thumbnail": "assets/img/event-thumb.png",
+    "images": [
+      "img/billeder/",
+      "img/billeder/"
+    ],
+    "description": "Udvikling af et responsivt koncertwebsite til unge (17–25 år) med fokus på UI/UX. Gennem UX-research, test og kodning i SCSS og Git skabte projektet en løsning med stærk visuel identitet og tydelig navigation."
+  },
+  {
+    "id": "life-hack",
+    "category": "tema",
+    "title": "LIFE HACK",
+    "thumbnail": "assets/img/lifehack-thumb.png",
+    "images": [
+      "img/billeder/",
+      "img/billeder/"
+    ],
+    "description": "Udvikling af How to: Voksenlivet – en digital guide til unge, der flytter hjemmefra. Gennem Design Thinking, brugerinterviews og brugertest skabte vi en intuitiv app designet i Figma og kodet i HTML/CSS, Bootstrap og SCSS."
+  },
+  {
+    "id": "short-form-video",
+    "category": "tema",
+    "title": "SHORT-FORM VIDEO",
+    "thumbnail": "assets/img/short-thumb.png",
+    "images": [
+      "img/billeder/",
+      "img/billeder/"
+    ],
+    "description": "I dette projekt udviklede jeg short-form videoer, SoMe strategi og content plan til BilligStyling.  jeg målgruppesegmenterede, udarbejdede et lydmoodboard og storyboard, samt designede mockups i Figma."
+  },
+  {
+    "id": "future-forretning",
+    "category": "tema",
+    "title": "FUTURE & FORRETNING",
+    "thumbnail": "assets/img/future-thumb.png",
+    "images": [
+      "img/billeder/",
+      "img/billeder/"
+    ],
+    "description": "I dette projekt lavede jeg et re-design af nfh.dk, med fokus på mobil- og tablet-UX. Gennem analyse, gestaltlove og designprincipper prøvede jeg at løse udfordringer med uoverskuelig navigation og manglede hierarki"
+  }
+]
