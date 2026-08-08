@@ -143,79 +143,107 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <section class="projects-section">
     <h2 class="section-title">Udvalgte projekter</h2>
 
-    <div class="projects-slider">
-        <!-- Kort 1: Spotless (Nu med dark-blue-bg) -->
-        <div class="project-card">
-            <div class="card-img-wrapper dark-blue-bg">
-                <img src="img/logo/logo_blue.png" alt="Spotless logo" style="filter: brightness(0) invert(1);">
+    <div class="projects-container">
+
+        <!-- Wrapper til kortene og den smalle rosa bjælke -->
+        <div class="projects-cards-wrap">
+            <div class="projects-bg-bar"></div> <!-- Smal rosa stribe bagved -->
+
+            <div class="projects-slider">
+                <!-- Kort 1: Spotless -->
+                <div class="project-card">
+                    <div class="card-img-wrapper dark-blue-bg">
+                        <img src="img/logo/logo_blue.png" alt="Spotless logo" style="filter: brightness(0) invert(1);">
+                    </div>
+                    <h3 class="card-title">Spotless</h3>
+                    <p class="card-desc-title">SaaS - Software as a Service</p>
+                    <p class="card-desc">Opgaven gik ud på at transformere en manuel eller forældet proces til en forenklet, digital SaaS-løsning med fokus på øget brugervenlighed.</p>
+                    <a href="Spotless.php" class="btn-card d-lg-none">Se mere...</a>
+                </div>
+
+                <!-- Kort 2: Waybly -->
+                <div class="project-card">
+                    <div class="card-img-wrapper blue-bg">
+                        <img src="img/logo/midwlogo.png" alt="Waybly logo">
+                    </div>
+                    <h3 class="card-title">Waybly</h3>
+                    <p class="card-desc-title">UX & Tilgængelighed</p>
+                    <p class="card-desc">Et projekt med fokus på User Experience og tilgængeligt design, hvor brugerbehov og kontekst var drivkraften bag den endelige digitale løsning.</p>
+                    <a href="Waybly.php" class="btn-card d-lg-none">Se mere...</a>
+                </div>
+
+                <!-- Kort 3: Semesterprøve -->
+                <div class="project-card">
+                    <div class="card-img-wrapper green-bg" style="position: relative; overflow: hidden; border-radius: 24px;">
+                        <img src="img/logo/logo1-1.png" alt="Semesterprøve logo" style="position: absolute; top: 50%; left: 50%; width: 80%; height: 80%; object-fit: contain; transform: translate(-48%, -48%);">
+                    </div>
+                    <h3 class="card-title">2. Semesterprøve</h3>
+                    <p class="card-desc-title">Førstehjælpseksperten</p>
+                    <p class="card-desc">Et tværfagligt projekt med fokus på helstøbte digitale løsninger. Opgaven kombinerede pensum fra 1. og 2. semester inden for UI-design, UX-research, indholdscreation, frontend og backend.</p>
+                    <a href="Semesterproeve.php" class="btn-card d-lg-none">Se mere...</a>
+                </div>
             </div>
-            <h3 class="card-title">Spotless</h3>
-            <a href="Spotless.php" class="btn-card">Se mere...</a>
         </div>
 
-        <!-- Kort 2: Waybly (Nu med blue-bg) -->
-        <div class="project-card">
-            <div class="card-img-wrapper blue-bg">
-                <img src="img/logo/midwlogo.png" alt="Waybly logo">
-            </div>
-            <h3 class="card-title">Waybly</h3>
-            <a href="Waybly.php" class="btn-card">Se mere...</a>
+        <!-- Fælles knap på desktop PLACERET UDEN FOR bjælken -->
+        <div class="projects-desktop-btn-wrap d-none d-lg-flex">
+            <a href="Andre-projekter.php" class="btn-projects-all">Se mere....</a>
         </div>
 
-        <!-- Kort 3: Semesterprøve -->
-        <div class="project-card">
-            <div class="card-img-wrapper green-bg" style="position: relative; overflow: hidden; border-radius: 24px;">
-                <img src="img/logo/logo1-1.png" alt="Semesterprøve logo" style="position: absolute; top: 50%; left: 50%; width: 80%; height: 80%; object-fit: contain; transform: translate(-48%, -48%);">
-            </div>
-            <h3 class="card-title">Semesterprøve</h3>
-            <a href="Semesterproeve.php" class="btn-card">Se mere...</a>
+        <!-- Indikator prikker (Mobil & Tablet) -->
+        <div class="slider-dots d-lg-none">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
         </div>
-    </div>
 
-    <!-- Indikator prikker i bunden -->
-    <div class="slider-dots">
-        <span class="dot active"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
     </div>
 </section>
 
+<!-- HVEM ER JEG? SEKTION (3 Kolonner på Desktop) -->
 <section class="about-section">
     <div class="about-container">
+        <!-- Kolonne 1: Billede -->
         <div class="profile-img-wrapper">
-            <!-- Ret stien 'img/profile.jpg' til det rigtige navn på dit profilbillede -->
             <img src="img/billeder/Mig.png" alt="Pia - Multimediedesigner" class="profile-img">
         </div>
 
-        <h2 class="about-title">Hvem er jeg?</h2>
-
-        <p class="about-intro">
-            Godt design handler ikke kun om, hvordan det ser ud – men om, hvordan det føles at bruge.
-        </p>
-
-        <div class="about-more-text" id="moreText">
-            <p>
-                Jeg hedder Pia og studerer til multimediedesigner med fokus på UI/UX og brugervenlige digitale løsninger. Jeg brænder for at skabe intuitive designs, hvor funktionalitet, æstetik og brugeroplevelse går hånd i hånd.
-            </p>
-            <p>
-                Min erfaring fra kundeservice, procesoptimering og pædagogik har givet mig en stærk forståelse for mennesker og deres behov – en styrke, jeg tager med ind i hver eneste designproces.
-            </p>
+        <!-- Kolonne 2: Overskrift & Lodret Streg -->
+        <div class="about-header-col">
+            <h2 class="about-title">Hvem er jeg?</h2>
+            <div class="about-divider d-none d-lg-block"></div>
         </div>
 
-        <button class="toggle-btn" id="toggleBtn" onclick="toggleAbout()">
-            <span id="btnText">Se mere</span>
-            <svg id="btnIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="m6 9 6 6 6-6"/>
-            </svg>
-        </button>
+        <!-- Kolonne 3: Tekst -->
+        <div class="about-text-wrapper">
+            <p class="about-intro">
+                Godt design handler ikke kun om, hvordan det ser ud – men om, hvordan det føles at bruge.
+            </p>
+
+            <div class="about-more-text" id="moreText">
+                <p>
+                    Jeg hedder Pia og studerer til multimediedesigner med fokus på UI/UX og brugervenlige digitale løsninger. Jeg brænder for at skabe intuitive designs, hvor funktionalitet, æstetik og brugeroplevelse går hånd i hånd.
+                </p>
+                <p>
+                    Min erfaring fra kundeservice, procesoptimering og pædagogik har givet mig en stærk forståelse for mennesker og deres behov – en styrke, jeg tager med ind i hver eneste designproces.
+                </p>
+            </div>
+
+            <button class="toggle-btn d-lg-none" id="toggleBtn" onclick="toggleAbout()">
+                <span id="btnText">Se mere</span>
+                <svg id="btnIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m6 9 6 6 6-6"/>
+                </svg>
+            </button>
+        </div>
     </div>
 </section>
 
+<!-- MINE KOMPETENCER -->
 <section class="skills-section">
     <div class="skills-container">
         <h2 class="skills-title">Mine kompetencer</h2>
 
-        <!-- Grid med kompetence-badges -->
         <div class="skills-grid">
             <div class="skill-badge">
                 <img src="img/icon/figma_logo_icon_147289.png" class="skill-icon" alt="Figma">
@@ -234,29 +262,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <span>Adobe Illustrator</span>
             </div>
             <div class="skill-badge">
-                <img src="img/icon/Logo-Adobe-Photoshop-CC-Vector-PNG.png" class="skill-icon" alt="Photoshop">
-                <span>Photoshop</span>
-            </div>
-            <div class="skill-badge">
                 <img src="img/icon/VN.png" class="skill-icon" alt="Video editor">
                 <span>Video editor</span>
+            </div>
+            <div class="skill-badge">
+                <img src="img/icon/php-file-format-icon-php-file-format-3d-render-icon-with-transparent-background-php-file-format-document-color-icon-vector.png" class="skill-icon" alt="PHP">
+                <span>PHP - SaaS</span>
+            </div>
+
+            <div class="skill-badge">
+                <img src="img/icon/Logo-Adobe-Photoshop-CC-Vector-PNG.png" class="skill-icon" alt="Photoshop">
+                <span>Photoshop</span>
             </div>
             <div class="skill-badge">
                 <img src="img/icon/images.png" class="skill-icon" alt="HTML/CSS">
                 <span>HTML/CSS<br>Javascript</span>
             </div>
-
             <div class="skill-badge">
-                <img src="img/icon/php-file-format-icon-php-file-format-3d-render-icon-with-transparent-background-php-file-format-document-color-icon-vector.png" class="skill-icon" alt="PHP">
-                <span>PHP SaaS</span>
+                <img src="img/icon/bootstrap-logo-rounded-free-png.webp" class="skill-icon" alt="Bootstrap">
+                <span>Bootstrap</span>
             </div>
             <div class="skill-badge">
                 <img src="img/icon/SCSS-File-Flat-Icon-Vector-Graphics-14768656-1-1-580x348.png" class="skill-icon" alt="Scss">
                 <span>Scss</span>
-            </div>
-            <div class="skill-badge">
-                <img src="img/icon/bootstrap-logo-rounded-free-png.webp" class="skill-icon" alt="Bootstrap">
-                <span>Bootstrap</span>
             </div>
             <div class="skill-badge">
                 <img src="img/icon/frontend.png" class="skill-icon" alt="Front">
@@ -268,30 +296,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
         </div>
 
-        <!-- Sociale ikoner i nederste højre hjørne -->
         <div class="skills-socials">
-
-            <a href="https://www.facebook.com/pia.a.petersen"
-               target="_blank"
-               rel="noopener noreferrer"
-               aria-label="Facebook">
+            <a href="https://www.facebook.com/pia.a.petersen" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                 <i class="fa-brands fa-facebook-f"></i>
             </a>
-
-            <a href="https://www.linkedin.com/in/pia-petersen-5aa252395/"
-               target="_blank"
-               rel="noopener noreferrer"
-               aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/pia-petersen-5aa252395/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                 <i class="fa-brands fa-linkedin-in"></i>
             </a>
-
-            <a href="https://github.com/Honnycut/Portfolio"
-               target="_blank"
-               rel="noopener noreferrer"
-               aria-label="GitHub">
+            <a href="https://github.com/Honnycut/Portfolio" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                 <i class="fa-brands fa-github"></i>
             </a>
-
         </div>
     </div>
 </section>
