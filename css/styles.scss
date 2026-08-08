@@ -992,9 +992,10 @@ p, .card-desc, .about-intro, .about-more-text p {
   }
 
   .projects-container {
-    width: calc(100% - 100px) !important;
-    max-width: 1220px !important;
-    padding: 0 2rem !important;
+    width: 95% !important;
+    max-width: 1380px !important;
+    margin: 0 auto !important;
+    padding: 0 1.5rem !important;
   }
 
   .project-card {
@@ -1002,7 +1003,7 @@ p, .card-desc, .about-intro, .about-more-text p {
   }
 
   .projects-slider{
-    gap: 1.8rem !important;
+    gap: 2rem !important;
   }
 
   .projects-bg-bar {
@@ -1113,12 +1114,13 @@ p, .card-desc, .about-intro, .about-more-text p {
   }
 
   .projects-container {
-    max-width: 1380px !important;
-    padding: 0 2.5rem !important;
+    width: 95% !important;
+    max-width: 1550px !important;
+    padding: 0 2rem !important;
   }
 
   .projects-slider {
-    gap: 2.2rem !important;
+    gap: 2.5rem !important;
   }
 
   .projects-bg-bar {
@@ -1221,18 +1223,19 @@ p, .card-desc, .about-intro, .about-more-text p {
 
 
   .projects-container {
-    max-width: 1600px;
-    padding: 0 80px !important;
+    width: 95% !important;
+    max-width: 1750px;
+    padding: 0 3rem !important;
   }
 
   .projects-slider {
-    gap: 4rem;
+    gap: 3.5rem;
   }
 
   .projects-bg-bar {
-    left: -45px;
-    width: calc(100% + 90px);
-    height: 190px;
+    left: -35px;
+    width: calc(100% + 70px);
+    height: 180px;
     border-radius: 20px;
   }
 
@@ -1306,4 +1309,76 @@ p, .card-desc, .about-intro, .about-more-text p {
       }
     }
   }
+}
+
+/* ---- Andre Projekter ---- */
+
+/* --- HERO HEADER (MOBIL) --- */
+
+.sub-hero-header {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.sub-hero-bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.sub-hero-layout {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  padding: 40px 24px 20px 24px;
+  box-sizing: border-box;
+}
+
+
+.sub-hero-text {
+  width: 100%;
+  display: flex !important;
+  justify-content: flex-start !important;
+  margin-bottom: -120px;
+}
+
+.sub-hero-text h1 {
+  font-size: 29.4px !important;
+  font-weight: 800 !important;
+  color: $black !important;
+  text-transform: uppercase;
+  letter-spacing: 2.5px !important;
+  margin: 0 !important;
+  text-align: left !important;
+  white-space: nowrap;
+  padding-left: 50px;
+}
+
+.sub-hero-img-box {
+  width: 100%;
+  display: flex !important;
+  justify-content: flex-end !important;
+  padding-right: 60px ;
+  margin-bottom: 30px;
+}
+
+.sub-hero-side-img,
+.sub-hero-img {
+  width: 80% !important;
+  max-width: 310px !important;
+  height: auto !important;
+  margin: 0 !important;
+  transform: rotate(7deg) !important;
+  object-fit: contain;
 }
