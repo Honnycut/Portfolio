@@ -7,14 +7,17 @@ require "settings/init.php";
 $statusMsg = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Hent data fra formularen og rens dem
+    // 1. Hent og rens formulardata
     $name    = htmlspecialchars($_POST['name']);
     $email   = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
     $subject = htmlspecialchars($_POST['subject']);
     $message = htmlspecialchars($_POST['message']);
 
-    // Din e-mailadresse, hvor beskeden skal modtages
+    // 2. MODTAGER: Her lander beskeden (din private mail)
     $to = "piapetersen1979@live.dk";
+
+    // 3. AFSENDER: Den mailadresse du LIGE har oprettet i Simply!
+    $fromEmail = "kontakt@honnycut.dk";
 
     // E-mail overskrift
     $email_subject = "Ny kontaktbesked fra: " . $subject;
@@ -25,12 +28,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             "E-mail: $email\n\n".
             "Besked:\n$message";
 
-    // Headers
-    $headers = "From: webmaster@ditdomaene.dk\r\n";
+    // Headers (Reply-To gør at du kan svare direkte til den der har udfyldt formularen!)
+    $headers  = "From: $fromEmail\r\n";
     $headers .= "Reply-To: $email\r\n";
+    $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
-    // Send e-mailen
-    if (mail($to, $email_subject, $body, $headers)) {
+    // Send e-mailen med Simplys -f parameter
+    if (mail($to, $email_subject, $body, $headers, "-f " . $fromEmail)) {
         $statusMsg = "Tak! Din besked er blevet sendt.";
     } else {
         $statusMsg = "Der opstod en fejl. Prøv venligst igen.";
