@@ -84,16 +84,16 @@ $statusMsg = "";
 
         <form class="contact-form" id="contactForm">
             <label for="name">Navn (skal udfyldes)</label>
-            <input type="text" id="name" required>
+            <input type="text" id="name" name="name" required>
 
             <label for="email">E-mail (skal udfyldes)</label>
-            <input type="email" id="email" required>
+            <input type="email" id="email" name="email" required>
 
             <label for="subject">Emne</label>
-            <input type="text" id="subject">
+            <input type="text" id="subject" name="subject">
 
             <label for="message">Din Besked</label>
-            <textarea id="message" rows="4" required></textarea>
+            <textarea id="message" name="message" rows="4" required></textarea>
 
             <button type="submit" class="btn-send">SEND</button>
         </form>
