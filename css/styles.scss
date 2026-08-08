@@ -55,6 +55,10 @@ body {
 }
 //-------------------------------------//
 
+/* ===================================================
+   MOBIL OG TABLET (Basis-styling op til 991px)
+   =================================================== */
+
 /* Hero Header */
 .hero-header {
   position: relative;
@@ -99,7 +103,7 @@ body {
   width: auto;
 }
 
-/* Ny container der samler tekst og billede side-om-side */
+/* Hero layout: Tekst til venstre, billede i højre side */
 .hero-main-layout {
   display: flex;
   flex-direction: row;
@@ -114,32 +118,31 @@ body {
 .hero-content {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Venstrejusteret i stedet for center */
-  text-align: left;        /* Venstrejusteret tekst */
+  align-items: flex-start;
+  text-align: left;
   flex: 1;
   padding-left: 20px;
 
   h1 {
-    font-size: 32px !important; /* Lidt tilpasset så det passer bedre på linjerne */
-    letter-spacing: 3px !important;
+    font-size: 26px !important;
+    letter-spacing: 2px !important;
     font-weight: 800;
     color: $black;
-    line-height: 36px !important;
+    line-height: 1.6rem !important;
     margin-bottom: 1rem;
   }
 
   .hero-subtitle {
     font-size: 16px !important;
-    letter-spacing: 1px !important;
+    letter-spacing: 0.5px !important;
     color: $black;
-    line-height: 24px !important;
-    font-weight: 600;
+    line-height: 1.5rem !important;
+    font-weight: 400;
     margin-bottom: 1.5rem;
     max-width: 100%;
   }
 }
 
-/* Højre side: Det nye billede */
 .hero-image-side {
   flex: 0 0 45%;
   display: flex;
@@ -150,7 +153,7 @@ body {
     width: 125%;
     max-width: 600px;
     height: auto;
-    margin-top: -130px ;
+    margin-top: -130px;
     margin-right: 70px;
     transform: rotate(7deg);
     transition: transform 0.3s ease-in-out;
@@ -169,12 +172,9 @@ body {
   display: inline-flex !important;
   justify-content: center !important;
   align-items: center !important;
-
-  /* Låser knapperne til en fast, ens størrelse */
   min-width: 135px !important;
   height: 44px !important;
   padding: 0 12px !important;
-
   border-radius: 12px !important;
   font-weight: 600 !important;
   font-size: 16px !important;
@@ -210,7 +210,7 @@ body {
 
 /* Modal Overlay & Card Styling */
 .modal-overlay {
-  display: none !important; /* Skjult indtil .active tilføjes */
+  display: none !important;
   position: fixed;
   top: 0;
   left: 0;
@@ -337,7 +337,6 @@ body {
   }
 }
 
-/* LUK Knap */
 .btn-luk {
   background-color: $black !important;
   color: $white;
@@ -355,7 +354,7 @@ body {
   }
 }
 
-/* --- UDVALGTE PROJEKTER SEKTION (HØJERE KORT & STØRRE LOGO) --- */
+/* Udvalgte Projekter Sektion */
 .projects-section {
   background-color: transparent;
   padding: 3.5rem 0 2.5rem 0;
@@ -365,14 +364,13 @@ body {
 
 .section-title {
   font-size: 25px !important;
-  line-height: 32px !important;
+  line-height: 1.2rem !important;
   letter-spacing: 3px !important;
   font-weight: 700;
   color: $black;
   margin-bottom: 2rem;
 }
 
-/* Horizontal Slider Container */
 .projects-slider {
   display: flex;
   gap: 2rem;
@@ -381,35 +379,39 @@ body {
   padding: 0.5rem 1.5rem 2rem 1.5rem;
   -webkit-overflow-scrolling: touch;
 
-  /* Gem scrollbar */
-  &::-webkit-scrollbar {
-    display: none;
-  }
+  &::-webkit-scrollbar { display: none; }
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
 
-/* Ekstra Stort & Højere Kort */
 .project-card {
-  flex: 0 0 100vw; /* Øget fra 85vw så det fanger skærmen perfekt med lille kig til næste kort */
-  max-width:500px; /* Hævet fra 360px */
-  min-height: 400px; /* Fjernet fast min-height for at undgå unødvendigt hulrum i bunden */
+  font-size: 16px;
+  flex: 0 0 100vw;
+  max-width: 500px;
+  min-height: 400px;
   scroll-snap-align: center;
-  background:$white;
-  border-radius: 32px;
+  background: $white;
+  border-radius: 15px;
   padding: 1.5rem;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem; /* Sikrer pæn fast afstand mellem elementerne */
+  align-items: flex-start !important;
+  text-align: left !important;
+  justify-content: flex-start;
+  gap: 0.5rem;
+
+  p, span, h3, div {
+    width: 100% !important;
+    text-align: left !important;
+    line-height: 1.5rem !important;
+  }
 }
 
-/* Billedfeltet */
+
 .card-img-wrapper {
   width: 100%;
-  height: 320px; /* Justeret fra 400px til 320px for bedre proportioner på mobil */
+  height: 320px;
   border-radius: 24px;
   display: flex;
   align-items: center;
@@ -423,52 +425,55 @@ body {
   }
 }
 
-/* Farvevarianter til logofelter */
-.card-img-wrapper.blue-bg {
-  background-color: #1E3A6D;
-}
-
-.card-img-wrapper.dark-blue-bg {
-  background-color: #0D2344;
-}
-
-/* Grøn kasse til Semesterprøve: Skalerer logoet op UDEN at ændre dets farve */
+.card-img-wrapper.blue-bg { background-color: #1E3A6D; }
+.card-img-wrapper.dark-blue-bg { background-color: #0D2344; }
 .card-img-wrapper.green-bg {
   background-color: rgba(140, 224, 144, 0.55);
-
   img {
-    transform: scale(1.4); /* Skalerer logoet 40% op i størrelse */
+    transform: scale(1.4);
     max-width: 100%;
     max-height: 100%;
   }
 }
 
-/* Tekst og knap på kortet */
 .card-title {
   font-size: 20px !important;
   font-weight: 700;
   color: $black;
   margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  width: 100%;
+  min-width: 48px;
+  display: flex;
+  align-items: center;
 }
+
+  @include media-breakpoint-up(lg){
+
+    .card-title{
+      text-align: center;
+      width: 100%;
+    }
+  }
+
 
 .btn-card {
   background-color: $black !important;
   color: $white !important;
-  font-size: 16px !important; /* Øget fra 12px til 15px */
+  font-size: 16px !important;
   font-weight: 600;
-  padding: 0.9rem 2.8rem; /* Øget padding for at gøre selve knappen større */
+  padding: 0.9rem 2.8rem;
   border-radius: 16px;
   text-decoration: none;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s ease;
+  margin-top: auto;
 
-  &:hover {
-    transform: translateY(-2px);
-  }
+
+  &:hover { transform: translateY(-2px); }
 }
 
-/* Indikator prikker */
 .slider-dots {
   display: flex;
   justify-content: center;
@@ -482,33 +487,31 @@ body {
     border-radius: 50%;
     display: inline-block;
 
-    &.active {
-      background-color: $black;
-    }
+    &.active { background-color: $black; }
   }
 }
 
+/* About Sektion */
 .about-section {
   width: 100%;
   background-color: $white;
-  padding: 2.5rem 1rem 2rem 1rem; /* Skåret ned i siderne så teksten får mere plads */
+  padding: 2.5rem 1rem 2rem 1rem;
   display: flex;
   justify-content: center;
 }
 
 .about-container {
   width: 100%;
-  max-width: 100%; /* Fjernet max-width begrænsningen så teksten strækker sig fuldt ud */
-  padding: 0 0.5rem; /* Minimal margin i siderne */
+  max-width: 100%;
+  padding: 0 0.5rem;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* Profilbillede gjort et nyk større */
 .profile-img-wrapper {
-  width: 130px; /* Øget fra 90px */
+  width: 130px;
   height: 130px;
   border-radius: 50%;
   background-color: #c8e6c9;
@@ -523,50 +526,46 @@ body {
   object-fit: cover;
 }
 
-/* Overskrift matcher hero/kort bedre */
 .about-title {
-  font-size: 1.5rem; /* Øget fra 1.25rem */
+  font-size: 1.5rem !important;
   font-weight: 800;
   margin-bottom: 1.5rem;
   color: $black;
-
 }
 
 .about-intro {
   font-size: 16px !important;
-  line-height: 26px !important;
+  line-height: 1.6rem !important;
   letter-spacing: 0.5px !important;
   color: $black;
   text-align: center;
   width: 100%;
-  max-width: 100%; /* Lader teksten fylde helt ud til siderne */
+  max-width: 100%;
   margin-bottom: 1.8rem;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .about-more-text {
   display: none;
   width: 100%;
-  max-width: 100%; /* Fjerner den smalle breddebegrænsning */
+  max-width: 100%;
   margin: 0 auto 1.2rem auto;
-}
 
-.about-more-text p {
-  font-size: 16px !important;
-  line-height: 26px !important;
-  letter-spacing: 0.5px !important;
-  color: $black;
-  text-align: center;
-  margin-bottom: 1rem;
-  font-weight: 600;
-}
+  p {
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+    letter-spacing: 0.5px !important;
+    color: $black;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-weight: 400;
+  }
 
-.about-more-text.show {
-  display: block;
+  &.show { display: block; }
 }
 
 .toggle-btn {
-  background-color:$black;
+  background-color: $black;
   color: $white;
   border: none;
   border-radius: 12px;
@@ -578,21 +577,19 @@ body {
   gap: 0.5rem;
   cursor: pointer;
   align-self: flex-end;
+  margin-left: auto;
+  margin-top: 1rem;
   transition: background-color 0.2s ease;
+
+  svg { transition: transform 0.3s ease; }
+  &.open svg { transform: rotate(180deg); }
 }
 
-.toggle-btn svg {
-  transition: transform 0.3s ease;
-}
-
-.toggle-btn.open svg {
-  transform: rotate(180deg);
-}
-
+/* Skills Sektion */
 .skills-section {
   position: relative;
   width: 100%;
-  background-color: #bce3b5; /* Lysegrøn baggrund */
+  background-color: #bce3b5;
   padding: 2.5rem 1.5rem 3rem 1.5rem;
   box-sizing: border-box;
 }
@@ -613,7 +610,6 @@ body {
   text-align: left;
 }
 
-/* Grid-layout for badges */
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
@@ -621,16 +617,15 @@ body {
   margin-bottom: 2rem;
 }
 
-/* Styling af de enkelte hvide badges - NU MED ENS STØRRELSE */
 .skill-badge {
   display: inline-flex;
   align-items: center;
-  justify-content: flex-start; /* Venstrejusterer ikon og tekst inde i knappen */
+  justify-content: flex-start;
   gap: 0.6rem;
   background-color: $white;
-  width: 100%; /* Tvinger alle brikker til samme bredde (justér evt. tallet) */
+  width: 100%;
   max-width: 185px;
-  height: 52px; /* Fast højde */
+  height: 52px;
   min-width: 55px;
   padding: 0.5rem 0.8rem;
   box-sizing: border-box;
@@ -641,21 +636,20 @@ body {
     width: 30px !important;
     height: 30px !important;
     object-fit: contain;
-    flex-shrink: 0;           /* Forhindrer ikonet i at skrumpe */
+    flex-shrink: 0;
   }
 
   span {
-    font-size: 16px !important;  /* Skriftstørrelse 12px */
-    font-weight: 600 !important; /* Semi-bold */
+    font-size: 16px !important;
+    font-weight: 600 !important;
     color: #121212;
     line-height: 1.2;
     white-space: normal;
     overflow: hidden;
-    text-overflow: ellipsis;  /* Tilføjer '...' hvis en tekst mod forventning er for lang */
+    text-overflow: ellipsis;
   }
 }
 
-/* SoMe-ikoner placeret i bunden til højre */
 .skills-socials {
   display: flex;
   justify-content: flex-end;
@@ -671,5 +665,215 @@ body {
       opacity: 0.7;
       transform: translateY(-2px);
     }
+  }
+}
+
+
+/* ===================================================
+   DESKTOP STYLES (LG Breakpoint >= 992px)
+   =================================================== */
+
+@include media-breakpoint-up(lg) {
+
+  .card-title{
+    text-align: left !important;
+    width: 100%;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+  }
+
+  .hero-content {
+    h1 {
+      font-size: clamp(28px, 2.5vw, 42px) !important;
+      line-height: 1.3 !important;
+    }
+    .hero-subtitle {
+      /* Starter ved 16px og vokser roligt på større skærme (op til 20px) */
+      font-size: clamp(16px, 1.2vw, 20px) !important;
+    }
+  }
+
+  .section-title {
+    font-size: clamp(26px, 2vw, 34px) !important;
+  }
+
+  .projects-titel{
+    overflow-x: hidden;
+  }
+
+  /* --- 1. UDVALGTE PROJEKTER & ROSA BJÆLKE --- */
+  .projects-container {
+    background-color: transparent;
+    width: calc(100% - 60px);
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px !important;
+    box-sizing: border-box;
+  }
+
+  .projects-cards-wrap {
+    position: relative;
+    width: 100%;
+    overflow: visible;
+    border-radius: 15px;
+  }
+
+  /* Smal rosa bjælke der kun ligger i bunden bag kortene */
+  .projects-bg-bar {
+    position: absolute;
+    bottom: -30px;
+    left: -25px;
+    width: calc(100% + 50px);
+    height: 150px; /* Lav højde som i Figma */
+    background-color: #eb96de;
+    border-radius: 15px;
+    z-index: 1;
+  }
+
+  .projects-slider {
+    position: relative;
+    z-index: 2; /* Lægger kortene OVENPÅ den rosa bjælke */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    overflow: visible;
+    padding: 0;
+  }
+
+  .project-card {
+    flex: none;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 28px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    padding: 1.8rem 1.5rem;
+
+
+  .btn-card{
+    margin-top: auto;
+  }
+}
+
+  .card-desc-title {
+    font-size: 13px !important;
+    font-weight: 700;
+    color: $black;
+    margin-top: 0.5rem;
+    margin-bottom: 0.3rem;
+    text-align: left !important;
+    width: 100%;
+    min-height: 28px;
+    display: flex;
+    align-items: flex-end ;
+  }
+
+  .card-desc {
+    font-size: 14px;
+    color: $black;
+    line-height: 1.5;
+    text-align: left !important;
+    width: 100%;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  /* Knap under bjælken */
+  .projects-desktop-btn-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 2.5rem;
+  }
+
+  .btn-projects-all {
+    display: inline-block;
+    background-color:  #eb96de;
+    color: $white;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 0.7rem 3.5rem;
+    border-radius: 12px;
+    text-decoration: none;
+    border: 2px solid #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+
+    &:hover {
+      background-color: darken(#E288D4, 8%);
+      color: $white;
+      transform: translateY(-2px);
+    }
+  }
+
+  /* --- 2. HVEM ER JEG? (3 Kolonner) --- */
+  .about-section {
+    padding: 4rem 1rem;
+  }
+
+  .about-container {
+    display: grid;
+    grid-template-columns: 200px auto 1fr; /* 3 Kolonner: Billede | Overskrift+Streg | Tekst */
+    column-gap: 2.5rem;
+    align-items: center;
+    max-width: 1050px;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .profile-img-wrapper {
+    width: 170px;
+    height: 170px;
+    margin-bottom: 0;
+  }
+
+  .about-header-col {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    height: 100%;
+  }
+
+  .about-title {
+    font-size: clamp(24px, 2vw, 32px) !important;
+    font-weight: 800;
+    white-space: nowrap;
+    margin-bottom: 0;
+    color: $black;
+  }
+
+  /* Lodret skilnelinje til højre for overskriften */
+  .about-divider {
+    width: 2px;
+    height: 180px;
+    background-color: #A0A0A0;
+  }
+
+  .about-text-wrapper {
+    text-align: left;
+  }
+
+  .about-intro, .about-more-text p {
+    text-align: left !important;
+    font-size: clamp(16px, 1.1vw, 18px) !important;
+    line-height: 1.6rem !important;
+    color: $black;
+    font-weight: 400 !important;
+  }
+
+  .about-more-text {
+    display: block !important;
+  }
+
+
+  /* --- 3. MINE KOMPETENCER (Nøjagtig 2 Rækker med 6 Hver) --- */
+  .skills-grid {
+    display: grid !important;
+    grid-template-columns: repeat(6, 1fr) !important; /* 6 Kolonner på desktop */
+    gap: 1rem;
+  }
+
+  .skill-badge {
+    max-width: 100% !important;
+    justify-content: flex-start;
   }
 }
