@@ -15,8 +15,8 @@
     "title": "EVENT",
     "thumbnail": "assets/img/event-thumb.png",
     "images": [
-      "img/billeder/",
-      "img/billeder/"
+      "img/billeder/event-1.png",
+      "img/billeder/event-2.png"
     ],
     "description": "Udvikling af et responsivt koncertwebsite til unge (17–25 år) med fokus på UI/UX. Gennem UX-research, test og kodning i SCSS og Git skabte projektet en løsning med stærk visuel identitet og tydelig navigation."
   },
@@ -26,8 +26,8 @@
     "title": "LIFE HACK",
     "thumbnail": "assets/img/lifehack-thumb.png",
     "images": [
-      "img/billeder/",
-      "img/billeder/"
+      "img/billeder/how-to-1.png",
+      "img/billeder/how-to-2.png"
     ],
     "description": "Udvikling af How to: Voksenlivet – en digital guide til unge, der flytter hjemmefra. Gennem Design Thinking, brugerinterviews og brugertest skabte vi en intuitiv app designet i Figma og kodet i HTML/CSS, Bootstrap og SCSS."
   },
@@ -37,8 +37,8 @@
     "title": "SHORT-FORM VIDEO",
     "thumbnail": "assets/img/short-thumb.png",
     "images": [
-      "img/billeder/",
-      "img/billeder/"
+      "img/billeder/tiktok.png",
+      "img/billeder/insta.png"
     ],
     "description": "I dette projekt udviklede jeg short-form videoer, SoMe strategi og content plan til BilligStyling.  jeg målgruppesegmenterede, udarbejdede et lydmoodboard og storyboard, samt designede mockups i Figma."
   },
@@ -48,8 +48,8 @@
     "title": "FUTURE & FORRETNING",
     "thumbnail": "assets/img/future-thumb.png",
     "images": [
-      "img/billeder/",
-      "img/billeder/"
+      "img/billeder/future-1.png",
+      "img/billeder/future-2.png"
     ],
     "description": "I dette projekt lavede jeg et re-design af nfh.dk, med fokus på mobil- og tablet-UX. Gennem analyse, gestaltlove og designprincipper prøvede jeg at løse udfordringer med uoverskuelig navigation og manglede hierarki"
   }
