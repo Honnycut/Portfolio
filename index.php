@@ -64,7 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <!-- Bootstraps ikoner -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="s
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name=" viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
