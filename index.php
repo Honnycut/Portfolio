@@ -3,48 +3,8 @@
  * @var db $db
  */
 require "settings/init.php";
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // 1. Hent og rens formulardata
-    $name    = htmlspecialchars($_POST['name'] ?? '');
-    $email   = filter_var($_POST['email'] ?? '', FILTER_SANITIZE_EMAIL);
-    $subject = htmlspecialchars($_POST['subject'] ?? '');
-    $message = htmlspecialchars($_POST['message'] ?? '');
-
-    // 2. MODTAGER: Nu ændret til din Gmail!
-    $to = "piapetersen1103@gmail.com";
-
-    // 3. AFSENDER: Din godkendte Simply-mail
-    $fromEmail = "kontakt@honnycut.dk";
-
-    // E-mail overskrift
-    $email_subject = "Ny kontaktbesked: " . $subject;
-
-    // E-mailens indhold
-    $body = "Du har modtaget en ny besked fra din webside.\n\n".
-            "Navn: $name\n".
-            "E-mail: $email\n\n".
-            "Besked:\n$message";
-
-    // Headers
-    $headers  = "From: $fromEmail\r\n";
-    $headers .= "Reply-To: $email\r\n";
-    $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
-
-    // Send e-mailen
-    $sent = mail($to, $email_subject, $body, $headers, "-f " . $fromEmail);
-
-    if ($sent) {
-        http_response_code(200);
-        echo "OK";
-    } else {
-        http_response_code(500);
-        echo "Fejl";
-    }
-
-    exit; // Vigtigt for at JS-fetch fanger det rigtige svar
-}
 ?>
+
 <!DOCTYPE html>
 <html lang="da">
 <head>
@@ -261,25 +221,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <span>UI/UX</span>
             </div>
             <div class="skill-badge">
-                <img src="img/icon/optimering.png" class="skill-icon" alt="Procesoptimering">
-                <span>Proces<br>optimering</span>
-            </div>
-            <div class="skill-badge">
                 <img src="img/icon/adobe-illustrator-icon-free-png.webp" class="skill-icon" alt="Adobe Illustrator">
                 <span>Adobe Illustrator</span>
+            </div>
+            <div class="skill-badge">
+                <img src="img/icon/Logo-Adobe-Photoshop-CC-Vector-PNG.png" class="skill-icon" alt="Photoshop">
+                <span>Photoshop</span>
+            </div>
+            <div class="skill-badge">
+                <img src="img/icon/optimering.png" class="skill-icon" alt="Procesoptimering">
+                <span>Proces<br>optimering</span>
             </div>
             <div class="skill-badge">
                 <img src="img/icon/VN.png" class="skill-icon" alt="Video editor">
                 <span>Video editor</span>
             </div>
             <div class="skill-badge">
-                <img src="img/icon/php-file-format-icon-php-file-format-3d-render-icon-with-transparent-background-php-file-format-document-color-icon-vector.png" class="skill-icon" alt="PHP">
-                <span>PHP - SaaS</span>
+                <img src="img/icon/frontend.png" class="skill-icon" alt="Front">
+                <span>Frontend</span>
             </div>
-
             <div class="skill-badge">
-                <img src="img/icon/Logo-Adobe-Photoshop-CC-Vector-PNG.png" class="skill-icon" alt="Photoshop">
-                <span>Photoshop</span>
+                <img src="img/icon/Backend.png" class="skill-icon" alt="Back">
+                <span>Backend</span>
             </div>
             <div class="skill-badge">
                 <img src="img/icon/images.png" class="skill-icon" alt="HTML/CSS">
@@ -294,12 +257,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <span>Scss</span>
             </div>
             <div class="skill-badge">
-                <img src="img/icon/frontend.png" class="skill-icon" alt="Front">
-                <span>Frontend</span>
-            </div>
-            <div class="skill-badge">
-                <img src="img/icon/Backend.png" class="skill-icon" alt="Back">
-                <span>Backend</span>
+                <img src="img/icon/php-file-format-icon-php-file-format-3d-render-icon-with-transparent-background-php-file-format-document-color-icon-vector.png" class="skill-icon" alt="PHP">
+                <span>PHP - SaaS</span>
             </div>
         </div>
 

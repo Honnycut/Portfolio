@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const formData = new FormData(contactForm);
 
             // Sender dataen ned til PHP-filen i baggrunden
-            fetch(contactForm.action || window.location.href, {
+            fetch("send_mail.php", {
                 method: "POST",
                 body: formData
             })
