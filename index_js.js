@@ -22,20 +22,39 @@ document.addEventListener("DOMContentLoaded", function () {
         };
     }
 
-    // Håndter formularafsendelse
+    // Håndter formularafsendelse (Sendes til PHP via fetch)
     if (contactForm) {
         contactForm.addEventListener("submit", function (e) {
-            e.preventDefault();
+            e.preventDefault(); // Stopper side-genindlæsning
 
-            if (contactModal) {
-                contactModal.style.setProperty("display", "none", "important");
-            }
+            // Samler alle felterne fra formularen (Navn, Email, Emne, Besked)
+            const formData = new FormData(contactForm);
 
-            if (successModal) {
-                successModal.style.setProperty("display", "flex", "important");
-            }
+            // Sender dataen ned til PHP-filen i baggrunden
+            fetch(contactForm.action || window.location.href, {
+                method: "POST",
+                body: formData
+            })
+                .then(response => {
+                    if (response.ok) {
+                        // 🌟 FØRST NÅR PHP HAR MODTAGET DATAEN, SKIFTES DER MODAL
+                        if (contactModal) {
+                            contactModal.style.setProperty("display", "none", "important");
+                        }
 
-            contactForm.reset();
+                        if (successModal) {
+                            successModal.style.setProperty("display", "flex", "important");
+                        }
+
+                        contactForm.reset();
+                    } else {
+                        alert("Der opstod en fejl på serveren. Prøv igen.");
+                    }
+                })
+                .catch(error => {
+                    console.error("Fejl ved afsendelse:", error);
+                    alert("Kunne ikke forbinde til serveren.");
+                });
         });
     }
 
