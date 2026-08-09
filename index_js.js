@@ -253,3 +253,59 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// --- ISOLERET POP-UP KODE MED KORREKT BILLEDGALLERI ---
+document.addEventListener("DOMContentLoaded", function () {
+    const globalModal = document.getElementById("globalModal");
+    const globalModalClose = document.getElementById("globalModalClose");
+
+    const globalModalTitle = document.getElementById("globalModalTitle");
+    const globalModalGallery = document.getElementById("globalModalGallery");
+    const globalModalDesc = document.getElementById("globalModalDesc");
+
+    const popupCards = document.querySelectorAll(".js-popup-card");
+
+    if (popupCards.length > 0 && globalModal) {
+        popupCards.forEach(card => {
+            card.addEventListener("click", function () {
+                const title = this.getAttribute("data-title");
+                const desc = this.getAttribute("data-desc");
+                const imagesJson = this.getAttribute("data-images");
+
+                if (globalModalTitle) globalModalTitle.textContent = title || "";
+                if (globalModalDesc) globalModalDesc.textContent = desc || "";
+
+                // Tøm og genopbyg galleriet fra 'images' arrayet
+                if (globalModalGallery) {
+                    globalModalGallery.innerHTML = "";
+
+                    try {
+                        const images = JSON.parse(imagesJson || "[]");
+                        images.forEach(imgSrc => {
+                            const imgElem = document.createElement("img");
+                            imgElem.src = imgSrc;
+                            imgElem.alt = title;
+                            globalModalGallery.appendChild(imgElem);
+                        });
+                    } catch (e) {
+                        console.error("Fejl ved indlæsning af modal billeder:", e);
+                    }
+                }
+
+                globalModal.classList.add("active");
+            });
+        });
+
+        if (globalModalClose) {
+            globalModalClose.addEventListener("click", function () {
+                globalModal.classList.remove("active");
+            });
+        }
+
+        window.addEventListener("click", function (e) {
+            if (e.target === globalModal) {
+                globalModal.classList.remove("active");
+            }
+        });
+    }
+});
