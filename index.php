@@ -175,7 +175,7 @@ $statusMsg = "";
     <div class="about-container">
         <!-- Kolonne 1: Billede -->
         <div class="profile-img-wrapper">
-            <img src="img/billeder/Mig.png" alt="Pia - Multimediedesigner" class="profile-img">
+            <img src="img/billeder/me.png" alt="Pia - Multimediedesigner" class="profile-img">
         </div>
 
         <!-- Kolonne 2: Overskrift & Lodret Streg -->
