@@ -5,7 +5,8 @@
     "title": "Street culture",
     "thumbnail": "img/billeder/street-cultur.png",
     "images": [
-      "img/billeder/tema-street.png"
+      "img/billeder/tema-street-1.png",
+      "img/billeder/tema-street-2.png"
     ],
     "description": "Udvikling af en turistapp til Nykøbing Falster med fokus på UI/UX og brugervenlighed. Gennem Design Thinking, Figma, brugertest og HTML/CSS skabte vi en intuitiv app med klar navigation."
   },
@@ -119,9 +120,9 @@
     "images": [
       "img/billeder/brochure-1.png",
       "img/billeder/brochure-2.png",
-      "img/billeder/brochure-2.png"
+      "img/billeder/brochure-3.png"
     ],
-    "description": "Ny brochure til radarstationen Skovhuse under udarbejdelse - til venstre ses den gamle og til højre ses ide og begyndelse til en ny."
+    "description": "Ny brochure til radarstationen Skovhuse under udarbejdelse - øverst ses den gamle og til nederst ses ide og begyndelse til en ny."
   },
   {
     "id": "drawing",
