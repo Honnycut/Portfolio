@@ -2,8 +2,8 @@
   {
     "id": "street-culture",
     "category": "tema",
-    "title": "STREET CULTURE",
-    "thumbnail": "assets/img/street-thumb.png",
+    "title": "Street culture",
+    "thumbnail": "img/billeder/street-cultur.png",
     "images": [
       "img/billeder/tema-street.png"
     ],
@@ -12,8 +12,8 @@
   {
     "id": "event",
     "category": "tema",
-    "title": "EVENT",
-    "thumbnail": "assets/img/event-thumb.png",
+    "title": "Event",
+    "thumbnail": "img/billeder/event.png",
     "images": [
       "img/billeder/event-1.png",
       "img/billeder/event-2.png"
@@ -23,8 +23,8 @@
   {
     "id": "life-hack",
     "category": "tema",
-    "title": "LIFE HACK",
-    "thumbnail": "assets/img/lifehack-thumb.png",
+    "title": "Life hack",
+    "thumbnail": "img/billeder/life-hack.png",
     "images": [
       "img/billeder/how-to-1.png",
       "img/billeder/how-to-2.png"
@@ -34,8 +34,8 @@
   {
     "id": "short-form-video",
     "category": "tema",
-    "title": "SHORT-FORM VIDEO",
-    "thumbnail": "assets/img/short-thumb.png",
+    "title": "Short-form video",
+    "thumbnail": "img/billeder/Short-form.png",
     "images": [
       "img/billeder/tiktok.png",
       "img/billeder/insta.png"
@@ -45,12 +45,107 @@
   {
     "id": "future-forretning",
     "category": "tema",
-    "title": "FUTURE & FORRETNING",
-    "thumbnail": "assets/img/future-thumb.png",
+    "title": "Future & forretning",
+    "thumbnail": "img/billeder/future.png",
     "images": [
       "img/billeder/future-1.png",
       "img/billeder/future-2.png"
     ],
     "description": "I dette projekt lavede jeg et re-design af nfh.dk, med fokus på mobil- og tablet-UX. Gennem analyse, gestaltlove og designprincipper prøvede jeg at løse udfordringer med uoverskuelig navigation og manglede hierarki"
+  },
+  {
+    "id": "Clemens",
+    "category": "projekter",
+    "title": "Clemens",
+    "thumbnail": "img/billeder/clement.png",
+    "images": [
+      "img/billeder/clement-1.png",
+      "img/billeder/clement-2.png",
+      "img/billeder/clement-3.png",
+      "img/billeder/clement-4.png"
+    ],
+    "description": "Var med til at idegenerer for Clemens manager til Clemens bodega tour, som skulle omhandle hans tribute til kendte afdøde musikker."
+  },
+  {
+    "id": "Poster",
+    "category": "projekter",
+    "title": "Poster & flyer",
+    "thumbnail": "img/billeder/poster.png",
+    "images": [
+      "img/billeder/Poster-Pia.jpg",
+      "img/billeder/Flyer-Pia.jpg"
+    ],
+    "description": "Her har jeg arbejdet med en plakat og en flyers, som skulle fortælle noget om os selv."
+  },
+  {
+    "id": "BMC",
+    "category": "projekter",
+    "title": "BMC",
+    "thumbnail": "img/billeder/bmc.png",
+    "images": [
+      "img/billeder/BMC-1.jpg",
+      "img/billeder/BMC-2.png"
+    ],
+    "description": "Jeg har arbejdet med BMC (Business Model canvas) og brugte det både under mit re-design af NFH og til min semesterprøve 2"
+  },
+  {
+    "id": "User",
+    "category": "projekter",
+    "title": "User Journey",
+    "thumbnail": "img/billeder/journey.png",
+    "images": [
+      "img/billeder/user-1.png",
+      "img/billeder/user-2.png"
+    ],
+    "description": "Her ses udarbejdelsen af en user journey, sammen med en bruger der er gangbesværet, formålet var at få en større forståelse for UX og tilgængelighed  på lokalitioner i Nykøbing Falster."
+  },
+  {
+    "id": "re-poster",
+    "category": "Fritid",
+    "title": "Re-design plakat",
+    "thumbnail": "img/billeder/re-desig-p.png",
+    "images": [
+      "img/billeder/poster-1.png",
+      "img/billeder/poster-2.png",
+      "img/billeder/poster-3.png"
+    ],
+    "description": "Nytænkning af en plakat til bodega Valhal i Rødby"
+  },
+  {
+    "id": "re-brochure",
+    "category": "Fritid",
+    "title": "Re-design brochure",
+    "thumbnail": "img/billeder/re-design-b.png",
+    "images": [
+      "img/billeder/brochure-1.png",
+      "img/billeder/brochure-2.png",
+      "img/billeder/brochure-2.png"
+    ],
+    "description": "Ny brochure til radarstationen Skovhuse under udarbejdelse - til venstre ses den gamle og til højre ses ide og begyndelse til en ny."
+  },
+  {
+    "id": "drawing",
+    "category": "Fritid",
+    "title": "Kreativ tegning",
+    "thumbnail": "img/billeder/drawing.png",
+    "images": [
+      "img/billeder/draw-1.png",
+      "img/billeder/draw-2.png",
+      "img/billeder/draw-3.png"
+    ],
+    "description": "Når regnen melder sig udenfor, så er en blyant og et stykke papir altid godt."
+  },
+  {
+    "id": "cake",
+    "category": "Fritid",
+    "title": "Kager",
+    "thumbnail": "img/billeder/cake.png",
+    "images": [
+      "img/billeder/cake-1.png",
+      "img/billeder/cake-2.png",
+      "img/billeder/cake-3.png",
+      "img/billeder/cake-4.png"
+    ],
+    "description": "Jeg elsker at være kreativ og bruge mine hænder og her ses et udsnit af hvad der kan komme ud af dette. Jeg både designer og laver kagerne fra bunden og kunden er altid med i idefasen."
   }
-]
+  ]
