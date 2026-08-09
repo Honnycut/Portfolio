@@ -23,7 +23,7 @@ require "settings/init.php";
     <script src="https://kit.fontawesome.com/737b386bab.js" crossorigin="anonymous"></script>
 
     <!-- Bootstraps ikoner -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="s
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -53,6 +53,8 @@ require "settings/init.php";
         </div>
     </div>
 </header>
+
+<?php include "components/navbar.php"; ?>
 
 <script src="index_js.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
