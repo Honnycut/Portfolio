@@ -50,12 +50,10 @@ body {
   margin: 0;
   background-color:$bg-white ;
   overflow-x: hidden;
-
-
 }
 
 /* ===================================================
-   MOBIL OG TABLET (Basis-styling op til 991px)
+   MOBIL OG TABLET index-side (Basis-styling op til 991px)
    =================================================== */
 
 /* Hero Header */
@@ -1381,4 +1379,62 @@ p, .card-desc, .about-intro, .about-more-text p {
   margin: 0 !important;
   transform: rotate(7deg) !important;
   object-fit: contain;
+}
+
+/* --- BUND NAVBAR --- */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 75px;
+  background-color: #b3e6b5;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 5px;
+  box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+  box-sizing: border-box;
+
+  .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #7d8b7d;
+    flex: 1;
+    text-align: center;
+    gap: 4px;
+    transition: color 0.2s ease, transform 0.2s ease;
+
+    i {
+      font-size: 1.8rem;
+      line-height: 1;
+    }
+
+    /* Specifik klasse i stedet for generisk span */
+    .nav-label {
+      font-size: 11px;
+      font-weight: 500;
+      line-height: 1.1;
+      max-width: 70px;
+    }
+
+    /* Når siden er AKTIV */
+    &.active {
+      color: #000000;
+
+      .nav-label {
+        font-weight: 800; /* Fed skrift på den aktive label */
+      }
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
 }
