@@ -597,7 +597,6 @@ p, .card-desc, .about-intro, .about-more-text p {
   height: 130px;
   border-radius: 50%;
   background-color: #c8e6c9;
-  padding: 6px;
   margin-bottom: 0.8rem;
 }
 
@@ -606,6 +605,7 @@ p, .card-desc, .about-intro, .about-more-text p {
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
+  object-position: bottom center;
 }
 
 .about-title {
@@ -613,6 +613,9 @@ p, .card-desc, .about-intro, .about-more-text p {
   font-weight: 800;
   margin-bottom: 1.5rem;
   color: $black;
+  text-align: center;
+  width: 100%;
+  margin-left: -2rem;
 }
 
 .about-intro {
@@ -1397,6 +1400,202 @@ p, .card-desc, .about-intro, .about-more-text p {
   }
 }
 
+/* ==========================
+   SEKTIONS- & KORT-STYLING
+   ==========================*/
+
+.page-projects-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 1.5rem 1rem 120px 1rem;
+}
+
+.section-card-group {
+  width: 100%;
+
+  .section-card-container {
+    max-width: 393px;
+    margin: 0 auto;
+    background-color: $white;
+    border-radius: 24px;
+    padding: 1.8rem 1.2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
+    transition: max-width 0.3s ease;
+  }
+
+  .section-title {
+    font-size: 20px;
+    font-weight: 800;
+    color: $black;
+    margin: 0 0 0.8rem 0;
+    text-align: left;
+    line-height: 1.3 !important;
+  }
+
+  .section-subtitle {
+    font-size: 11px;
+    color: $black;
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+    text-align: left;
+  }
+
+  /* GRID - MASSIVE AFSTAND NED IGENNEM MIDTEN */
+  .section-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 127px);
+    justify-content: center;
+    column-gap: 3rem;
+    row-gap: 1.8rem;
+  }
+
+  /* UNIVERSAL KORT */
+  .universal-card {
+    position: relative;
+    width: 127px;
+    height: 159px;
+    border-radius: 15px;
+    border: 2px solid $black;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.22);
+    }
+
+    .card-bg {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .card-badge {
+      position: absolute;
+      bottom: -1px;
+      left: -1px;
+      width: calc(100% + 2px);
+      height: 62px;
+      background-color: #ffffff;
+      border-top-right-radius: 40px;
+      padding: 0.6rem 0.6rem 0.6rem 0.8rem;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      border-top: 2px solid #000000;
+
+      .universal-card-title {
+        display: block;
+        font-size: 10px;
+        font-weight: 900;
+        color: #000000;
+        text-transform: uppercase;
+        line-height: 1.2;
+        letter-spacing: 0.3px;
+        max-width: 85%;
+      }
+    }
+  }
+}
+
+/* ===================================================
+   POP-UP MODAL & GALLERI (FIXER POP-UP STYLING)
+   =================================================== */
+
+.global-modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(5px);
+  z-index: 999999;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  box-sizing: border-box;
+
+  /* Når JS tilføjer 'active', vises pop-uppen */
+  &.active {
+    display: flex !important;
+  }
+
+  .global-modal-content {
+    position: relative;
+    background: $white;
+    width: 100%;
+    max-width: 380px;
+    max-height: 85vh;
+    overflow-y: auto;
+    border-radius: 24px;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
+    text-align: center;
+
+    /* Luk-knap (X) */
+    .global-modal-close {
+      position: absolute;
+      top: 14px;
+      right: 18px;
+      background: $white;
+      border: 2px solid $black;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 800;
+      color: $black;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .global-modal-title {
+      font-size: 20px;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin: 0.5rem 0 1.2rem 0;
+      color: $black;
+      letter-spacing: 0.5px;
+    }
+
+    .global-modal-gallery {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.8rem;
+      margin-bottom: 1.2rem;
+
+      img {
+        width: 127px;
+        height: 80px;
+        object-fit: contain;
+        border-radius: 10px;
+      }
+    }
+
+    .global-modal-desc {
+      font-size: 12px;
+      color: #333333;
+      line-height: 1.6;
+      margin: 0;
+      text-align: left;
+    }
+  }
+}
+
 /* --- BUND NAVBAR --- */
 .bottom-nav {
   position: fixed;
@@ -1432,7 +1631,6 @@ p, .card-desc, .about-intro, .about-more-text p {
       line-height: 1;
     }
 
-    /* Specifik klasse i stedet for generisk span */
     .nav-label {
       font-size: 11px;
       font-weight: 500;
@@ -1440,12 +1638,11 @@ p, .card-desc, .about-intro, .about-more-text p {
       max-width: 70px;
     }
 
-    /* Når siden er AKTIV */
     &.active {
-      color: #000000;
+      color: $black;
 
       .nav-label {
-        font-weight: 800; /* Fed skrift på den aktive label */
+        font-weight: 800;
       }
     }
 
@@ -1454,3 +1651,993 @@ p, .card-desc, .about-intro, .about-more-text p {
     }
   }
 }
+
+/* Desktop footer er skjult på mobil/tablet */
+.site-footer {
+  display: none;
+}
+
+.desktop-nav-links {
+  display: none !important;
+}
+
+.image-lightbox {
+  display: none;
+}
+
+/* ===================================================
+  breakpoint styling
+  =================================================== */
+
+@include media-breakpoint-up(md) {
+
+  .sub-hero-header {
+
+    .sub-hero-layout {
+      gap: 2.5rem;
+
+      .sub-hero-text {
+
+        .sub-hero-title {
+          font-size: 34px;
+          line-height: 1.2;
+        }
+      }
+
+      .sub-hero-img-box {
+        .sub-hero-img {
+          max-width: 220px;
+        }
+      }
+    }
+  }
+
+  .page-projects-wrapper {
+    gap: 3rem;
+    padding: 2rem 2rem 120px;
+  }
+
+  .section-card-group {
+
+    .section-card-container {
+      max-width: 650px;
+      padding: 2.2rem 2.5rem;
+    }
+
+    .section-title {
+      font-size: 23px;
+    }
+
+    .section-subtitle {
+      font-size: 12px;
+      margin-bottom: 2rem;
+    }
+
+    .section-grid {
+      grid-template-columns: repeat(2, 165px);
+      column-gap: 5rem;
+      row-gap: 2.5rem;
+    }
+
+    .universal-card {
+      width: 165px;
+      height: 206px;
+      border-radius: 18px;
+
+      .card-badge {
+        height: 76px;
+        padding: 0.8rem 0.8rem 0.8rem 1rem;
+
+        .universal-card-title {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  .global-modal-overlay {
+
+    .global-modal-content {
+      max-width: 560px;
+      padding: 2.4rem 2rem;
+    }
+
+    .global-modal-title {
+      font-size: 22px;
+      margin-bottom: 1.4rem;
+    }
+
+    .global-modal-gallery {
+      gap: 1.2rem;
+
+      img {
+        width: auto;
+        height: auto;
+        max-width: 165px;
+        max-height: 115px;
+        object-fit: contain;
+      }
+    }
+
+    .global-modal-desc {
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .global-modal-close {
+      width: 36px;
+      height: 36px;
+      font-size: 20px;
+    }
+  }
+}
+
+@include media-breakpoint-up(mg) {
+
+  .sub-hero-header {
+    .sub-hero-layout {
+      gap: 3rem;
+
+      .sub-hero-text {
+        .sub-hero-title {
+          font-size: 36px;
+        }
+      }
+
+      .sub-hero-img-box {
+        .sub-hero-img {
+          max-width: 260px;
+        }
+      }
+    }
+  }
+
+
+  .page-projects-wrapper {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+
+  .section-card-group {
+
+    .section-card-container {
+      max-width: 760px;
+      padding: 2.5rem 3rem;
+    }
+
+    .section-title {
+      font-size: 24px;
+    }
+
+    .section-subtitle {
+      font-size: 13px;
+    }
+
+    /* stadig 2 kort */
+    .section-grid {
+      grid-template-columns: repeat(2, 185px);
+      column-gap: 6rem;
+      row-gap: 2.8rem;
+    }
+
+    .universal-card {
+      width: 185px;
+      height: 231px;
+      border-radius: 20px;
+
+      .card-badge {
+        height: 84px;
+        padding: 0.9rem 0.9rem 0.9rem 1.1rem;
+
+        .universal-card-title {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+
+  .global-modal-overlay {
+
+    .global-modal-content {
+      max-width: 680px;
+      padding: 2.7rem 2.4rem;
+    }
+
+    .global-modal-title {
+      font-size: 24px;
+      margin-bottom: 1.6rem;
+    }
+
+    .global-modal-gallery {
+      gap: 1.5rem;
+
+      img {
+        width: auto;
+        height: auto;
+        max-width: 190px;
+        max-height: 135px;
+        object-fit: contain;
+      }
+    }
+
+    .global-modal-desc {
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .global-modal-close {
+      width: 40px;
+      height: 40px;
+      font-size: 22px;
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+
+  .sub-hero-header {
+    position: relative !important;
+    display: block !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    left: 50% !important;
+    right: 50% !important;
+    margin-left: -50vw !important;
+    margin-right: -50vw !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    box-sizing: border-box;
+
+    .sub-hero-bg-img {
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      z-index: 1 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    .sub-navbar {
+      position: relative !important;
+      z-index: 10 !important;
+      background-color: #b3e6b5 !important;
+      width: 100vw !important;
+      max-width: 100vw !important;
+      margin-left: calc(50% - 50vw) !important;
+      margin-right: calc(50% - 50vw) !important;
+      height: 65px !important;
+      display: flex !important;
+      justify-content: space-between !important;
+      align-items: center !important;
+      padding: 0 2rem !important;
+      box-sizing: border-box !important;
+
+      .sub-logo {
+        display: flex !important;
+        align-items: center !important;
+
+        img {
+          height: 30px !important;
+          width: auto !important;
+          display: block !important;
+          margin-left: -10px !important;
+          margin-top: 15px !important;
+        }
+      }
+
+      .desktop-nav-links {
+        display: flex !important;
+        align-items: center !important;
+        list-style: none !important;
+        gap: 1.5rem !important;
+        margin: 15px 0 0 20px !important;
+        padding: 0 !important;
+
+
+        li {
+          display: flex !important;
+          align-items: center !important;
+
+          a {
+            text-decoration: none !important;
+            color: $black !important;
+            font-weight: 600 !important;
+            font-size: 15px !important;
+
+            &.active,
+            &:hover {
+              font-weight: 800 !important;
+              text-decoration: underline !important;
+            }
+          }
+        }
+
+        .nav-divider {
+          color: $black !important;
+          font-size: 15px !important;
+          opacity: 0.5 !important;
+          user-select: none !important;
+        }
+      }
+    }
+
+    .sub-hero-layout {
+      position: relative !important;
+      z-index: 2 !important;
+      display: flex !important;
+      flex-direction: row !important;
+      justify-content: space-between !important;
+      align-items: center !important;
+      padding: 3rem 6rem 4rem 6rem !important;
+      box-sizing: border-box !important;
+
+      .sub-hero-text {
+        text-align: left !important;
+        flex: 1 !important;
+
+        h1 {
+          font-size: 38px !important;
+          font-weight: 900 !important;
+          letter-spacing: 3px !important;
+          word-spacing: 10px !important;
+          color: $black !important;
+          text-align: left !important;
+          margin: 0 !important;
+          white-space: nowrap !important;
+
+          br {
+            display: none !important;
+          }
+        }
+      }
+
+      .sub-hero-img-box {
+        display: flex !important;
+        justify-content: flex-end !important;
+        align-items: center !important;
+        flex: 1 !important;
+
+        .sub-hero-img {
+          max-width: 360px !important;
+          width: 100% !important;
+          height: auto !important;
+          display: block !important;
+        }
+      }
+    }
+  }
+
+  .section-card-group {
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+
+    .section-card-container {
+      max-width: 1280px !important;
+      width: 100% !important;
+      border-radius: 25px !important;
+      padding: 3rem 4rem !important;
+      box-sizing: border-box !important;
+    }
+
+    .section-grid {
+      display: grid !important;
+      grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+      gap: 1.5rem !important;
+      justify-content: space-between !important;
+      width: 100% !important;
+
+      .universal-card {
+        width: 100% !important;
+        max-width: none !important;
+      }
+    }
+  }
+
+  /* 3. SKJUL MOBIL BUND-NAVBAR PÅ DESKTOP */
+  .bottom-nav {
+    display: none !important;
+  }
+
+  /* ==========================================================
+    POPUP – DESKTOP / LG → XXXL
+    ========================================================== */
+
+    .global-modal-overlay {
+
+      .global-modal-content {
+        width: min(900px, calc(100vw - 80px)) !important;
+        max-width: 900px !important;
+        height: 410px !important;
+        max-height: calc(100vh - 80px) !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        box-sizing: border-box !important;
+        position: relative !important;
+        overflow: hidden !important;
+        border-radius: 24px !important;
+        background: $white !important;
+        display: grid !important;
+        grid-template-columns: 1fr 1px 1fr !important;
+        grid-template-areas:
+                "gallery divider info" !important;
+      }
+
+      /* ==================================================
+         GALLERY – VENSTRE SIDE
+         ================================================== */
+
+      .global-modal-gallery {
+        grid-area: gallery !important;
+        width: 100% !important;
+        height: 100% !important;
+        margin: 0 !important;
+        padding: 55px !important;
+        box-sizing: border-box !important;
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        grid-auto-rows: auto !important;
+        justify-items: center !important;
+        align-items: center !important;
+        align-content: center !important;
+        gap: 40px !important;
+        row-gap: 30px !important;
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+        scrollbar-width: none !important;
+
+        img {
+          cursor: zoom-in !important;
+          transition: transform 0.2s ease, opacity 0.2s ease;
+
+          &:hover {
+            transform: scale(1.03);
+            opacity: 0.9;
+          }
+        }
+      }
+
+      .image-lightbox {
+        position: fixed;
+        inset: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.82);
+        z-index: 99999;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 60px;
+        box-sizing: border-box;
+
+
+        /* Når den er åben */
+        &.active {
+          display: flex;
+        }
+
+        /* Det store billede */
+        img {
+          display: block;
+          width: auto;
+          height: auto;
+          max-width: 90vw;
+          max-height: 85vh;
+          object-fit: contain;
+          border-radius: 0;
+          cursor: zoom-out;
+        }
+
+
+        /* Luk-knap */
+        .image-lightbox-close {
+          position: absolute;
+          top: 30px;
+          right: 40px;
+          width: 48px;
+          height: 48px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0;
+          background-color: $white;
+          border: 3px solid $black;
+          border-radius: 50%;
+          color: $black;
+          font-size: 30px;
+          line-height: 1;
+          cursor: pointer;
+          z-index: 2;
+        }
+      }
+
+      /* Chrome / Edge / Safari */
+      .global-modal-gallery::-webkit-scrollbar {
+        display: none !important;
+      }
+
+      /* ==================================================
+         BILLEDER
+         ================================================== */
+
+      .global-modal-gallery img {
+        display: block !important;
+        width: auto !important;
+        height: auto !important;
+        max-width: 170px !important;
+        max-height: 145px !important;
+        object-fit: contain !important;
+        border-radius: 0 !important;
+        margin: 0 !important;
+        justify-self: center !important;
+        align-self: center !important;
+      }
+
+      .global-modal-gallery:has(img:nth-child(3):last-child) {
+
+        img:nth-child(3) {
+          grid-column: 1 / -1 !important;
+          justify-self: center !important;
+        }
+      }
+
+      /* ==================================================
+         MIDTERLINJE
+         ================================================== */
+
+      .global-modal-content::before {
+        content: "";
+        position: absolute;
+        top: 32px;
+        bottom: 32px;
+        left: 50%;
+        width: 1px;
+        background: $black;
+        z-index: 5;
+      }
+
+
+      /* ==================================================
+         HØJRE SIDE – TITEL
+         ================================================== */
+
+      .global-modal-title {
+        position: absolute !important;
+        top: 82px !important;
+        left: calc(50% + 1px) !important;
+        width: calc(50% - 1px) !important;
+        margin: 0 !important;
+        padding: 0 55px !important;
+        box-sizing: border-box !important;
+        text-align: left !important;
+        font-size: 22px !important;
+        font-weight: 500 !important;
+        line-height: 1.2 !important;
+        letter-spacing: 4px !important;
+        text-transform: uppercase !important;
+        color: $black !important;
+      }
+
+      /* ==================================================
+         HØJRE SIDE – BESKRIVELSE
+         ================================================== */
+
+      .global-modal-desc {
+        grid-area: info !important;
+        width: 100% !important;
+        height: 100% !important;
+        margin: 0 !important;
+        padding: 145px 55px 45px !important;
+        box-sizing: border-box !important;
+        display: block !important;
+        text-align: left !important;
+        font-size: 13px !important;
+        line-height: 2.35 !important;
+        letter-spacing: 3px !important;
+        color: $black !important;
+        overflow-y: auto !important;
+      }
+
+      /* ==================================================
+         LUKKEKNAP
+         ================================================== */
+
+      .global-modal-close {
+        position: absolute !important;
+        top: 27px !important;
+        right: 28px !important;
+        z-index: 20 !important;
+        width: 46px !important;
+        height: 46px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        border: 3px solid $black !important;
+        border-radius: 50% !important;
+        background: $white !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        box-sizing: border-box !important;
+      }
+    }
+
+  /* ===================================================
+   GRØN FOOTER - KUN LG OG OP
+   =================================================== */
+
+  .site-footer {
+    width: 100% !important;
+    min-height: 65px !important;
+    background-color: #b3e6b5 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    padding: 0 35px !important;
+    box-sizing: border-box !important;
+
+
+    .social-icons {
+      display: flex !important;
+      flex-direction: row !important;
+      align-items: center !important;
+      justify-content: flex-end !important;
+      gap: 18px !important;
+
+      a {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 34px !important;
+        height: 34px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        color: $black !important;
+        text-decoration: none !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+
+        i {
+          display: block !important;
+          font-size: 27px !important;
+          line-height: 1 !important;
+          color: $black !important;
+          opacity: 1 !important;
+          visibility: visible !important;
+        }
+
+        &:hover {
+          opacity: 0.7 !important;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+
+  .sub-hero-header {
+
+    .sub-navbar {
+      padding: 0 2.5rem !important;
+
+      .desktop-nav-links {
+        gap: 1.5rem !important;
+
+        li {
+
+          a {
+            font-size: 15px !important;
+          }
+        }
+      }
+    }
+
+    .sub-hero-layout {
+      padding: 3rem 5rem 4rem !important;
+      .sub-hero-img-box {
+        .sub-hero-img {
+          max-width: 350px !important;
+        }
+      }
+    }
+  }
+
+  .section-card-group {
+
+    .section-card-container {
+      max-width: 1120px !important;
+      padding: 3rem 3.5rem !important;
+    }
+
+    .section-grid {
+      gap: 1.4rem !important;
+    }
+  }
+
+  .global-modal-overlay {
+
+    .global-modal-content {
+      width: 900px !important;
+      max-width: 900px !important;
+      height: 410px !important;
+    }
+
+
+    .global-modal-gallery {
+      padding: 50px !important;
+      column-gap: 40px !important;
+      row-gap: 30px !important;
+    }
+
+
+    .global-modal-gallery img {
+      max-width: 170px !important;
+      max-height: 145px !important;
+    }
+
+    .global-modal-title {
+      top: 82px !important;
+      padding: 0 55px !important;
+      font-size: 22px !important;
+      letter-spacing: 4px !important;
+    }
+
+    .global-modal-desc {
+      padding: 145px 55px 45px !important;
+      font-size: 13px !important;
+      line-height: 2.35 !important;
+      letter-spacing: 3px !important;
+    }
+  }
+}
+
+@include media-breakpoint-up(xxl) {
+
+  .sub-hero-header {
+
+    .sub-hero-layout {
+      padding:
+              3.5rem
+              6rem
+              4.5rem !important;
+
+
+      .sub-hero-text {
+
+        h1 {
+          font-size: 42px !important;
+        }
+      }
+
+
+      .sub-hero-img-box {
+
+        .sub-hero-img {
+          max-width: 380px !important;
+        }
+      }
+    }
+  }
+
+
+  .section-card-group {
+
+    .section-card-container {
+      max-width: 1280px !important;
+
+      padding: 3rem 4rem !important;
+    }
+
+
+    .section-title {
+      font-size: 26px !important;
+    }
+
+
+    .section-grid {
+      gap: 1.5rem !important;
+    }
+  }
+
+
+  .site-footer {
+    padding: 0 45px !important;
+
+    .social-icons {
+      gap: 20px !important;
+
+      a {
+
+        i {
+          font-size: 28px !important;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(xxxl) {
+
+  .sub-hero-header {
+
+    .sub-navbar {
+      height: 75px !important;
+
+      padding: 0 5rem !important;
+
+
+      .sub-logo {
+
+        img {
+          height: 36px !important;
+        }
+      }
+
+
+      .desktop-nav-links {
+        gap: 2rem !important;
+
+        li {
+
+          a {
+            font-size: 17px !important;
+          }
+        }
+      }
+    }
+
+
+    .sub-hero-layout {
+      max-width: 1750px;
+
+      margin: 0 auto !important;
+
+      padding:
+              4rem
+              8rem
+              5rem !important;
+
+
+      .sub-hero-text {
+
+        h1 {
+          font-size: 48px !important;
+        }
+      }
+
+
+      .sub-hero-img-box {
+
+        .sub-hero-img {
+          max-width: 430px !important;
+        }
+      }
+    }
+  }
+
+
+  .page-projects-wrapper {
+    max-width: 1800px;
+
+    margin: 0 auto;
+
+    gap: 4.5rem;
+  }
+
+
+  .section-card-group {
+
+    .section-card-container {
+      max-width: 1500px !important;
+
+      padding: 3.5rem 5rem !important;
+    }
+
+
+    .section-title {
+      font-size: 30px !important;
+    }
+
+
+    .section-subtitle {
+      font-size: 14px !important;
+    }
+
+
+    .section-grid {
+      gap: 2rem !important;
+    }
+
+
+    .universal-card {
+
+      .card-badge {
+
+        .universal-card-title {
+          font-size: 13px !important;
+        }
+      }
+    }
+  }
+
+
+  .global-modal-overlay {
+
+    .global-modal-content {
+      width: 1050px !important;
+
+      max-width: 1050px !important;
+
+      height: 480px !important;
+    }
+
+
+    .global-modal-gallery {
+      padding: 65px !important;
+
+      column-gap: 50px !important;
+
+      row-gap: 35px !important;
+    }
+
+
+    .global-modal-gallery img {
+      max-width: 200px !important;
+
+      max-height: 165px !important;
+    }
+
+
+    .global-modal-title {
+      top: 95px !important;
+
+      padding: 0 65px !important;
+
+      font-size: 25px !important;
+    }
+
+
+    .global-modal-desc {
+      padding:
+              165px
+              65px
+              55px !important;
+
+      font-size: 14px !important;
+    }
+
+
+    .global-modal-close {
+      width: 50px !important;
+      height: 50px !important;
+
+      top: 31px !important;
+      right: 34px !important;
+    }
+  }
+
+
+  .site-footer {
+    min-height: 75px !important;
+
+    padding: 0 60px !important;
+
+    .social-icons {
+      gap: 22px !important;
+
+      a {
+        width: 38px !important;
+        height: 38px !important;
+
+        i {
+          font-size: 31px !important;
+        }
+      }
+    }
+  }
+}
+
