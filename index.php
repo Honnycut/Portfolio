@@ -122,6 +122,9 @@ $statusMsg = "";
         <div class="projects-cards-wrap">
             <div class="projects-bg-bar"></div> <!-- Smal rosa stribe bagved -->
 
+            <!-- Rosa bjælke bag det nederste centrerede kort -->
+            <div class="projects-bg-bar-bottom"></div>
+
             <div class="projects-slider">
                 <!-- Kort 1: Spotless -->
                 <div class="project-card">
