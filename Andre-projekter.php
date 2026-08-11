@@ -85,7 +85,9 @@ $sektioner = [
 
     <div class="sub-hero-layout">
         <div class="sub-hero-text">
-            <h1 class="sub-hero-title">Andre&nbsp;Projekter</h1>
+            <h1 class="sub-hero-title">
+                Andre <span class="hero-title-break">Projekter</span>
+            </h1>
         </div>
 
         <div class="sub-hero-img-box">
