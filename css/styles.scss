@@ -93,12 +93,17 @@ body {
   justify-content: flex-end;
   width: 100%;
   z-index: 10;
+  padding-top: 5px;
+  padding-right: 5px;
+  box-sizing: border-box;
 }
 
 .logo img {
-  height: 45px;
+  height: 25px;
   width: auto;
+  display: block;
 }
+
 
 /* Hero layout: Tekst til venstre, billede i højre side */
 .hero-main-layout {
@@ -147,11 +152,11 @@ body {
   align-items: center;
 
   .hero-side-img {
-    width: 125%;
+    width: clamp(280px, 38vw, 600px);
     max-width: 600px;
     height: auto;
-    margin-top: -130px;
-    margin-right: 70px;
+    margin-top: clamp(-130px, -7vw, -60px);
+    margin-right: clamp(10px, 4vw, 70px);
     transform: rotate(7deg);
     transition: transform 0.3s ease-in-out;
   }
@@ -450,7 +455,7 @@ body {
 
 .project-card {
   font-size: 16px;
-  flex: 0 0 100vw;
+  flex: 0 0 calc(100vw - 3rem) ;
   max-width: 500px;
   min-height: 400px;
   scroll-snap-align: center;
@@ -513,14 +518,6 @@ h3, .card-title {
   display: flex;
   align-items: center;
 }
-
-  @include media-breakpoint-up(lg){
-
-    .card-title{
-      text-align: center;
-      width: 100%;
-    }
-  }
 
 .card-desc-title {
   font-size: clamp(13px, 1.1vw, 16px) !important;
@@ -615,7 +612,7 @@ p, .card-desc, .about-intro, .about-more-text p {
   color: $black;
   text-align: center;
   width: 100%;
-  margin-left: -2rem;
+  margin-left: 0;
 }
 
 .about-intro {
@@ -762,7 +759,7 @@ p, .card-desc, .about-intro, .about-more-text p {
   .projects-desktop-btn-wrap {
     display: flex;
     justify-content: center;
-    margin-top: clamp(4.5rem, 6vw, 6.5rem) !important;
+    margin-top: clamp(2.5rem, 4vw, 4rem) !important;
   }
 
   .card-title {
@@ -842,7 +839,6 @@ p, .card-desc, .about-intro, .about-more-text p {
     display: flex;
     flex-direction: column;
 
-
     .btn-card {
       margin-top: auto;
     }
@@ -871,12 +867,6 @@ p, .card-desc, .about-intro, .about-more-text p {
     margin-top: 0;
   }
 
-  .projects-desktop-btn-wrap {
-    display: flex;
-    justify-content: center;
-    margin-top: clamp(4.5rem, 6vw, 6.5rem) !important;
-  }
-
   .btn-projects-all {
     display: inline-block;
     background-color: #eb96de;
@@ -899,7 +889,7 @@ p, .card-desc, .about-intro, .about-more-text p {
 
   /* --- 2. HVEM ER JEG? (3 Kolonner) --- */
   .about-section {
-    padding: 4rem 1rem;
+    padding: 3rem 1rem;
   }
 
   .about-container {
@@ -1249,13 +1239,11 @@ p, .card-desc, .about-intro, .about-more-text p {
     width: 100%;
   }
 
-  .skills-container {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 !important;
-    padding: 0 2rem !important;
-    box-sizing: border-box;
-  }
+    .skills-container {
+      max-width: 1600px !important;
+      margin: 0 auto !important;
+      padding: 0 3rem !important;
+    }
 
   .skills-title {
     text-align: left !important;
@@ -1422,14 +1410,15 @@ p, .card-desc, .about-intro, .about-more-text p {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
-  padding: 1.5rem 1rem 120px 1rem;
+  padding: 1.5rem 0.6rem 120px;
 }
 
 .section-card-group {
   width: 100%;
 
   .section-card-container {
-    max-width: 393px;
+    width: 100%;
+    max-width: 420px;
     margin: 0 auto;
     background-color: $white;
     border-radius: 24px;
