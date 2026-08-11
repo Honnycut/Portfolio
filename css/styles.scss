@@ -1343,16 +1343,30 @@ p, .card-desc, .about-intro, .about-more-text p {
     z-index: 2;
     width: 100%;
     display: flex;
-    justify-content: flex-end; /* Skubber det helt til højre ligesom forsiden */
+    justify-content: flex-end;
     align-items: center;
     box-sizing: border-box;
     margin-left: 10px;
     margin-top: -15px;
 
 
-    .sub-logo img {
-      height: 25px !important; /* Præcis samme højde som forsidens .logo img */
-      width: 30px !important;
+    .sub-logo {
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        text-decoration: none;
+      }
+
+
+      img {
+        height: 25px !important;
+        width: 30px !important;
+
+        display: block;
+      }
     }
   }
 
@@ -1668,6 +1682,160 @@ p, .card-desc, .about-intro, .about-more-text p {
 /* ===================================================
   breakpoint styling
   =================================================== */
+
+@media (min-width: 440px) and (max-width: 575.98px) {
+
+  .sub-hero-header {
+
+    .sub-hero-layout {
+
+      .sub-hero-text {
+
+        .sub-hero-title {
+          font-size: clamp(24px, 6vw, 29px);
+          line-height: 1.15;
+          letter-spacing: 1.5px;
+          text-align: center;
+          white-space: normal;
+          margin: 0;
+
+          .hero-title-break {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(sm) {
+
+    .sub-hero-header {
+
+      .sub-hero-layout {
+
+        .sub-hero-text {
+
+          .sub-hero-title {
+            font-size: 31px;
+            line-height: 1.2;
+            letter-spacing: 1.5px;
+            text-align: center;
+            max-width: none;
+            width: auto;
+            white-space: nowrap;
+            margin: 0;
+
+            .hero-title-break {
+              display: inline;
+            }
+          }
+        }
+      }
+    }
+
+  .sub-hero-header {
+    padding: 2.2rem 2rem 4rem 2rem;
+
+    .sub-hero-layout {
+      gap: 2rem;
+
+      .sub-hero-text {
+
+        .sub-hero-title {
+          font-size: 31px;
+          line-height: 1.2;
+        }
+      }
+
+      .sub-hero-img-box {
+
+        .sub-hero-img {
+          max-width: 190px;
+        }
+      }
+    }
+  }
+
+  .page-projects-wrapper {
+    padding: 1.8rem 1.5rem 120px;
+    gap: 2.7rem;
+  }
+
+  .section-card-group {
+
+    .section-card-container {
+      max-width: 520px;
+      padding: 2rem 2rem;
+      border-radius: 24px;
+    }
+
+    .section-title {
+      font-size: 21px;
+    }
+
+    .section-subtitle {
+      font-size: 11.5px;
+      margin-bottom: 1.8rem;
+    }
+
+    .section-grid {
+      grid-template-columns: repeat(2, 145px);
+      column-gap: 4rem;
+      row-gap: 2.2rem;
+    }
+
+    .universal-card {
+      width: 145px;
+      height: 181px;
+      border-radius: 16px;
+
+      .card-badge {
+        height: 68px;
+        padding: 0.7rem 0.7rem 0.7rem 0.9rem;
+
+        .universal-card-title {
+          font-size: 11px;
+        }
+      }
+    }
+  }
+
+  .global-modal-overlay {
+
+    .global-modal-content {
+      max-width: 460px;
+      padding: 2.2rem 1.8rem;
+    }
+
+    .global-modal-title {
+      font-size: 21px;
+    }
+
+    .global-modal-gallery {
+      gap: 1rem;
+
+      img {
+        width: auto;
+        height: auto;
+        max-width: 145px;
+        max-height: 100px;
+        object-fit: contain;
+      }
+    }
+
+    .global-modal-desc {
+      font-size: 12.5px;
+      line-height: 1.65;
+    }
+
+    .global-modal-close {
+      width: 34px;
+      height: 34px;
+      font-size: 19px;
+    }
+  }
+}
 
 @include media-breakpoint-up(md) {
 
