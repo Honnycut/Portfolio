@@ -67,7 +67,9 @@ $sektioner = [
 
     <nav class="sub-navbar">
         <div class="sub-logo">
+            <a href="index.php" aria-label="gå til forside">
             <img src="img/logo/PP-logo.png" alt="PP logo">
+            </a>
         </div>
 
         <!-- NYT DESKTOP MENU-LINKS (Bevarer din sub-navbar og aktiveres på desktop via SCSS) -->
