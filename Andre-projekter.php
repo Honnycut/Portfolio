@@ -49,6 +49,9 @@ $sektioner = [
     <!-- Font Awesome ikoner -->
     <script src="https://kit.fontawesome.com/737b386bab.js" crossorigin="anonymous"></script>
 
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="img/logo/PP-logo.png">
+
     <!-- Bootstraps ikoner -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
@@ -64,14 +67,17 @@ $sektioner = [
 
     <nav class="sub-navbar">
         <div class="sub-logo">
-            <img src="img/logo/e5c3a926-0a69-4233-8852-ee861d1e8d96-1.png" alt="PP logo">
+            <img src="img/logo/PP-logo.png" alt="PP logo">
         </div>
 
         <!-- NYT DESKTOP MENU-LINKS (Bevarer din sub-navbar og aktiveres på desktop via SCSS) -->
         <ul class="desktop-nav-links">
             <li><a href="index.php">Forside</a></li>
-            <li><a href="Andre_projekter.php" class="active">Andre projekter</a></li>
-            <li><a href="index.php#udvalgte">Udvalgte projekter</a></li>
+            <li class="nav-divider">|</li>
+            <li><a href="Andre-projekter.php" class="active">Andre projekter</a></li>
+            <li class="nav-divider">|</li>
+            <li><a href="#">Udvalgte projekter</a></li>
+            <li class="nav-divider">|</li>
             <li><a href="index.php#kontakt">Kontakt</a></li>
         </ul>
 
@@ -79,7 +85,7 @@ $sektioner = [
 
     <div class="sub-hero-layout">
         <div class="sub-hero-text">
-            <h1 class="sub-hero-title">Andre<br>Projekter</h1>
+            <h1 class="sub-hero-title">Andre &nbsp;Projekter</h1>
         </div>
 
         <div class="sub-hero-img-box">
@@ -136,12 +142,18 @@ $sektioner = [
 <!-- NY DESKTOP FOOTER (Viser SoMe ikoner på stor skærm) -->
 <footer class="site-footer">
     <div class="social-icons">
-        <a href="https://www.facebook.com/pia.a.petersen" target="_blank" rel="noopener noreferrer" aria-label="Facebook"></a>
+
+        <a href="https://www.facebook.com/pia.a.petersen" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
             <i class="fa-brands fa-facebook-f"></i>
-        <a href="https://www.linkedin.com/in/pia-petersen-5aa252395/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"></a>
+        </a>
+
+        <a href="https://www.linkedin.com/in/pia-petersen-5aa252395/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <i class="fa-brands fa-linkedin-in"></i>
-        <a href="https://github.com/Honnycut/Portfolio" target="_blank" rel="noopener noreferrer" aria-label="GitHub"></a>
+        </a>
+
+        <a href="https://github.com/Honnycut/Portfolio" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <i class="fa-brands fa-github"></i>
+        </a>
     </div>
 </footer>
 
