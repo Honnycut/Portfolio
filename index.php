@@ -24,6 +24,9 @@ $statusMsg = "";
     <!-- Font Awesome ikoner -->
     <script src="https://kit.fontawesome.com/737b386bab.js" crossorigin="anonymous"></script>
 
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="img/logo/PP-logo.png">
+
     <!-- Bootstraps ikoner -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
@@ -41,7 +44,7 @@ $statusMsg = "";
 
     <nav class="navbar">
         <div class="logo">
-            <img src="img/logo/e5c3a926-0a69-4233-8852-ee861d1e8d96-1.png" alt="PP logo">
+            <img src="img/logo/PP-logo.png" alt="PP logo">
         </div>
     </nav>
 
@@ -192,10 +195,10 @@ $statusMsg = "";
 
             <div class="about-more-text" id="moreText">
                 <p>
-                    Jeg hedder Pia og studerer til multimediedesigner med fokus på UI/UX og brugervenlige digitale løsninger. Jeg brænder for at skabe intuitive designs, hvor funktionalitet, æstetik og brugeroplevelse går hånd i hånd.
+                    Jeg hedder Pia og studerer til multimediedesigner med fokus på UI/UX og brugervenlige digitale løsninger.Jeg brænder<br>for at skabe intuitive designs, hvor funktionalitet, æstetik og brugeroplevelse går hånd i hånd.
                 </p>
                 <p>
-                    Min erfaring fra kundeservice, procesoptimering og pædagogik har givet mig en stærk forståelse for mennesker og deres behov – en styrke, jeg tager med ind i hver eneste designproces.
+                    Min erfaring fra kundeservice, procesoptimering og pædagogik har givet mig en stærk forståelse for mennesker<br>og deres behov – en styrke, jeg tager med ind i hver eneste designproces.
                 </p>
             </div>
 
