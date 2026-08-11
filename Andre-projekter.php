@@ -85,7 +85,7 @@ $sektioner = [
 
     <div class="sub-hero-layout">
         <div class="sub-hero-text">
-            <h1 class="sub-hero-title">Andre &nbsp;Projekter</h1>
+            <h1 class="sub-hero-title">Andre&nbsp;Projekter</h1>
         </div>
 
         <div class="sub-hero-img-box">
@@ -168,6 +168,14 @@ $sektioner = [
 
         <p id="globalModalDesc" class="global-modal-desc"></p>
     </div>
+</div>
+
+<div id="imageLightbox" class="image-lightbox">
+    <button class="image-lightbox-close" aria-label="Luk billede">
+        &times;
+    </button>
+
+    <img id="imageLightboxImg" src="" alt="">
 </div>
 
 <?php include "components/navbar.php"; ?>
