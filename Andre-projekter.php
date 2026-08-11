@@ -79,8 +79,6 @@ $sektioner = [
             <li><a href="Andre-projekter.php" class="active">Andre projekter</a></li>
             <li class="nav-divider">|</li>
             <li><a href="#">Udvalgte projekter</a></li>
-            <li class="nav-divider">|</li>
-            <li><a href="index.php">Kontakt</a></li>
         </ul>
 
     </nav>

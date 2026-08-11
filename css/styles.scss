@@ -1448,10 +1448,6 @@ h3, .card-title {
 
 /* ---- Andre Projekter ---- */
 
-/* ===================================================
-   KUN TIL UNDERSIDER (100% ISOLERET CSS)
-   =================================================== */
-
 .sub-hero-header {
   position: relative;
   width: 100%;
@@ -1471,7 +1467,8 @@ h3, .card-title {
     z-index: 0;
   }
 
-  /* Top bar / Logo - Matchet 1:1 med forsidens placering og størrelse */
+  /* Top bar / Logo */
+
   .sub-navbar {
     position: relative;
     z-index: 2;
@@ -1504,6 +1501,7 @@ h3, .card-title {
   }
 
   /* Indhold i midten */
+
   .sub-hero-layout {
     position: relative;
     z-index: 2;
@@ -1547,9 +1545,7 @@ h3, .card-title {
   }
 }
 
-/* ==========================
-   SEKTIONS- & KORT-STYLING
-   ==========================*/
+/* SEKTIONS- & KORT-STYLING */
 
 .page-projects-wrapper {
   display: flex;
@@ -1591,6 +1587,7 @@ h3, .card-title {
   }
 
   /* GRID - MASSIVE AFSTAND NED IGENNEM MIDTEN */
+
   .section-grid {
     display: grid;
     grid-template-columns: repeat(2, 127px);
@@ -1600,6 +1597,7 @@ h3, .card-title {
   }
 
   /* UNIVERSAL KORT */
+
   .universal-card {
     position: relative;
     width: 127px;
@@ -1652,9 +1650,7 @@ h3, .card-title {
   }
 }
 
-/* ===================================================
-   POP-UP MODAL & GALLERI (FIXER POP-UP STYLING)
-   =================================================== */
+/* POP-UP MODAL & GALLERI */
 
 .global-modal-overlay {
   display: none;
@@ -1672,6 +1668,7 @@ h3, .card-title {
   box-sizing: border-box;
 
   /* Når JS tilføjer 'active', vises pop-uppen */
+
   &.active {
     display: flex !important;
   }
@@ -1690,6 +1687,7 @@ h3, .card-title {
     text-align: center;
 
     /* Luk-knap (X) */
+
     .global-modal-close {
       position: absolute;
       top: 14px;
@@ -1745,6 +1743,7 @@ h3, .card-title {
 }
 
 /* --- BUND NAVBAR --- */
+
 .bottom-nav {
   position: fixed;
   bottom: 0;
@@ -1801,6 +1800,7 @@ h3, .card-title {
 }
 
 /* Desktop footer er skjult på mobil/tablet */
+
 .site-footer {
   display: none;
 }
@@ -1813,9 +1813,7 @@ h3, .card-title {
   display: none;
 }
 
-/* ===================================================
-  breakpoint styling
-  =================================================== */
+/* breakpoint styling */
 
 @media (min-width: 440px) and (max-width: 575.98px) {
 
@@ -2341,13 +2339,12 @@ h3, .card-title {
   }
 
   /* 3. SKJUL MOBIL BUND-NAVBAR PÅ DESKTOP */
+
   .bottom-nav {
     display: none !important;
   }
 
-  /* ==========================================================
-    POPUP – DESKTOP / LG → XXXL
-    ========================================================== */
+  /* POPUP – DESKTOP / LG → XXXL */
 
     .global-modal-overlay {
 
@@ -2369,9 +2366,7 @@ h3, .card-title {
                 "gallery divider info" !important;
       }
 
-      /* ==================================================
-         GALLERY – VENSTRE SIDE
-         ================================================== */
+      /* GALLERY – VENSTRE SIDE */
 
       .global-modal-gallery {
         grid-area: gallery !important;
@@ -2418,11 +2413,13 @@ h3, .card-title {
 
 
         /* Når den er åben */
+
         &.active {
           display: flex;
         }
 
         /* Det store billede */
+
         img {
           display: block;
           width: auto;
@@ -2436,6 +2433,7 @@ h3, .card-title {
 
 
         /* Luk-knap */
+
         .image-lightbox-close {
           position: absolute;
           top: 30px;
@@ -2458,13 +2456,12 @@ h3, .card-title {
       }
 
       /* Chrome / Edge / Safari */
+
       .global-modal-gallery::-webkit-scrollbar {
         display: none !important;
       }
 
-      /* ==================================================
-         BILLEDER
-         ================================================== */
+      /* BILLEDER */
 
       .global-modal-gallery img {
         display: block !important;
@@ -2487,9 +2484,7 @@ h3, .card-title {
         }
       }
 
-      /* ==================================================
-         MIDTERLINJE
-         ================================================== */
+      /* MIDTERLINJE */
 
       .global-modal-content::before {
         content: "";
@@ -2503,9 +2498,7 @@ h3, .card-title {
       }
 
 
-      /* ==================================================
-         HØJRE SIDE – TITEL
-         ================================================== */
+      /* HØJRE SIDE – TITEL */
 
       .global-modal-title {
         position: absolute !important;
@@ -2524,9 +2517,7 @@ h3, .card-title {
         color: $black !important;
       }
 
-      /* ==================================================
-         HØJRE SIDE – BESKRIVELSE
-         ================================================== */
+      /* HØJRE SIDE – BESKRIVELSE */
 
       .global-modal-desc {
         grid-area: info !important;
@@ -2544,9 +2535,7 @@ h3, .card-title {
         overflow-y: auto !important;
       }
 
-      /* ==================================================
-         LUKKEKNAP
-         ================================================== */
+      /* LUKKEKNAP */
 
       .global-modal-close {
         position: absolute !important;
@@ -2567,9 +2556,7 @@ h3, .card-title {
       }
     }
 
-  /* ===================================================
-   GRØN FOOTER - KUN LG OG OP
-   =================================================== */
+  /* GRØN FOOTER - KUN LG OG OP */
 
   .site-footer {
     width: 100% !important;
