@@ -256,6 +256,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // --- ISOLERET POP-UP KODE MED KORREKT BILLEDGALLERI ---
 document.addEventListener("DOMContentLoaded", function () {
+
     const globalModal = document.getElementById("globalModal");
     const globalModalClose = document.getElementById("globalModalClose");
 
@@ -265,47 +266,270 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const popupCards = document.querySelectorAll(".js-popup-card");
 
+
+    /* =====================================================
+       NORMAL PROJEKT-POPUP
+       ===================================================== */
+
     if (popupCards.length > 0 && globalModal) {
+
         popupCards.forEach(card => {
+
             card.addEventListener("click", function () {
+
                 const title = this.getAttribute("data-title");
                 const desc = this.getAttribute("data-desc");
                 const imagesJson = this.getAttribute("data-images");
 
-                if (globalModalTitle) globalModalTitle.textContent = title || "";
-                if (globalModalDesc) globalModalDesc.textContent = desc || "";
 
-                // Tøm og genopbyg galleriet fra 'images' arrayet
+                if (globalModalTitle) {
+                    globalModalTitle.textContent = title || "";
+                }
+
+
+                if (globalModalDesc) {
+                    globalModalDesc.textContent = desc || "";
+                }
+
+
+                /* Tøm og genopbyg galleriet */
                 if (globalModalGallery) {
+
                     globalModalGallery.innerHTML = "";
 
+
                     try {
-                        const images = JSON.parse(imagesJson || "[]");
+
+                        const images = JSON.parse(
+                            imagesJson || "[]"
+                        );
+
+
                         images.forEach(imgSrc => {
-                            const imgElem = document.createElement("img");
+
+                            const imgElem =
+                                document.createElement("img");
+
                             imgElem.src = imgSrc;
-                            imgElem.alt = title;
-                            globalModalGallery.appendChild(imgElem);
+
+                            imgElem.alt = title || "";
+
+                            globalModalGallery.appendChild(
+                                imgElem
+                            );
+
                         });
+
+
                     } catch (e) {
-                        console.error("Fejl ved indlæsning af modal billeder:", e);
+
+                        console.error(
+                            "Fejl ved indlæsning af modal billeder:",
+                            e
+                        );
+
                     }
                 }
 
+
+                /* Åbn projekt-popup */
                 globalModal.classList.add("active");
             });
         });
 
+
+        /* Luk projekt-popup med X */
         if (globalModalClose) {
-            globalModalClose.addEventListener("click", function () {
-                globalModal.classList.remove("active");
-            });
+
+            globalModalClose.addEventListener(
+                "click",
+                function () {
+
+                    globalModal.classList.remove(
+                        "active"
+                    );
+
+                }
+            );
         }
 
-        window.addEventListener("click", function (e) {
-            if (e.target === globalModal) {
-                globalModal.classList.remove("active");
+
+        /* Luk projekt-popup ved klik på overlay */
+        window.addEventListener(
+            "click",
+            function (e) {
+
+                if (e.target === globalModal) {
+
+                    globalModal.classList.remove(
+                        "active"
+                    );
+
+                }
             }
-        });
+        );
     }
+
+    /* =====================================================
+       FORSTØR BILLEDE I POPUP
+       KUN LG / DESKTOP 992px+
+       ===================================================== */
+
+    const imageLightbox =
+        document.getElementById("imageLightbox");
+
+    const imageLightboxImg =
+        document.getElementById("imageLightboxImg");
+
+    const imageLightboxClose =
+        document.querySelector(
+            ".image-lightbox-close"
+        );
+
+
+    /*
+     * lytter på selve gallery-containeren.
+     *
+     * Det fungerer selvom billederne først
+     * bliver oprettet dynamisk ovenfor.
+     */
+    if (
+        globalModalGallery &&
+        imageLightbox &&
+        imageLightboxImg
+    ) {
+
+        globalModalGallery.addEventListener(
+            "click",
+            function (e) {
+
+                /*
+                 * Tjek om brugeren klikkede
+                 * direkte på et billede.
+                 */
+                const clickedImage =
+                    e.target.closest("img");
+
+
+                if (!clickedImage) {
+                    return;
+                }
+
+
+                /*
+                 * KUN LG OG OP.
+                 *
+                 * Under 992px sker der ingenting,
+                 * så mobil/tablet forbliver som nu.
+                 */
+                if (window.innerWidth < 992) {
+                    return;
+                }
+
+
+                /*
+                 * Brug præcis det billede,
+                 * der blev klikket på.
+                 */
+                imageLightboxImg.src =
+                    clickedImage.src;
+
+                imageLightboxImg.alt =
+                    clickedImage.alt || "";
+
+
+                /* Åbn forstørret billede */
+                imageLightbox.classList.add(
+                    "active"
+                );
+
+            }
+        );
+    }
+
+    /* =====================================================
+       LUK FORSTØRRET BILLEDE MED X
+       ===================================================== */
+
+    if (
+        imageLightboxClose &&
+        imageLightbox &&
+        imageLightboxImg
+    ) {
+
+        imageLightboxClose.addEventListener(
+            "click",
+            function (e) {
+
+                /*
+                 * Stop klik fra at fortsætte
+                 * til elementerne bagved.
+                 */
+                e.stopPropagation();
+
+                imageLightbox.classList.remove(
+                    "active"
+                );
+
+                imageLightboxImg.src = "";
+
+            }
+        );
+    }
+
+    /* =====================================================
+       LUK VED KLIK PÅ MØRK BAGGRUND
+       ===================================================== */
+
+    if (
+        imageLightbox &&
+        imageLightboxImg
+    ) {
+        imageLightbox.addEventListener(
+            "click",
+            function (e) {
+
+                /*
+                 * Luk kun hvis brugeren klikker
+                 * på selve baggrunden.
+                 *
+                 * Klik på billedet lukker derfor
+                 * ikke lightboxen.
+                 */
+                if (e.target === imageLightbox) {
+                    imageLightbox.classList.remove(
+                        "active"
+                    );
+                    imageLightboxImg.src = "";
+                }
+            }
+        );
+    }
+
+    /* =====================================================
+       LUK FORSTØRRET BILLEDE MED ESC
+       ===================================================== */
+
+    document.addEventListener(
+        "keydown",
+        function (e) {
+
+            if (
+                e.key === "Escape" &&
+                imageLightbox &&
+                imageLightbox.classList.contains(
+                    "active"
+                )
+            ) {
+
+                imageLightbox.classList.remove(
+                    "active"
+                );
+                if (imageLightboxImg) {
+                    imageLightboxImg.src = "";
+                }
+            }
+        }
+    );
+
 });
