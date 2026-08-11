@@ -90,8 +90,8 @@ document.addEventListener("DOMContentLoaded", function () {
     resizeCanvas();
     window.addEventListener("resize", resizeCanvas);
 
-    const colorGreen = "rgba(177, 249, 172, 0.45)";  // Grøn farve fra Figma
-    const colorPurple = "rgba(243, 203, 233, 0.50)"; // Lilla/Rosa farve fra Figma
+    const colorGreen = "rgba(177, 249, 172, 0.45)";  // Grøn farve
+    const colorPurple = "rgba(241,170,223,0.47)"; // Lilla/Rosa farve
 
     class Bubble {
         constructor(x, y, radius, color, isLeftZone) {

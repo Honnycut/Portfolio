@@ -80,7 +80,7 @@ $sektioner = [
             <li class="nav-divider">|</li>
             <li><a href="#">Udvalgte projekter</a></li>
             <li class="nav-divider">|</li>
-            <li><a href="index.php#kontakt">Kontakt</a></li>
+            <li><a href="index.php">Kontakt</a></li>
         </ul>
 
     </nav>
