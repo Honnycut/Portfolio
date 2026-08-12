@@ -2001,7 +2001,7 @@ h3, .card-title {
 
     .section-card-container {
       max-width: 650px;
-      padding: 2.2rem 2.5rem;
+      padding: 2.2rem 2rem;
     }
 
     .section-title {
@@ -2015,7 +2015,7 @@ h3, .card-title {
 
     .section-grid {
       grid-template-columns: repeat(2, 165px);
-      column-gap: 5rem;
+      column-gap: 4rem;
       row-gap: 2.5rem;
     }
 
@@ -2062,6 +2062,10 @@ h3, .card-title {
     .global-modal-desc {
       font-size: 13px;
       line-height: 1.7;
+      text-align: center !important;
+      max-width: 460px !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
     }
 
     .global-modal-close {
