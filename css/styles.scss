@@ -2272,7 +2272,7 @@ h3, .card-title {
       flex-direction: row !important;
       justify-content: space-between !important;
       align-items: center !important;
-      padding: 3rem 6rem 4rem 6rem !important;
+      padding: 2.5rem 4rem 3.5rem 4rem !important;
       box-sizing: border-box !important;
 
       .sub-hero-text {
@@ -2280,7 +2280,7 @@ h3, .card-title {
         flex: 1 !important;
 
         h1 {
-          font-size: 38px !important;
+          font-size: 36px !important;
           font-weight: 900 !important;
           letter-spacing: 3px !important;
           word-spacing: 10px !important;
@@ -2302,7 +2302,7 @@ h3, .card-title {
         flex: 1 !important;
 
         .sub-hero-img {
-          max-width: 360px !important;
+          max-width: 320px !important;
           width: 100% !important;
           height: auto !important;
           display: block !important;
@@ -2320,14 +2320,14 @@ h3, .card-title {
       max-width: 1280px !important;
       width: 100% !important;
       border-radius: 25px !important;
-      padding: 3rem 4rem !important;
+      padding: 2.5rem 3rem !important;
       box-sizing: border-box !important;
     }
 
     .section-grid {
       display: grid !important;
       grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
-      gap: 1.5rem !important;
+      gap: 1.25rem !important;
       justify-content: space-between !important;
       width: 100% !important;
 
