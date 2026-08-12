@@ -281,6 +281,27 @@ document.addEventListener("DOMContentLoaded", function () {
                 const desc = this.getAttribute("data-desc");
                 const imagesJson = this.getAttribute("data-images");
 
+                const normalizedTitle = (title || "").trim().toLowerCase();
+
+                if (globalModalGallery) {
+
+                    globalModalGallery.classList.remove(
+                        "gallery-stacked",
+                        "gallery-brochure"
+                    );
+
+                    if (
+                        normalizedTitle === "bmc" ||
+                        normalizedTitle === "user journey"
+                    ) {
+                        globalModalGallery.classList.add("gallery-stacked");
+                    }
+
+                    if (normalizedTitle === "re-design brochure") {
+                        globalModalGallery.classList.add("gallery-brochure");
+                    }
+                }
+
 
                 if (globalModalTitle) {
                     globalModalTitle.textContent = title || "";
