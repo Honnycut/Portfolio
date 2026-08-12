@@ -16,8 +16,8 @@ $statusMsg = "";
     <title>Pia's_Portfolio</title>
     
     <meta name="robots" content="All">
-    <meta name="author" content="Udgiver">
-    <meta name="copyright" content="Information om copyright">
+    <meta name="author" content="Pia Petersen">
+    <meta name="copyright" content="Pia Petersen">
     
     <link href="css/styles.css" rel="stylesheet" type="text/css">
 
