@@ -2626,10 +2626,16 @@ h3, .card-title {
 
     .sub-hero-layout {
       padding: 3rem 5rem 4rem !important;
+
+      h1{
+        font-size: 38px !important;
+
+
       .sub-hero-img-box {
         .sub-hero-img {
-          max-width: 350px !important;
+          max-width: 330px !important;
         }
+      }
       }
     }
   }
@@ -2685,17 +2691,18 @@ h3, .card-title {
 
   .sub-hero-header {
     .sub-hero-layout {
-      padding: 3.5rem 6rem 4.5rem !important;
+      padding: 3rem 5.5rem 4rem !important;
 
       .sub-hero-text {
         h1 {
-          font-size: 42px !important;
+          font-size: 40px !important;
         }
       }
 
       .sub-hero-img-box {
         .sub-hero-img {
-          max-width: 380px !important;
+          max-width: 350px !important;
+          transform: translateY(12px);
         }
       }
     }
@@ -2704,8 +2711,8 @@ h3, .card-title {
 
   .section-card-group {
     .section-card-container {
-      max-width: 1280px !important;
-      padding: 3rem 4rem !important;
+      max-width: 1320px !important;
+      padding: 3rem 3.5rem !important;
     }
 
     .section-title {
@@ -2713,7 +2720,7 @@ h3, .card-title {
     }
 
     .section-grid {
-      gap: 1.5rem !important;
+      gap: 1.75rem !important;
     }
   }
 
