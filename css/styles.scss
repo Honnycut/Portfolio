@@ -2140,7 +2140,7 @@ h3, .card-title {
   .global-modal-overlay {
 
     .global-modal-content {
-      max-width: 680px;
+      max-width: 640px;
       padding: 2.7rem 2.4rem;
     }
 
@@ -2164,6 +2164,10 @@ h3, .card-title {
     .global-modal-desc {
       font-size: 14px;
       line-height: 1.8;
+      text-align: center !important;
+      max-width: 520px !important;
+      margin-bottom: auto !important;
+      margin-right: auto !important;
     }
 
     .global-modal-close {
