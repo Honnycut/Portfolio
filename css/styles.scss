@@ -1913,7 +1913,7 @@ h3, .card-title {
 
     .section-grid {
       grid-template-columns: repeat(2, 145px);
-      column-gap: 4rem;
+      column-gap: 3rem;
       row-gap: 2.2rem;
     }
 
@@ -1959,6 +1959,10 @@ h3, .card-title {
     .global-modal-desc {
       font-size: 12.5px;
       line-height: 1.65;
+      text-align: center !important;
+      max-width: 350px !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
     }
 
     .global-modal-close {
