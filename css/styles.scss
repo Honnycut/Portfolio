@@ -1748,15 +1748,16 @@ h3, .card-title {
   position: fixed;
   bottom: 0;
   left: 0;
-  width: 100%;
+  right: 0;
+  width:auto;
   height: 75px;
-  background-color: #b3e6b5;
+  background-color: $secondary;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  padding: 0 5px;
+  padding: 0 8px;
   box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.05);
   z-index: 1000;
   box-sizing: border-box;
@@ -1768,21 +1769,39 @@ h3, .card-title {
     justify-content: center;
     text-decoration: none;
     color: #7d8b7d;
-    flex: 1;
+    flex: 1 1 0;
+    min-width: 0;
     text-align: center;
-    gap: 4px;
+    gap: 5px;
     transition: color 0.2s ease, transform 0.2s ease;
 
     i {
-      font-size: 1.8rem;
-      line-height: 1;
+      font-size: 38px;
+      line-height: 38px;
+      width: 38px;
+      height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nav-icon-img {
+      width: 38px;
+      height: 38px;
+      object-fit: contain;
+      display: block;
+      opacity: 0.55;
     }
 
     .nav-label {
-      font-size: 11px;
+      font-size: 10px;
       font-weight: 500;
-      line-height: 1.1;
-      max-width: 70px;
+      line-height: 1;
+      width: auto;
+      margin: 0;
+      max-width: 100%;
+      text-align: center;
+      white-space: nowrap;
     }
 
     &.active {
@@ -1790,6 +1809,11 @@ h3, .card-title {
 
       .nav-label {
         font-weight: 800;
+      }
+
+      .nav-icon-img {
+        opacity: 1;
+        filter: brightness(0);
       }
     }
 
@@ -2958,3 +2982,450 @@ h3, .card-title {
   }
 }
 
+/* ==========================================
+   UDVALGTE PROJEKTER - MOBILE FIRST
+========================================== */
+
+.selected-mobile-page {
+  width: 100%;
+  min-height: 100vh;
+  background: $bg-white;
+  padding-bottom: 110px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.selected-mobile-hero {
+  position: relative;
+  width: 100%;
+  min-height: 320px;
+  overflow: hidden;
+}
+
+.selected-mobile-hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.selected-mobile-hero #bubbleCanvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.selected-mobile-logo {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  z-index: 3;
+
+  img {
+    width: 34px;
+    height: auto;
+    display: block;
+  }
+}
+
+.selected-mobile-hero-content {
+  position: relative;
+  z-index: 2;
+  min-height: 320px;
+  padding: 70px 28px 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.selected-mobile-title {
+   margin-left: 20px;
+  font-size: 30px;
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.selected-mobile-hero-project-img {
+  width: 40%;
+  max-width: 140px;
+  height: auto;
+  object-fit: contain;
+  rotate: 9deg;
+  margin-right: 30px;
+}
+
+/* =========================
+   PROJEKTKORT
+========================= */
+
+.selected-mobile-project-section {
+  position: relative;
+  z-index: 3;
+  overflow: hidden;
+  height: 430px;
+  display: flex;
+  flex-direction: column;
+  background: $white;
+  border-radius: 18px 18px 0 0;
+  padding: 35px 0 22px;
+  margin-top: -20px;
+  box-sizing: border-box;
+}
+
+/* SPOTLESS */
+.project-theme-spotless {
+  --project-bubble-color: #0f2d52;
+}
+
+/* WAYBLY */
+.project-theme-waybly {
+  --project-bubble-color: #294d87;
+}
+
+/* SEMESTERPRØVE */
+.project-theme-semesterproeve {
+  --project-bubble-color: #79d88a;
+}
+
+/* Selve den vandrette slider */
+.selected-project-slider {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  flex: 1;
+  min-height: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  padding: 0 24px;
+}
+
+.selected-project-slider::-webkit-scrollbar {
+  display: none;
+}
+
+
+.selected-project-slide {
+  position: relative;
+  overflow: hidden;
+  flex: 0 0 58%;
+  height: 100%;
+  scroll-snap-align: start;
+  padding: 5px 20px;
+  border-right: 1px solid #555;
+  box-sizing: border-box;
+
+  h2 {
+    margin: 0 0 12px;
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.7;
+  }
+}
+
+/* SPOTLESS */
+.project-theme-spotless {
+  --project-bubble-color: #0f2d52;
+}
+
+/* WAYBLY */
+.project-theme-waybly {
+  --project-bubble-color: #294d87;
+}
+
+/* SEMESTERPRØVE */
+.project-theme-semesterproeve {
+  --project-bubble-color: #79d88a;
+}
+
+/* Selve den vandrette slider */
+.selected-project-slider {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  padding: 0 24px;
+}
+
+.selected-project-slider::-webkit-scrollbar {
+  display: none;
+}
+
+/* =========================
+   BOBLER I HVER SLIDE
+========================= */
+
+.selected-slide-bubbles {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.selected-slide-bubbles .project-bubble {
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  background: var(--project-bubble-color);
+  opacity: 0.08;
+}
+
+/* Stor boble */
+
+.selected-slide-bubbles .bubble-a {
+  width: 180px;
+  height: 180px;
+  top: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Lille boble */
+
+.selected-slide-bubbles .bubble-b {
+  width: 120px;
+  height: 120px;
+  top: 181px;
+  left: 60%;
+  transform: translateX(-50%);
+}
+
+.selected-slide-content{
+  position: relative;
+  z-index: 2;
+}
+
+/* Hvert tekstområde */
+.selected-project-slide {
+  position: relative;
+  overflow: hidden;
+  flex: 0 0 58%;
+  scroll-snap-align: start;
+  padding: 5px 20px;
+  border-right: 1px solid #555;
+  box-sizing: border-box;
+
+  h2 {
+    margin: 0 0 12px;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.7;
+  }
+}
+
+/* Ingen skillelinje efter sidste */
+.selected-project-slide:last-child {
+  border-right: 0;
+}
+
+.selected-mobile-skills {
+  line-height: 1.7 !important;
+}
+
+.selected-project-scroll-indicator {
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+  width: 140px;
+  height: 22px;
+  margin: 25px auto 0;
+  display: flex;
+  align-items: center;
+}
+
+.selected-project-scroll-line {
+  width: 100%;
+  height: 3px;
+  background: #333;
+  border-radius: 10px;
+}
+
+.selected-project-scroll-handle,
+.selected-mobile-gallery-slider .slider-handle{
+  position: absolute;
+  left: 0;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================
+   GALLERI - MOBILE FIRST
+========================= */
+
+.selected-mobile-gallery-label {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  background: transparent;
+  margin-top: 30px;
+  margin-bottom: -18px;
+
+  span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: $white;
+    border: 1px solid #555;
+    border-radius: 12px;
+    padding: 6px 16px;
+    font-size: 13px;
+    font-weight: 500;
+  }
+}
+
+.selected-mobile-gallery {
+  background: #efc4ea;
+  margin-top: 0;
+  padding: 38px 0 24px;
+  overflow: hidden;
+  border-radius: 15px 15px 15px 15px;
+}
+
+/* Billed-track */
+.selected-mobile-gallery-track {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  padding: 0 14px;
+}
+
+.selected-mobile-gallery-track::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hvert billede */
+.selected-mobile-gallery-item {
+  flex: 0 0 auto;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: transparent;
+  scroll-snap-align: start;
+
+  img {
+    display: block;
+    width: auto;
+    height: 180px;
+    object-fit: contain;
+  }
+}
+
+/* Slider */
+.selected-mobile-gallery-slider {
+  position: relative;
+  width: 145px;
+  height: 22px;
+  margin: 28px auto 0;
+  display: flex;
+  align-items: center;
+}
+
+.selected-mobile-gallery-slider .slider-line {
+  width: 100%;
+  height: 3px;
+  background: #333;
+  border-radius: 999px;
+}
+
+.selected-mobile-gallery-slider .slider-handle {
+  position: absolute;
+  left: 30%;
+  transform: translateX(-50%);
+  width: 22px;
+  height: 22px;
+  background: $white;
+  border-radius: 50%;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+}
+
+.selected-mobile-actions {
+  min-height: 120px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 22px 18px 40px;
+
+  background: $bg-white;
+  box-sizing: border-box;
+}
+
+.selected-mobile-login {
+  h2 {
+    margin: 0 0 5px;
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  p {
+    margin: 0;
+    font-size: 11px;
+    line-height: 1.5;
+  }
+}
+
+.selected-mobile-website-btn {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 82px;
+  height: 48px;
+  padding: 0 18px;
+  background-color: $black;
+  color: $white;
+  border-radius: 15px;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.22);
+  box-sizing: border-box;
+
+  &:visited,
+  &:hover,
+  &:focus,
+  &:active {
+    color: #fff;
+    text-decoration: none;
+  }
+}
