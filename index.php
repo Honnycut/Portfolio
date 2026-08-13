@@ -134,7 +134,7 @@ $statusMsg = "";
                     <h3 class="card-title">Spotless</h3>
                     <p class="card-desc-title">SaaS - Software as a Service</p>
                     <p class="card-desc">Opgaven gik ud på at transformere en manuel eller forældet proces til en forenklet, digital SaaS-løsning med fokus på øget brugervenlighed.</p>
-                    <a href="Spotless.php" class="btn-card d-lg-none">Se mere...</a>
+                    <a href="Udvalgte-projekter.php?project=spotless" class="btn-card d-lg-none">Se mere...</a>
                 </div>
 
                 <!-- Kort 2: Waybly -->
@@ -145,7 +145,7 @@ $statusMsg = "";
                     <h3 class="card-title">Waybly</h3>
                     <p class="card-desc-title">UX & Tilgængelighed</p>
                     <p class="card-desc">Et projekt med fokus på User Experience og tilgængeligt design, hvor brugerbehov og kontekst var drivkraften bag den endelige digitale løsning.</p>
-                    <a href="Waybly.php" class="btn-card d-lg-none">Se mere...</a>
+                    <a href="Udvalgte-projekter.php?project=waybly" class="btn-card d-lg-none">Se mere...</a>
                 </div>
 
                 <!-- Kort 3: Semesterprøve -->
@@ -156,7 +156,7 @@ $statusMsg = "";
                     <h3 class="card-title">2. Semesterprøve</h3>
                     <p class="card-desc-title">Førstehjælpseksperten</p>
                     <p class="card-desc">Et tværfagligt projekt med fokus på helstøbte digitale løsninger. Opgaven kombinerede pensum fra 1. og 2. semester inden for UI-design, UX-research, indholdscreation, frontend og backend.</p>
-                    <a href="Semesterproeve.php" class="btn-card d-lg-none">Se mere...</a>
+                    <a href="Udvalgte-projekter.php?project=semesterproeve" class="btn-card d-lg-none">Se mere...</a>
                 </div>
             </div>
         </div>
