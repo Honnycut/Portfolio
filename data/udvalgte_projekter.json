@@ -25,19 +25,23 @@
 
       "gallery": [
         {
-          "src": "img/spotless/spot-1.png",
+          "src": "img/billeder/spot-5.png",
+          "alt": "Spotless logo"
+        },
+        {
+          "src": "img/billeder/spot-1.png",
           "alt": "Spotless skitse"
         },
         {
-          "src": "img/spotless/spot-2.png",
+          "src": "img/billeder/spot-2.png",
           "alt": "Spotless wireframe"
         },
         {
-          "src": "img/spotless/spot-3.png",
+          "src": "img/billeder/spot-3.png",
           "alt": "Spotless prototype"
         },
         {
-          "src": "img/spotless/spot-4.png",
+          "src": "img/billeder/spot-4.png",
           "alt": "Spotless prototype"
         }
       ],
@@ -91,19 +95,23 @@
 
       "gallery": [
         {
-          "src": "img/waybly/way-1.png",
+          "src": "img/billeder/way-5.png",
+          "alt": "Waybly logo"
+        },
+        {
+          "src": "img/billeder/way-1.png",
           "alt": "Waybly persona"
         },
         {
-          "src": "img/waybly/way-2.png",
+          "src": "img/billeder/way-2.png",
           "alt": "Waybly user journey"
         },
         {
-          "src": "img/waybly/way-3.png",
+          "src": "img/billeder/way-3.png",
           "alt": "Waybly moodboard"
         },
         {
-          "src": "img/waybly/way-4.png",
+          "src": "img/billeder/way-4.png",
           "alt": "Waybly prototype"
         }
       ],
@@ -129,7 +137,8 @@
     },
     {
       "slug": "semesterproeve",
-      "title": "Semesterprøve",
+      "title": "Semester prøve",
+
       "subtitle": "Førstehjælpseksperten",
 
       "hero": {
@@ -152,23 +161,27 @@
 
       "gallery": [
         {
-          "src": "img/semesterproeve/first-1.png",
-          "alt": "Semesterprøve færdig løsning"
+          "src": "img/billeder/first-6.png",
+          "alt": "Semesterprøve logo"
         },
         {
-          "src": "img/semesterproeve/first-2.png",
+          "src": "img/billeder/first-1.png",
+          "alt": "Semesterprøve logo"
+        },
+        {
+          "src": "img/billeder/first-2.png",
           "alt": "Semesterprøve design"
         },
         {
-          "src": "img/semesterproeve/first-3.png",
+          "src": "img/billeder/first-3.png",
           "alt": "Semesterprøve storyboard"
         },
         {
-          "src": "img/semesterproeve/first-4.png",
+          "src": "img/billeder/first-4.png",
           "alt": "Semesterprøve tiktok"
         },
         {
-          "src": "img/semesterproeve/first-5.png",
+          "src": "img/billeder/first-5.png",
           "alt": "Semesterprøve instagram"
         }
       ],
