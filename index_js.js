@@ -187,7 +187,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const bubbles = [];
 
     // GRØNNE BOBLER -> LIGGER PÅ DET LILLA FELT (VENSTRE SIDE)
-    const greenSizes = [45, 60, 80, 50, 110];
+    const greenSizes = [25, 40, 60, 30, 70];
     greenSizes.forEach(size => {
         let x = Math.random() * (canvas.width / 2 - size * 2) + size;
         let y = Math.random() * (canvas.height - size * 2) + size;
@@ -195,7 +195,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // LILLA BOBLER -> LIGGER PÅ DET GRØNNE FELT (HØJRE SIDE)
-    const purpleSizes = [50, 70, 90, 55, 120];
+    const purpleSizes = [35, 50, 70, 30, 80];
     purpleSizes.forEach(size => {
         let x = Math.random() * (canvas.width / 2 - size * 2) + canvas.width / 2 + size;
         let y = Math.random() * (canvas.height - size * 2) + size;
