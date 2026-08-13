@@ -554,3 +554,49 @@ document.addEventListener("DOMContentLoaded", function () {
     );
 
 });
+
+function connectScrollIndicator(trackSelector, handleSelector) {
+    const track = document.querySelector(trackSelector);
+    const handle = document.querySelector(handleSelector);
+
+    if (!track || !handle) return;
+
+    const updateHandle = () => {
+        const maxScroll = track.scrollWidth - track.clientWidth;
+
+        if (maxScroll <= 0) {
+            handle.style.left = "0%";
+            return;
+        }
+
+        const scrollProgress = track.scrollLeft / maxScroll;
+
+        const indicator = handle.parentElement;
+        const indicatorWidth = indicator.clientWidth;
+        const handleWidth = handle.offsetWidth;
+
+        const maxHandleMove = indicatorWidth - handleWidth;
+
+        handle.style.left = `${scrollProgress * maxHandleMove}px`;
+    };
+
+    track.addEventListener("scroll", updateHandle);
+
+    window.addEventListener("resize", updateHandle);
+
+    updateHandle();
+}
+
+
+/* Projekt-slider */
+connectScrollIndicator(
+    ".selected-project-slider",
+    ".selected-project-scroll-handle"
+);
+
+
+/* Galleri-slider */
+connectScrollIndicator(
+    ".selected-mobile-gallery-track",
+    ".selected-mobile-gallery-slider .slider-handle"
+);
