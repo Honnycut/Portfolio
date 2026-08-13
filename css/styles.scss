@@ -3082,21 +3082,6 @@ h3, .card-title {
   box-sizing: border-box;
 }
 
-/* SPOTLESS */
-.project-theme-spotless {
-  --project-bubble-color: #0f2d52;
-}
-
-/* WAYBLY */
-.project-theme-waybly {
-  --project-bubble-color: #294d87;
-}
-
-/* SEMESTERPRØVE */
-.project-theme-semesterproeve {
-  --project-bubble-color: #79d88a;
-}
-
 /* Selve den vandrette slider */
 .selected-project-slider {
   position: relative;
@@ -3118,11 +3103,12 @@ h3, .card-title {
 }
 
 
+/* Hvert tekstområde */
 .selected-project-slide {
   position: relative;
   overflow: hidden;
-  flex: 0 0 58%;
   height: 100%;
+  flex: 0 0 58%;
   scroll-snap-align: start;
   padding: 5px 20px;
   border-right: 1px solid #555;
@@ -3130,7 +3116,7 @@ h3, .card-title {
 
   h2 {
     margin: 0 0 12px;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 700;
   }
 
@@ -3219,29 +3205,7 @@ h3, .card-title {
   z-index: 2;
 }
 
-/* Hvert tekstområde */
-.selected-project-slide {
-  position: relative;
-  overflow: hidden;
-  flex: 0 0 58%;
-  scroll-snap-align: start;
-  padding: 5px 20px;
-  border-right: 1px solid #555;
-  box-sizing: border-box;
 
-  h2 {
-    margin: 0 0 12px;
-    font-size: 16px;
-    font-weight: 700;
-  }
-
-  p {
-    margin: 0;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1.7;
-  }
-}
 
 /* Ingen skillelinje efter sidste */
 .selected-project-slide:last-child {
@@ -3427,5 +3391,128 @@ h3, .card-title {
   &:active {
     color: #fff;
     text-decoration: none;
+  }
+}
+
+@include media-breakpoint-up(sm){
+
+  .selected-mobile-hero{
+    min-height: 350px;
+  }
+
+  .selected-mobile-hero-content{
+    min-height: 350px;
+    padding: 75px 40px 40px;
+  }
+
+  .selected-mobile-title{
+    margin-left: 25px;
+    font-size: 34px;
+  }
+
+  .selected-mobile-hero-project-img{
+    width: 38%;
+    max-width: 155px;
+    margin-right: 40px;
+  }
+
+
+  .selected-mobile-project-section{
+    height: 445px;
+    padding-top: 38px;
+    padding-bottom: 24px;
+    margin-top: -22px;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .selected-project-slider{
+    padding: 28px 28px;
+  }
+
+  .selected-project-slide{
+    flex-basis: 56%;
+    padding: 5px 24px;
+
+    h2 {
+      font-size: 16px;
+    }
+
+    p {
+      font-size: 13px;
+      line-height: 1.65;
+    }
+  }
+
+  .selected-slide-bubbles .bubble-a{
+    width: 190px;
+    height: 190px;
+
+    top: 5px;
+  }
+
+  .selected-slide-bubbles .bubble-b{
+    width: 125px;
+    height: 125px;
+    top: 190px;
+    left: 60%;
+  }
+
+  .selected-project-scroll-indicator{
+    width: 155px;
+    margin-top: 26px;
+  }
+
+  .selected-mobile-gallery-label{
+    margin-top: 32px;
+    margin-bottom: -18px;
+
+    span {
+      font-size: 14px;
+      padding: 7px 18px;
+    }
+  }
+
+  .selected-mobile-gallery{
+    padding: 42px 0 26px;
+  }
+
+  .selected-mobile-gallery-track{
+    gap: 16px;
+    padding: 0 20px;
+  }
+
+  .selected-mobile-gallery-item{
+    img {
+      height: 170px;
+    }
+  }
+
+  .selected-mobile-gallery-slider{
+    width: 155px;
+    margin-top: 30px;
+  }
+
+  .selected-mobile-actions{
+    min-height: 130px;
+
+    padding: 24px 24px 42px;
+  }
+
+  .selected-mobile-login{
+
+    h2 {
+      font-size: 14px;
+    }
+
+    p {
+      font-size: 12px;
+    }
+  }
+
+  .selected-mobile-website-btn{
+    min-width: 90px;
+    height: 50px;
+    padding: 0 20px;
+    font-size: 14px;
   }
 }
