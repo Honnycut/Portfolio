@@ -19,7 +19,7 @@
       "content": {
         "projekt": "Udvikling af Spotless, en digital SaaS-løsning til registrering og dokumentation af rengøring på toiletter med fokus på overblik, hygiejne og brugervenlighed.",
         "proces": "Vi arbejdede med idéudvikling, målgruppeanalyse, personaer, moodboard, Figma-prototype og brugertest samt udvikling med HTML, SCSS, Bootstrap, PHP og database.",
-        "resultat": "En moderne og overskuelig løsning, hvor rengøring nemt kan registreres digitalt, og både personale og gæster kan se den seneste rengøring.",
+        "resultat": "En moderne og overskuelig løsning, hvor rengøring nemt kan registreres digitalt, og både personale og gæster kan se den seneste rengøring og den er gjort responsiv til mobil/tablet.",
         "rolle": "Jeg stod for udviklingen af kontakt modal (popup for kontaktknap), samt at opsætte og style rengøringslisten på forsiden, som jeg satte op til at samarbejde med databasen, så når man som medarbejder opdateret rengøringen, så opdateret det listen på forsiden. Løsningen er gjort responsiv til mobil/tablet."
       },
 
@@ -60,7 +60,7 @@
 
       "website": {
         "show": true,
-        "url": "https://https://honnycut.dk/Spotless-main/index.php",
+        "url": "https://honnycut.dk/Spotless-main/index.php",
         "label": "Website"
       },
 
