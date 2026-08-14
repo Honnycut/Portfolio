@@ -211,6 +211,274 @@ document.addEventListener("DOMContentLoaded", function () {
     animate();
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+
+    const canvas = document.getElementById("selectedDesktopBubbleCanvas");
+
+    // Hvis canvas ikke findes på siden, gør vi ingenting
+    if (!canvas) return;
+
+    const ctx = canvas.getContext("2d");
+
+    function resizeCanvas() {
+        const hero = canvas.parentElement;
+
+        canvas.width = hero.clientWidth;
+        canvas.height = hero.clientHeight;
+    }
+
+    resizeCanvas();
+    window.addEventListener("resize", resizeCanvas);
+
+
+    const colorGreen = "rgba(177, 249, 172, 0.22)";
+    const colorPurple = "rgba(241, 170, 223, 0.22)";
+
+
+    class DesktopBubble {
+
+        constructor(x, y, radius, color, isLeftZone) {
+            this.x = x;
+            this.y = y;
+            this.radius = radius;
+            this.color = color;
+            this.isLeftZone = isLeftZone;
+
+            this.vx = (Math.random() - 0.5) * 0.3;
+            this.vy = (Math.random() - 0.5) * 0.3;
+        }
+
+
+        draw() {
+            ctx.beginPath();
+
+            ctx.arc(
+                this.x,
+                this.y,
+                this.radius,
+                0,
+                Math.PI * 2
+            );
+
+            ctx.fillStyle = this.color;
+            ctx.fill();
+
+            ctx.closePath();
+        }
+
+
+        update(bubbles) {
+
+            this.x += this.vx;
+            this.y += this.vy;
+
+
+            /* TOP + BUND */
+
+            if (
+                this.y - this.radius < 0 ||
+                this.y + this.radius > canvas.height
+            ) {
+                this.vy *= -1;
+            }
+
+
+            /* VENSTRE / HØJRE ZONE */
+
+            const midX = canvas.width / 2;
+
+
+            if (this.isLeftZone) {
+
+                if (this.x - this.radius < 0) {
+                    this.x = this.radius;
+                    this.vx *= -1;
+                }
+
+                if (this.x + this.radius > midX) {
+                    this.x = midX - this.radius;
+                    this.vx *= -1;
+                }
+
+            } else {
+
+                if (this.x - this.radius < midX) {
+                    this.x = midX + this.radius;
+                    this.vx *= -1;
+                }
+
+                if (this.x + this.radius > canvas.width) {
+                    this.x = canvas.width - this.radius;
+                    this.vx *= -1;
+                }
+            }
+
+
+            /* KOLLISION MELLEM BOBLER */
+
+            for (const other of bubbles) {
+
+                if (other === this) continue;
+
+                const dx = other.x - this.x;
+                const dy = other.y - this.y;
+
+                const distance = Math.sqrt(
+                    dx * dx + dy * dy
+                );
+
+                const minDistance =
+                    this.radius + other.radius;
+
+
+                if (
+                    distance < minDistance &&
+                    distance > 0
+                ) {
+
+                    const angle =
+                        Math.atan2(dy, dx);
+
+                    const targetX =
+                        this.x +
+                        Math.cos(angle) * minDistance;
+
+                    const targetY =
+                        this.y +
+                        Math.sin(angle) * minDistance;
+
+                    const ax =
+                        (targetX - other.x) * 0.01;
+
+                    const ay =
+                        (targetY - other.y) * 0.01;
+
+                    this.vx -= ax;
+                    this.vy -= ay;
+
+                    other.vx += ax;
+                    other.vy += ay;
+                }
+            }
+
+
+            /* MAX HASTIGHED */
+
+            const maxSpeed = 0.5;
+
+            const speed = Math.sqrt(
+                this.vx * this.vx +
+                this.vy * this.vy
+            );
+
+            if (speed > maxSpeed) {
+
+                this.vx =
+                    (this.vx / speed) * maxSpeed;
+
+                this.vy =
+                    (this.vy / speed) * maxSpeed;
+            }
+
+
+            this.draw();
+        }
+    }
+
+
+    const bubbles = [];
+
+
+    /* GRØNNE BOBLER - VENSTRE SIDE */
+
+    const greenSizes = [
+        40,
+        60,
+        30,
+        70
+    ];
+
+    greenSizes.forEach(size => {
+
+        const x =
+            Math.random() *
+            (canvas.width / 2 - size * 2) +
+            size;
+
+        const y =
+            Math.random() *
+            (canvas.height - size * 2) +
+            size;
+
+        bubbles.push(
+            new DesktopBubble(
+                x,
+                y,
+                size,
+                colorGreen,
+                true
+            )
+        );
+    });
+
+
+    /* LILLA BOBLER - HØJRE SIDE */
+
+    const purpleSizes = [
+        50,
+        70,
+        30,
+        80
+    ];
+
+    purpleSizes.forEach(size => {
+
+        const x =
+            Math.random() *
+            (canvas.width / 2 - size * 2) +
+            canvas.width / 2 +
+            size;
+
+        const y =
+            Math.random() *
+            (canvas.height - size * 2) +
+            size;
+
+        bubbles.push(
+            new DesktopBubble(
+                x,
+                y,
+                size,
+                colorPurple,
+                false
+            )
+        );
+    });
+
+
+    function animateDesktopBubbles() {
+
+        ctx.clearRect(
+            0,
+            0,
+            canvas.width,
+            canvas.height
+        );
+
+        bubbles.forEach(bubble => {
+            bubble.update(bubbles);
+        });
+
+        requestAnimationFrame(
+            animateDesktopBubbles
+        );
+    }
+
+
+    animateDesktopBubbles();
+
+});
+
 function toggleAbout() {
     const moreText = document.getElementById("moreText");
     const btnText = document.getElementById("btnText");
@@ -600,3 +868,97 @@ connectScrollIndicator(
     ".selected-mobile-gallery-track",
     ".selected-mobile-gallery-slider .slider-handle"
 );
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    const initialActiveCard = document.querySelector(
+        '.selected-desktop-project-card.active'
+    );
+
+    if (initialActiveCard) {
+        const initialProject = initialActiveCard.dataset.projectCard;
+        document.body.classList.add(`theme-${initialProject}`);
+    }
+
+    const desktopTabs = document.querySelectorAll('.selected-desktop-tab');
+    const desktopCards = document.querySelectorAll('.selected-desktop-project-card');
+
+
+    function updateDesktopCardStack() {
+
+        const activeCard = document.querySelector(
+            '.selected-desktop-project-card.active'
+        );
+
+        if (!activeCard) return;
+
+
+        // Fjern gamle stack-klasser
+        desktopCards.forEach(card => {
+            card.classList.remove('stack-1', 'stack-2');
+        });
+
+
+        // Find de to kort, som IKKE er aktive
+        const inactiveCards = [...desktopCards].filter(
+            card => card !== activeCard
+        );
+
+
+        // Første kort bagved
+        if (inactiveCards[0]) {
+            inactiveCards[0].classList.add('stack-1');
+        }
+
+
+        // Andet kort bagved
+        if (inactiveCards[1]) {
+            inactiveCards[1].classList.add('stack-2');
+        }
+    }
+
+
+    desktopTabs.forEach(tab => {
+
+        tab.addEventListener('click', () => {
+
+            const project = tab.dataset.project;
+
+
+            desktopTabs.forEach(item => {
+                item.classList.remove('active');
+            });
+
+
+            desktopCards.forEach(card => {
+                card.classList.remove('active');
+            });
+
+
+            tab.classList.add('active');
+
+
+            document
+                .querySelector(`[data-project-card="${project}"]`)
+                ?.classList.add('active');
+
+            document.body.classList.remove(
+                'theme-spotless',
+                'theme-waybly',
+                'theme-semesterproeve'
+            );
+
+            document.body.classList.add(`theme-${project}`);
+
+            // Omarrangér kortene efter klik
+            updateDesktopCardStack();
+        });
+
+    });
+
+
+    // VIGTIGT:
+    // Lav stacken med det samme siden indlæses
+    updateDesktopCardStack();
+
+});
