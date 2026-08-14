@@ -11,7 +11,7 @@
       },
 
       "logo": {
-        "src": "img/logo/logo_blue.png",
+        "src": "img/logo/logo_white.png",
         "alt": "Spotless logo",
         "class": "dark-blue-bg"
       },
@@ -30,19 +30,23 @@
         },
         {
           "src": "img/billeder/spot-1.png",
-          "alt": "Spotless skitse"
-        },
-        {
-          "src": "img/billeder/spot-2.png",
-          "alt": "Spotless wireframe"
+          "alt": "Spotless mindmap",
+          "label": "Mindmap"
         },
         {
           "src": "img/billeder/spot-3.png",
-          "alt": "Spotless prototype"
+          "alt": "Spotless wireframe",
+          "label": "Udarbejdelse af krav til user interface"
+        },
+        {
+          "src": "img/billeder/spot-2.png",
+          "alt": "Spotless data",
+          "label": "Skitsering af tabel til database"
         },
         {
           "src": "img/billeder/spot-4.png",
-          "alt": "Spotless prototype"
+          "alt": "Spotless prototype",
+          "label": "Figma prototype"
         }
       ],
 
@@ -100,19 +104,23 @@
         },
         {
           "src": "img/billeder/way-1.png",
-          "alt": "Waybly persona"
+          "alt": "Waybly persona",
+          "label": "Persona"
         },
         {
           "src": "img/billeder/way-2.png",
-          "alt": "Waybly user journey"
+          "alt": "Waybly user journey",
+          "label": "User journey"
         },
         {
           "src": "img/billeder/way-3.png",
-          "alt": "Waybly moodboard"
+          "alt": "Waybly moodboard",
+          "label": "Moodboard"
         },
         {
           "src": "img/billeder/way-4.png",
-          "alt": "Waybly prototype"
+          "alt": "Waybly prototype",
+          "label": "Figma Prototype"
         }
       ],
 
@@ -166,23 +174,28 @@
         },
         {
           "src": "img/billeder/first-1.png",
-          "alt": "Semesterprøve logo"
+          "alt": "Semesterprøve mobil",
+          "label": "Mobil Prototype"
         },
         {
           "src": "img/billeder/first-2.png",
-          "alt": "Semesterprøve design"
+          "alt": "Semesterprøve desktop",
+          "label": "Desktop Prototype"
         },
         {
           "src": "img/billeder/first-3.png",
-          "alt": "Semesterprøve storyboard"
+          "alt": "Semesterprøve storyboard",
+          "label": "Storyboard"
         },
         {
           "src": "img/billeder/first-4.png",
-          "alt": "Semesterprøve tiktok"
+          "alt": "Semesterprøve tiktok",
+          "label": "Opslag TikTok"
         },
         {
           "src": "img/billeder/first-5.png",
-          "alt": "Semesterprøve instagram"
+          "alt": "Semesterprøve instagram",
+          "label": "Opslag Instagram"
         }
       ],
 
