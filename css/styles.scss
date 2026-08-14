@@ -3643,3 +3643,119 @@ h3, .card-title {
     font-size: 14px;
   }
 }
+
+@include media-breakpoint-up(mg) {
+
+  .selected-mobile-hero{
+    min-height: 430px;
+  }
+
+  .selected-mobile-hero-content{
+    min-height: 435px;
+    padding: 85px 110px 55px;
+    justify-content: center;
+    gap: 115px;
+  }
+
+  .selected-mobile-title {
+    margin: 0;
+    font-size: 38px;
+    line-height: 1.15;
+    flex: 0 0 auto;
+  }
+
+  .selected-mobile-hero-project-img{
+    width: 200px;
+    max-width: 175px;
+    max-height: 230px;
+    margin: 0;
+   object-fit: contain;
+  }
+
+  .hero-theme-semesterproeve {
+    .selected-mobile-title {
+      width: 190px;
+    }
+  }
+
+  .selected-mobile-project-section{
+    height: 420px;
+    padding: 40px 0 24px;
+    margin-top: -24px;
+    border-radius: 24px 24px 0 0;
+  }
+
+  .selected-project-slider{
+    padding: 0 34px;
+  }
+
+  .selected-project-slide{
+    flex-basis: 44%;
+    padding: 8px 30px;
+
+    h2 {
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 1.65;
+    }
+  }
+
+  .selected-slide-bubbles .bubble-a{
+    width: 200px;
+    height: 200px;
+  }
+
+  .selected-slide-bubbles .bubble-b{
+    width: 107px;
+    height: 107px;
+    top: 191px;
+    margin-left: 10%;
+  }
+
+  .selected-project-scroll-indicator{
+    width: 180px;
+  }
+
+  .selected-mobile-gallery{
+    padding: 42px 0 28px;
+  }
+
+  .selected-mobile-gallery-track{
+    gap: 18px;
+    padding: 0 20px;
+  }
+
+  .selected-mobile-gallery-item img{
+    height: 180px;
+  }
+
+  .selected-mobile-gallery-slider{
+    width: 170px;
+    margin-top: 30px;
+  }
+
+  .selected-mobile-actions{
+    min-height: 145px;
+    padding: 26px 34px 44px;
+  }
+
+  .selected-mobile-login{
+
+    h2 {
+      font-size: 14px;
+    }
+
+    p {
+      font-size: 12px;
+    }
+  }
+
+  .selected-mobile-website-btn{
+    min-width: 90px;
+    height: 50px;
+    font-size: 14px;
+  }
+}
