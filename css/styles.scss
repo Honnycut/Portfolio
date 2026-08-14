@@ -4312,3 +4312,316 @@ h3, .card-title {
   }
 
 }
+
+/* =========================================
+   XL DESKTOP – 1200px og op
+========================================= */
+
+@include media-breakpoint-up(xl){
+
+
+  .selected-desktop-hero {
+    height: 300px;
+  }
+
+  .selected-desktop-hero h1 {
+    left: 20%;
+    font-size: 28px;
+  }
+
+  .selected-desktop-hero-images {
+    right: 17%;
+  }
+
+  .selected-desktop-hero-images img {
+    width: 180px;
+  }
+
+
+  /* OMRÅDET UNDER HERO */
+  .selected-desktop-projects {
+    padding: 90px 0 45px;
+  }
+
+
+  /* TABS */
+  .selected-desktop-tabs {
+    width: 92%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+
+  /* KORT */
+  .selected-desktop-card-stack {
+    width: 92%;
+    max-width: 1200px;
+    height: 740px;
+    margin: 0 auto;
+  }
+
+  .selected-desktop-project-card {
+    padding: 34px 38px 28px;
+  }
+
+
+  /* VENSTRE SIDE */
+  .selected-desktop-card-media {
+    width: 42%;
+  }
+
+
+  /* HØJRE SIDE */
+  .selected-desktop-card-content {
+    width: 90%;
+    max-width: 540px;
+    transform: translateY(-19px);
+  }
+
+  .selected-desktop-card-content::before {
+    left: -20px !important;
+    right: auto !important;
+  }
+
+  .selected-desktop-card-content::after {
+    left: 160px !important;
+    right: auto !important;
+  }
+
+  .selected-desktop-text-bubble {
+    left: 190px !important;
+    right: auto !important;
+  }
+
+  .selected-desktop-text-block {
+    padding-left: 15px;
+  }
+
+  .selected-desktop-text-block h3 {
+    font-size: 18px;
+    margin: 20px 0 9px;
+  }
+
+  .selected-desktop-text-block p {
+    font-size: 12px;
+    line-height: 1.65;
+  }
+
+  .selected-desktop-login {
+    font-size: 10px;
+  }
+
+  .selected-desktop-website-btn {
+    font-size: 11px;
+  }
+
+  .selected-desktop-main-image {
+    width: 220px;
+    height: 170px;
+  }
+
+  .selected-desktop-main-image img {
+    width: 80%;
+    height: 80%;
+  }
+
+  .selected-desktop-logo-label {
+    width: 230px;
+  }
+
+  .selected-desktop-gallery-row {
+    grid-template-columns: 175px 1fr;
+    gap: 22px;
+  }
+
+  .selected-desktop-gallery-row img {
+    width: 165px;
+    height: 100px;
+  }
+}
+
+@include media-breakpoint-up(xxl) {
+
+  // KORT
+  .selected-desktop-project-card {
+    max-width: 1200px;
+  }
+
+  // HØJRE SIDE / TEKST
+  .selected-desktop-card-content {
+    max-width: 590px;
+  }
+
+  // OVERSKRIFTER
+  .selected-desktop-text-block h3 {
+    font-size: 20px;
+    margin: 20px 0 9px;
+  }
+
+  // BRØDTEKST
+  .selected-desktop-text-block p {
+    font-size: 13px;
+    line-height: 1.65;
+  }
+
+  // STORT LOGO
+  .selected-desktop-main-image {
+    width: 240px;
+    height: 185px;
+
+    img {
+      width: 80%;
+      height: 80%;
+    }
+  }
+
+  // TEKST UNDER LOGO
+  .selected-desktop-logo-label {
+    width: 250px;
+  }
+
+  // GALLERI
+  .selected-desktop-gallery-row {
+    grid-template-columns: 185px 1fr;
+    gap: 24px;
+
+    img {
+      width: 175px;
+      height: 105px;
+    }
+  }
+
+  // STOR ØVERSTE BOBLE
+  .selected-desktop-card-content::before {
+    width: 290px;
+    height: 290px;
+    left: -25px !important;
+    right: auto !important;
+  }
+
+  // MELLEMSTE BOBLE
+  .selected-desktop-card-content::after {
+    width: 190px;
+    height: 190px;
+    left: 190px !important;
+    right: auto !important;
+  }
+
+  // NEDERSTE BOBLE
+  .selected-desktop-text-bubble {
+    width: 150px;
+    height: 150px;
+    left: 225px !important;
+    right: auto !important;
+    top: 423px;
+  }
+
+  // WEBSITE + LOGIN
+  .selected-desktop-login {
+    font-size: 10px;
+  }
+
+  .selected-desktop-website-btn {
+    font-size: 11px;
+  }
+}
+
+@include media-breakpoint-up(xxxl) {
+
+  .selected-desktop-card-stack {
+    height: 890px;
+  }
+
+  // SELVE KORTET
+  .selected-desktop-project-card {
+    max-width: 1450px;
+    height: 900px;
+  }
+
+  .selected-desktop-hero {
+    height: 360px;
+  }
+
+  .selected-desktop-hero-bg {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  // HØJRE TEKSTSIDE
+  .selected-desktop-card-content {
+    max-width: 700px;
+  }
+
+  // TEKST
+  .selected-desktop-text-block h3 {
+    font-size: 24px;
+    margin: 24px 0 10px;
+  }
+
+  .selected-desktop-text-block p {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  // STORT LOGO
+  .selected-desktop-main-image {
+    width: 300px;
+    height: 230px;
+
+    img {
+      width: 80%;
+      height: 80%;
+    }
+  }
+
+  .selected-desktop-logo-label {
+    width: 300px;
+    font-size: 13px;
+  }
+
+  // GALLERI
+  .selected-desktop-gallery-row {
+    grid-template-columns: 220px 1fr;
+    gap: 28px;
+
+    img {
+      width: 205px;
+      height: 125px;
+    }
+  }
+
+  .selected-desktop-gallery-caption {
+    font-size: 13px;
+  }
+
+  // BOBLER
+  .selected-desktop-card-content::before {
+    width: 330px;
+    height: 330px;
+    left: -10px !important;
+    right: auto !important;
+  }
+
+  .selected-desktop-card-content::after {
+    width: 200px;
+    height: 200px;
+    left: 263px !important;
+    right: auto !important;
+  }
+
+  .selected-desktop-text-bubble {
+    width: 180px;
+    height: 180px;
+    left: 210px !important;
+    right: auto !important;
+  }
+
+  // KNAP + LOGIN
+  .selected-desktop-website-btn {
+    font-size: 13px;
+  }
+
+  .selected-desktop-login {
+    font-size: 12px;
+  }
+}
