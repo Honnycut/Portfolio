@@ -51,7 +51,7 @@ if (!$currentProject) {
     <!-- =========================
          1. HERO
     ========================== -->
-    <section class="selected-mobile-hero">
+    <section class="selected-mobile-hero hero-theme-<?= htmlspecialchars($currentProject['slug']) ?>">
 
         <img
                 src="img/billeder/hero_img.png"
@@ -273,6 +273,239 @@ if (!$currentProject) {
     </section>
 
 </main>
+
+<!-- ==============
+        Desktop
+     ============== -->
+
+<section class="selected-desktop-page">
+
+    <nav class="sub-navbar">
+
+        <div class="sub-logo">
+            <a href="index.php" aria-label="gå til forside">
+                <img src="img/logo/PP-logo.png" alt="PP logo">
+            </a>
+        </div>
+
+        <ul class="desktop-nav-links">
+
+            <li>
+                <a href="index.php">Forside</a>
+            </li>
+
+            <li class="nav-divider">|</li>
+
+            <li>
+                <a href="Andre-projekter.php">Andre projekter</a>
+            </li>
+
+            <li class="nav-divider">|</li>
+
+            <li>
+                <a href="Udvalgte-projekter.php" class="active">
+                    Udvalgte projekter
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+    <section class="selected-desktop-hero">
+
+        <img src="img/billeder/hero_img.png" alt="" class="selected-desktop-hero-bg">
+
+        <canvas id="selectedDesktopBubbleCanvas"></canvas>
+
+        <h1>Udvalgte projekter</h1>
+
+        <div class="selected-desktop-hero-images">
+            <img src="img/billeder/hero1.png" alt="Spotless, Waybly og Semesterprøve">
+        </div>
+
+    </section>
+
+
+    <section class="selected-desktop-projects">
+        <div class="selected-desktop-tabs">
+
+            <?php foreach ($projects as $index => $project): ?>
+
+                <button type="button" class="selected-desktop-tab <?= $index === 0 ? 'active' : '' ?>" data-project="<?= htmlspecialchars($project['slug']) ?>">
+                    <?= htmlspecialchars($project['title']) ?>
+                </button>
+
+            <?php endforeach; ?>
+        </div>
+
+
+        <div class="selected-desktop-card-stack">
+
+            <?php foreach ($projects as $index => $project): ?>
+
+                <article
+                        class="selected-desktop-project-card <?= $index === 0 ? 'active' : '' ?>"
+                        data-project-card="<?= htmlspecialchars($project['slug']) ?>"
+                >
+
+                    <div class="selected-desktop-card-inner">
+                        <!-- VENSTRE SIDE -->
+                        <div class="selected-desktop-card-gallery">
+
+                            <div class="selected-desktop-main-image <?= htmlspecialchars($project['logo']['class']) ?>">
+                                <img
+                                        src="<?= htmlspecialchars($project['logo']['src']) ?>"
+                                        alt="<?= htmlspecialchars($project['logo']['alt']) ?>"
+                                >
+                            </div>
+
+                            <span class="selected-desktop-logo-label">Logo</span>
+
+                            <?php $desktopGallery = array_slice($project['gallery'], 1); ?>
+
+                            <?php foreach ($desktopGallery as $galleryIndex => $galleryImage): ?>
+
+                                <div class="selected-desktop-gallery-row
+                                    <?= $project['slug'] === 'semesterproeve'
+                                    && $galleryIndex >= count($desktopGallery) - 2
+                                        ? 'semester-bottom-image'
+                                        : '' ?>">
+
+                                    <img
+                                            src="<?= htmlspecialchars($galleryImage['src']) ?>"
+                                            alt="<?= htmlspecialchars($galleryImage['alt']) ?>"
+                                    >
+
+                                    <span class="selected-desktop-gallery-caption">
+                <?= htmlspecialchars($galleryImage['label']) ?>
+            </span>
+
+                                </div>
+
+                            <?php endforeach; ?>
+
+                        </div>
+
+                        <!-- HØJRE SIDE -->
+                        <div class="selected-desktop-card-content">
+
+                            <span class="selected-desktop-text-bubble"></span>
+
+                            <div class="selected-desktop-text-block">
+                                <h3>Projekt</h3>
+                                <p>
+                                    <?= htmlspecialchars($project['content']['projekt']) ?>
+                                </p>
+                            </div>
+
+
+                            <div class="selected-desktop-text-block">
+                                <h3>Proces</h3>
+                                <p>
+                                    <?= htmlspecialchars($project['content']['proces']) ?>
+                                </p>
+                            </div>
+
+
+                            <div class="selected-desktop-text-block">
+                                <h3>Resultat</h3>
+                                <p>
+                                    <?= htmlspecialchars($project['content']['resultat']) ?>
+                                </p>
+                            </div>
+
+
+                            <div class="selected-desktop-text-block">
+                                <h3>Min rolle i projektet</h3>
+                                <p>
+                                    <?= htmlspecialchars($project['content']['rolle']) ?>
+                                </p>
+                            </div>
+
+
+                            <div class="selected-desktop-text-block">
+                                <h3>Kompetencer</h3>
+                                <p>
+                                    <?= htmlspecialchars(implode(' • ', $project['skills'])) ?>
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- BUNDEN AF KORTET -->
+                    <div class="selected-desktop-card-bottom">
+
+                        <?php if (!empty($project['website']['show'])): ?>
+
+                            <a
+                                    href="<?= htmlspecialchars($project['website']['url']) ?>"
+                                    class="selected-desktop-website-btn"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+
+                                <?= htmlspecialchars($project['website']['label']) ?>
+                            </a>
+
+                        <?php endif; ?>
+
+
+                        <?php if (
+                                !empty($project['login']) &&
+                                !empty($project['login']['show'])
+                        ): ?>
+
+                            <div class="selected-desktop-login">
+
+                                <strong>Login til user:</strong>
+
+                                <?php if (!empty($project['login']['username'])): ?>
+                                    <span>
+                                Brugernavn:
+                                <?= htmlspecialchars($project['login']['username']) ?>
+                            </span>
+                                <?php endif; ?>
+
+
+                                <?php if (!empty($project['login']['password'])): ?>
+                                    <span>
+                                Adgangskode:
+                                <?= htmlspecialchars($project['login']['password']) ?>
+                            </span>
+                                <?php endif; ?>
+
+                            </div>
+
+                        <?php endif; ?>
+
+                    </div>
+                </article>
+
+            <?php endforeach; ?>
+
+        </div>
+    </section>
+</section>
+
+<footer class="site-footer">
+<div class="social-icons">
+
+    <a href="https://www.facebook.com/pia.a.petersen" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+        <i class="fa-brands fa-facebook-f"></i>
+    </a>
+
+    <a href="https://www.linkedin.com/in/pia-petersen-5aa252395/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <i class="fa-brands fa-linkedin-in"></i>
+    </a>
+
+    <a href="https://github.com/Honnycut/Portfolio" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <i class="fa-brands fa-github"></i>
+    </a>
+</div>
+</footer>
 
 <?php include "components/navbar.php"; ?>
 
