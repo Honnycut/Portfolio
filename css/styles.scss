@@ -2210,9 +2210,9 @@ h3, .card-title {
   }
 }
 
-@include media-breakpoint-up(lg) {
+@include media-breakpoint-up(lg){
 
-  .sub-hero-header {
+  .sub-hero-header{
     position: relative !important;
     display: block !important;
     width: 100vw !important;
@@ -2225,7 +2225,7 @@ h3, .card-title {
     overflow: hidden !important;
     box-sizing: border-box;
 
-    .sub-hero-bg-img {
+    .sub-hero-bg-img{
       position: absolute !important;
       top: 0 !important;
       left: 0 !important;
@@ -2237,7 +2237,7 @@ h3, .card-title {
       padding: 0 !important;
     }
 
-    .sub-navbar {
+    .sub-navbar{
       position: relative !important;
       z-index: 10 !important;
       background-color: #b3e6b5 !important;
@@ -2252,11 +2252,11 @@ h3, .card-title {
       padding: 0 2rem !important;
       box-sizing: border-box !important;
 
-      .sub-logo {
+      .sub-logo{
         display: flex !important;
         align-items: center !important;
 
-        img {
+        img{
           height: 30px !important;
           width: auto !important;
           display: block !important;
@@ -2265,7 +2265,7 @@ h3, .card-title {
         }
       }
 
-      .desktop-nav-links {
+      .desktop-nav-links{
         display: flex !important;
         align-items: center !important;
         list-style: none !important;
@@ -2274,25 +2274,25 @@ h3, .card-title {
         padding: 0 !important;
 
 
-        li {
+        li{
           display: flex !important;
           align-items: center !important;
 
-          a {
+          a{
             text-decoration: none !important;
             color: $black !important;
             font-weight: 600 !important;
             font-size: 15px !important;
 
             &.active,
-            &:hover {
+            &:hover{
               font-weight: 800 !important;
               text-decoration: underline !important;
             }
           }
         }
 
-        .nav-divider {
+        .nav-divider{
           color: $black !important;
           font-size: 15px !important;
           opacity: 0.5 !important;
@@ -2301,7 +2301,7 @@ h3, .card-title {
       }
     }
 
-    .sub-hero-layout {
+    .sub-hero-layout{
       position: relative !important;
       z-index: 2 !important;
       display: flex !important;
@@ -2311,7 +2311,7 @@ h3, .card-title {
       padding: 2.5rem 4rem 3.5rem 4rem !important;
       box-sizing: border-box !important;
 
-      .sub-hero-text {
+      .sub-hero-text{
         text-align: left !important;
         flex: 1 !important;
 
@@ -2331,13 +2331,13 @@ h3, .card-title {
         }
       }
 
-      .sub-hero-img-box {
+      .sub-hero-img-box{
         display: flex !important;
         justify-content: flex-end !important;
         align-items: center !important;
         flex: 1 !important;
 
-        .sub-hero-img {
+        .sub-hero-img{
           max-width: 320px !important;
           width: 100% !important;
           height: auto !important;
@@ -2347,12 +2347,12 @@ h3, .card-title {
     }
   }
 
-  .section-card-group {
+  .section-card-group{
     display: flex !important;
     justify-content: center !important;
     width: 100% !important;
 
-    .section-card-container {
+    .section-card-container{
       max-width: 1280px !important;
       width: 100% !important;
       border-radius: 25px !important;
@@ -2360,14 +2360,14 @@ h3, .card-title {
       box-sizing: border-box !important;
     }
 
-    .section-grid {
+    .section-grid{
       display: grid !important;
       grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
       gap: 1.25rem !important;
       justify-content: space-between !important;
       width: 100% !important;
 
-      .universal-card {
+      .universal-card{
         width: 100% !important;
         max-width: none !important;
       }
@@ -2376,15 +2376,15 @@ h3, .card-title {
 
   /* 3. SKJUL MOBIL BUND-NAVBAR PÅ DESKTOP */
 
-  .bottom-nav {
+  .bottom-nav{
     display: none !important;
   }
 
   /* POPUP – DESKTOP / LG → XXXL */
 
-    .global-modal-overlay {
+    .global-modal-overlay{
 
-      .global-modal-content {
+      .global-modal-content{
         width: min(900px, calc(100vw - 80px)) !important;
         max-width: 900px !important;
         height: 410px !important;
@@ -2423,18 +2423,18 @@ h3, .card-title {
         overflow-x: hidden !important;
         scrollbar-width: none !important;
 
-        img {
+        img{
           cursor: zoom-in !important;
           transition: transform 0.2s ease, opacity 0.2s ease;
 
-          &:hover {
+          &:hover{
             transform: scale(1.03);
             opacity: 0.9;
           }
         }
       }
 
-      .image-lightbox {
+      .image-lightbox{
         position: fixed;
         inset: 0;
         width: 100vw;
@@ -2450,13 +2450,13 @@ h3, .card-title {
 
         /* Når den er åben */
 
-        &.active {
+        &.active{
           display: flex;
         }
 
         /* Det store billede */
 
-        img {
+        img{
           display: block;
           width: auto;
           height: auto;
@@ -2470,7 +2470,7 @@ h3, .card-title {
 
         /* Luk-knap */
 
-        .image-lightbox-close {
+        .image-lightbox-close{
           position: absolute;
           top: 30px;
           right: 40px;
@@ -2493,13 +2493,13 @@ h3, .card-title {
 
       /* Chrome / Edge / Safari */
 
-      .global-modal-gallery::-webkit-scrollbar {
+      .global-modal-gallery::-webkit-scrollbar{
         display: none !important;
       }
 
       /* BILLEDER */
 
-      .global-modal-gallery img {
+      .global-modal-gallery img{
         display: block !important;
         width: auto !important;
         height: auto !important;
@@ -2512,7 +2512,7 @@ h3, .card-title {
         align-self: center !important;
       }
 
-      .global-modal-gallery:has(img:nth-child(3):last-child) {
+      .global-modal-gallery:has(img:nth-child(3):last-child){
         img:nth-child(3) {
           grid-column: 1 / -1 !important;
           justify-self: center !important;
@@ -2521,7 +2521,7 @@ h3, .card-title {
 
       /* MIDTERLINJE */
 
-      .global-modal-content::before {
+      .global-modal-content::before{
         content: "";
         position: absolute;
         top: 32px;
@@ -2535,7 +2535,7 @@ h3, .card-title {
 
       /* HØJRE SIDE – TITEL */
 
-      .global-modal-title {
+      .global-modal-title{
         position: absolute !important;
         top: 82px !important;
         left: calc(50% + 1px) !important;
@@ -2572,7 +2572,7 @@ h3, .card-title {
 
       /* LUKKEKNAP */
 
-      .global-modal-close {
+      .global-modal-close{
         position: absolute !important;
         top: 27px !important;
         right: 28px !important;
@@ -2593,7 +2593,7 @@ h3, .card-title {
 
   /* GRØN FOOTER - KUN LG OG OP */
 
-  .site-footer {
+  .site-footer{
     width: 100% !important;
     min-height: 65px !important;
     background-color: #b3e6b5 !important;
@@ -2604,14 +2604,14 @@ h3, .card-title {
     box-sizing: border-box !important;
 
 
-    .social-icons {
+    .social-icons{
       display: flex !important;
       flex-direction: row !important;
       align-items: center !important;
       justify-content: flex-end !important;
       gap: 18px !important;
 
-      a {
+      a{
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
@@ -2624,7 +2624,7 @@ h3, .card-title {
         opacity: 1 !important;
         visibility: visible !important;
 
-        i {
+        i{
           display: block !important;
           font-size: 27px !important;
           line-height: 1 !important;
@@ -2633,7 +2633,7 @@ h3, .card-title {
           visibility: visible !important;
         }
 
-        &:hover {
+        &:hover{
           opacity: 0.7 !important;
         }
       }
@@ -2641,34 +2641,34 @@ h3, .card-title {
   }
 }
 
-@include media-breakpoint-up(xl) {
+@include media-breakpoint-up(xl){
 
-  .sub-hero-header {
+  .sub-hero-header{
 
-    .sub-navbar {
+    .sub-navbar{
       padding: 0 2.5rem !important;
 
-      .desktop-nav-links {
+      .desktop-nav-links{
         gap: 1.5rem !important;
 
-        li {
+        li{
 
-          a {
+          a{
             font-size: 15px !important;
           }
         }
       }
     }
 
-    .sub-hero-layout {
+    .sub-hero-layout{
       padding: 3rem 5rem 4rem !important;
 
       h1{
         font-size: 38px !important;
 
 
-      .sub-hero-img-box {
-        .sub-hero-img {
+      .sub-hero-img-box{
+        .sub-hero-img{
           max-width: 330px !important;
         }
       }
@@ -2676,26 +2676,26 @@ h3, .card-title {
     }
   }
 
-  .section-card-group {
-    .section-card-container {
+  .section-card-group{
+    .section-card-container{
       max-width: 1120px !important;
       padding: 3rem 3.5rem !important;
     }
 
-    .section-grid {
+    .section-grid{
       gap: 1.4rem !important;
     }
   }
 
-  .global-modal-overlay {
-    .global-modal-content {
+  .global-modal-overlay{
+    .global-modal-content{
       width: 900px !important;
       max-width: 900px !important;
       height: 410px !important;
     }
 
 
-    .global-modal-gallery {
+    .global-modal-gallery{
       padding: 50px !important;
       column-gap: 40px !important;
       row-gap: 30px !important;
@@ -2707,14 +2707,14 @@ h3, .card-title {
       max-height: 145px !important;
     }
 
-    .global-modal-title {
+    .global-modal-title{
       top: 82px !important;
       padding: 0 55px !important;
       font-size: 22px !important;
       letter-spacing: 4px !important;
     }
 
-    .global-modal-desc {
+    .global-modal-desc{
       padding: 145px 55px 45px !important;
       font-size: 13px !important;
       line-height: 2.35 !important;
@@ -2723,20 +2723,20 @@ h3, .card-title {
   }
 }
 
-@include media-breakpoint-up(xxl) {
+@include media-breakpoint-up(xxl){
 
-  .sub-hero-header {
-    .sub-hero-layout {
+  .sub-hero-header{
+    .sub-hero-layout{
       padding: 3rem 5.5rem 4rem !important;
 
-      .sub-hero-text {
+      .sub-hero-text{
         h1 {
           font-size: 40px !important;
         }
       }
 
-      .sub-hero-img-box {
-        .sub-hero-img {
+      .sub-hero-img-box{
+        .sub-hero-img{
           max-width: 350px !important;
           transform: translateY(12px);
         }
@@ -2745,31 +2745,31 @@ h3, .card-title {
   }
 
 
-  .section-card-group {
-    .section-card-container {
+  .section-card-group{
+    .section-card-container{
       max-width: 1320px !important;
       padding: 3rem 3.5rem !important;
     }
 
-    .section-title {
+    .section-title{
       font-size: 26px !important;
     }
 
-    .section-grid {
+    .section-grid{
       gap: 1.75rem !important;
     }
   }
 
 
-  .site-footer {
+  .site-footer{
     padding: 0 45px !important;
 
-    .social-icons {
+    .social-icons{
       gap: 20px !important;
 
-      a {
+      a{
 
-        i {
+        i{
           font-size: 28px !important;
         }
       }
@@ -2777,7 +2777,7 @@ h3, .card-title {
   }
 }
 
-@include media-breakpoint-up(xxxl) {
+@include media-breakpoint-up(xxxl){
 
   .sub-hero-header {
     .sub-navbar {
@@ -2790,7 +2790,7 @@ h3, .card-title {
         }
       }
 
-      .desktop-nav-links {
+      .desktop-nav-links{
         gap: 2rem !important;
 
         li {
@@ -2802,7 +2802,7 @@ h3, .card-title {
     }
 
 
-    .sub-hero-layout {
+    .sub-hero-layout{
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -2811,7 +2811,7 @@ h3, .card-title {
       padding: 3rem 8rem 5rem !important;
 
 
-      .sub-hero-text {
+      .sub-hero-text{
         flex: 1;
         display: flex;
         justify-content: center;
@@ -2822,12 +2822,12 @@ h3, .card-title {
       }
 
 
-      .sub-hero-img-box {
+      .sub-hero-img-box{
         flex: 1;
         display: flex;
         justify-content: center !important;
 
-        .sub-hero-img {
+        .sub-hero-img{
           max-width: 430px !important;
         }
       }
@@ -2835,29 +2835,29 @@ h3, .card-title {
   }
 
 
-  .page-projects-wrapper {
+  .page-projects-wrapper{
     max-width: 1800px;
     margin: 0 auto;
     gap: 4.5rem;
   }
 
 
-  .section-card-group {
-    .section-card-container {
+  .section-card-group{
+    .section-card-container{
       max-width: 1600px !important;
       padding: 3rem 4rem !important;
     }
 
 
-    .section-title {
+    .section-title{
       font-size: 32px !important;
     }
 
-    .section-subtitle {
+    .section-subtitle{
       font-size: 14px !important;
     }
 
-    .section-grid {
+    .section-grid{
       gap: 1.5rem !important;
     }
 
@@ -2871,14 +2871,14 @@ h3, .card-title {
   }
 
 
-  .global-modal-overlay {
-    .global-modal-content {
+  .global-modal-overlay{
+    .global-modal-content{
       width: 1050px !important;
       max-width: 1050px !important;
       height: 480px !important;
     }
 
-    .global-modal-gallery {
+    .global-modal-gallery{
       padding: 55px !important;
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2890,7 +2890,7 @@ h3, .card-title {
       border-radius: 0 !important;
     }
 
-    .global-modal-gallery img {
+    .global-modal-gallery img{
       max-width: 220px !important;
       max-height: 190px !important;
       width: auto;
@@ -2899,14 +2899,14 @@ h3, .card-title {
       display: block;
     }
 
-    .global-modal-gallery:has(img:only-child) {
+    .global-modal-gallery:has(img:only-child){
       display: flex !important;
       align-items: center !important;
       justify-content: center !important;
       padding: 40px 35px !important;
     }
 
-    .global-modal-gallery:has(img:only-child) img {
+    .global-modal-gallery:has(img:only-child) img{
       width: auto !important;
       height: auto !important;
       max-width: 90% !important;
@@ -2914,7 +2914,7 @@ h3, .card-title {
     }
 
     /* Kun BMC + User Journey */
-    .global-modal-gallery.gallery-stacked {
+    .global-modal-gallery.gallery-stacked{
       display: flex !important;
       flex-direction: column !important;
       justify-content: center !important;
@@ -2923,12 +2923,12 @@ h3, .card-title {
       padding: 35px 40px !important;
     }
 
-    .global-modal-gallery.gallery-stacked img {
+    .global-modal-gallery.gallery-stacked img{
       max-width: 85% !important;
       max-height: 150px !important;
     }
 
-    .global-modal-gallery.gallery-brochure {
+    .global-modal-gallery.gallery-brochure{
       display: grid !important;
       grid-template-columns: repeat(2, 1fr);
       column-gap: 28px !important;
@@ -2938,24 +2938,24 @@ h3, .card-title {
       padding: 40px !important;
     }
 
-    .global-modal-gallery.gallery-brochure img:nth-child(3) {
+    .global-modal-gallery.gallery-brochure img:nth-child(3){
       grid-column: 1 / -1;
       justify-self: center;
     }
 
 
-    .global-modal-title {
+    .global-modal-title{
       top: 95px !important;
       padding: 0 65px !important;
       font-size: 25px !important;
     }
 
-    .global-modal-desc {
+    .global-modal-desc{
       padding: 165px 65px 55px !important;
       font-size: 14px !important;
     }
 
-    .global-modal-close {
+    .global-modal-close{
       width: 50px !important;
       height: 50px !important;
       top: 31px !important;
@@ -2963,18 +2963,18 @@ h3, .card-title {
     }
   }
 
-  .site-footer {
+  .site-footer{
     min-height: 75px !important;
     padding: 0 60px !important;
 
-    .social-icons {
+    .social-icons{
       gap: 22px !important;
 
-      a {
+      a{
         width: 38px !important;
         height: 38px !important;
 
-        i {
+        i{
           font-size: 31px !important;
         }
       }
@@ -2986,7 +2986,7 @@ h3, .card-title {
    UDVALGTE PROJEKTER - MOBILE FIRST
 ========================================== */
 
-.selected-mobile-page {
+.selected-mobile-page{
   width: 100%;
   min-height: 100vh;
   background: $bg-white;
@@ -2998,14 +2998,14 @@ h3, .card-title {
    HERO
 ========================= */
 
-.selected-mobile-hero {
+.selected-mobile-hero{
   position: relative;
   width: 100%;
   min-height: 320px;
   overflow: hidden;
 }
 
-.selected-mobile-hero-bg {
+.selected-mobile-hero-bg{
   position: absolute;
   inset: 0;
   width: 100%;
@@ -3014,7 +3014,7 @@ h3, .card-title {
   z-index: 0;
 }
 
-.selected-mobile-hero #bubbleCanvas {
+.selected-mobile-hero #bubbleCanvas{
   position: absolute;
   inset: 0;
   width: 100%;
@@ -3023,7 +3023,7 @@ h3, .card-title {
   pointer-events: none;
 }
 
-.selected-mobile-logo {
+.selected-mobile-logo{
   position: absolute;
   top: 18px;
   right: 18px;
@@ -3036,7 +3036,7 @@ h3, .card-title {
   }
 }
 
-.selected-mobile-hero-content {
+.selected-mobile-hero-content{
   position: relative;
   z-index: 2;
   min-height: 320px;
@@ -3055,7 +3055,7 @@ h3, .card-title {
   letter-spacing: 1px;
 }
 
-.selected-mobile-hero-project-img {
+.selected-mobile-hero-project-img{
   width: 40%;
   max-width: 140px;
   height: auto;
@@ -3068,7 +3068,7 @@ h3, .card-title {
    PROJEKTKORT
 ========================= */
 
-.selected-mobile-project-section {
+.selected-mobile-project-section{
   position: relative;
   z-index: 3;
   overflow: hidden;
@@ -3083,7 +3083,7 @@ h3, .card-title {
 }
 
 /* Selve den vandrette slider */
-.selected-project-slider {
+.selected-project-slider{
   position: relative;
   z-index: 2;
   display: flex;
@@ -3098,13 +3098,13 @@ h3, .card-title {
   padding: 0 24px;
 }
 
-.selected-project-slider::-webkit-scrollbar {
+.selected-project-slider::-webkit-scrollbar{
   display: none;
 }
 
 
 /* Hvert tekstområde */
-.selected-project-slide {
+.selected-project-slide{
   position: relative;
   overflow: hidden;
   height: 100%;
@@ -3139,12 +3139,12 @@ h3, .card-title {
 }
 
 /* SEMESTERPRØVE */
-.project-theme-semesterproeve {
+.project-theme-semesterproeve{
   --project-bubble-color: #7be27e;
 }
 
 /* Selve den vandrette slider */
-.selected-project-slider {
+.selected-project-slider{
   position: relative;
   z-index: 2;
   display: flex;
@@ -3157,7 +3157,7 @@ h3, .card-title {
   padding: 0 24px;
 }
 
-.selected-project-slider::-webkit-scrollbar {
+.selected-project-slider::-webkit-scrollbar{
   display: none;
 }
 
@@ -3172,7 +3172,7 @@ h3, .card-title {
   pointer-events: none;
 }
 
-.selected-slide-bubbles .project-bubble {
+.selected-slide-bubbles .project-bubble{
   position: absolute;
   display: block;
   border-radius: 50%;
@@ -3182,7 +3182,7 @@ h3, .card-title {
 
 /* Stor boble */
 
-.selected-slide-bubbles .bubble-a {
+.selected-slide-bubbles .bubble-a{
   width: 180px;
   height: 180px;
   top: 4px;
@@ -3192,7 +3192,7 @@ h3, .card-title {
 
 /* Lille boble */
 
-.selected-slide-bubbles .bubble-b {
+.selected-slide-bubbles .bubble-b{
   width: 120px;
   height: 120px;
   top: 181px;
@@ -3208,7 +3208,7 @@ h3, .card-title {
 
 
 /* Ingen skillelinje efter sidste */
-.selected-project-slide:last-child {
+.selected-project-slide:last-child{
   border-right: 0;
 }
 
@@ -3216,7 +3216,7 @@ h3, .card-title {
   line-height: 1.7 !important;
 }
 
-.selected-project-scroll-indicator {
+.selected-project-scroll-indicator{
   position: relative;
   z-index: 2;
   flex-shrink: 0;
@@ -3227,7 +3227,7 @@ h3, .card-title {
   align-items: center;
 }
 
-.selected-project-scroll-line {
+.selected-project-scroll-line{
   width: 100%;
   height: 3px;
   background: #333;
@@ -3249,7 +3249,7 @@ h3, .card-title {
    GALLERI - MOBILE FIRST
 ========================= */
 
-.selected-mobile-gallery-label {
+.selected-mobile-gallery-label{
   position: relative;
   z-index: 3;
   display: flex;
@@ -3271,7 +3271,7 @@ h3, .card-title {
   }
 }
 
-.selected-mobile-gallery {
+.selected-mobile-gallery{
   background: #efc4ea;
   margin-top: 0;
   padding: 38px 0 24px;
@@ -3280,7 +3280,7 @@ h3, .card-title {
 }
 
 /* Billed-track */
-.selected-mobile-gallery-track {
+.selected-mobile-gallery-track{
   display: flex;
   align-items: center;
   gap: 14px;
@@ -3292,12 +3292,12 @@ h3, .card-title {
   padding: 0 14px;
 }
 
-.selected-mobile-gallery-track::-webkit-scrollbar {
+.selected-mobile-gallery-track::-webkit-scrollbar{
   display: none;
 }
 
 /* Hvert billede */
-.selected-mobile-gallery-item {
+.selected-mobile-gallery-item{
   flex: 0 0 auto;
   padding: 0;
   margin: 0;
@@ -3314,7 +3314,7 @@ h3, .card-title {
 }
 
 /* Slider */
-.selected-mobile-gallery-slider {
+.selected-mobile-gallery-slider{
   position: relative;
   width: 145px;
   height: 22px;
@@ -3323,14 +3323,14 @@ h3, .card-title {
   align-items: center;
 }
 
-.selected-mobile-gallery-slider .slider-line {
+.selected-mobile-gallery-slider .slider-line{
   width: 100%;
   height: 3px;
   background: #333;
   border-radius: 999px;
 }
 
-.selected-mobile-gallery-slider .slider-handle {
+.selected-mobile-gallery-slider .slider-handle{
   position: absolute;
   left: 30%;
   transform: translateX(-50%);
@@ -3341,20 +3341,17 @@ h3, .card-title {
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
 }
 
-.selected-mobile-actions {
+.selected-mobile-actions{
   min-height: 120px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   padding: 22px 18px 40px;
-
   background: $bg-white;
   box-sizing: border-box;
 }
 
-.selected-mobile-login {
+.selected-mobile-login{
   h2 {
     margin: 0 0 5px;
     font-size: 13px;
@@ -3368,7 +3365,7 @@ h3, .card-title {
   }
 }
 
-.selected-mobile-website-btn {
+.selected-mobile-website-btn{
   margin-left: auto;
   display: inline-flex;
   align-items: center;
@@ -3446,15 +3443,17 @@ h3, .card-title {
   .selected-slide-bubbles .bubble-a{
     width: 190px;
     height: 190px;
-
     top: 5px;
+    left: 115px;
+    transform: translateX(-50%);
   }
 
   .selected-slide-bubbles .bubble-b{
-    width: 125px;
-    height: 125px;
-    top: 190px;
-    left: 60%;
+    width: 113px;
+    height: 113px;
+    top: 166px;
+    left: 70%;
+    transform: translateX(-50%);
   }
 
   .selected-project-scroll-indicator{
@@ -3519,7 +3518,7 @@ h3, .card-title {
 
 @include media-breakpoint-up(md){
 
-  .selected-mobile-hero {
+  .selected-mobile-hero{
     min-height: 360px;
   }
 
@@ -3577,13 +3576,16 @@ h3, .card-title {
     width: 200px;
     height: 200px;
     top: 8px;
+    left: 50%;
+    transform: translateX(-50%) ;
   }
 
   .selected-slide-bubbles .bubble-b{
     width: 110px;
     height: 110px;
-    top: 205px;
-    left: 60%;
+    top: 193px;
+    left: 70%;
+    transform: translateX(-50%);
   }
 
   .selected-project-scroll-indicator{
@@ -3644,7 +3646,7 @@ h3, .card-title {
   }
 }
 
-@include media-breakpoint-up(mg) {
+@include media-breakpoint-up(mg){
 
   .selected-mobile-hero{
     min-height: 430px;
@@ -3657,7 +3659,7 @@ h3, .card-title {
     gap: 115px;
   }
 
-  .selected-mobile-title {
+  .selected-mobile-title{
     margin: 0;
     font-size: 38px;
     line-height: 1.15;
@@ -3672,8 +3674,8 @@ h3, .card-title {
    object-fit: contain;
   }
 
-  .hero-theme-semesterproeve {
-    .selected-mobile-title {
+  .hero-theme-semesterproeve{
+    .selected-mobile-title{
       width: 190px;
     }
   }
@@ -3706,13 +3708,17 @@ h3, .card-title {
   .selected-slide-bubbles .bubble-a{
     width: 200px;
     height: 200px;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%) ;
   }
 
   .selected-slide-bubbles .bubble-b{
-    width: 107px;
-    height: 107px;
-    top: 191px;
-    margin-left: 10%;
+    width: 110px;
+    height: 110px;
+    top: 181px;
+    left: 75%;
+    transform: translateX(-50%);
   }
 
   .selected-project-scroll-indicator{
@@ -3758,4 +3764,551 @@ h3, .card-title {
     height: 50px;
     font-size: 14px;
   }
+}
+
+.selected-desktop-page {
+  display: none;
+}
+
+@include media-breakpoint-up(lg) {
+
+  $spotless-color: #1c2541;
+  $waybly-color: #17277a;
+  $semester-color: #5eb35d;
+  $stack-color: #efc4ea;
+
+  .selected-mobile-page {
+    display: none;
+  }
+
+  .selected-desktop-page {
+    display: block;
+    min-height: calc(100vh - 65px);
+    background: $bg-white;
+  }
+
+  /* HERO */
+
+  .sub-navbar {
+    height: 50px;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: $secondary;
+    box-sizing: border-box;
+  }
+
+  .sub-logo {
+    display: flex;
+    align-items: center;
+
+    img {
+      display: block;
+      width: 38px;
+      height: auto;
+    }
+  }
+
+  .desktop-nav-links {
+    display: flex !important;
+    align-items: center;
+    gap: 14px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 14px;
+
+    li {
+      display: flex;
+      align-items: center;
+    }
+
+    a {
+      color: $black;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    a.active {
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .nav-divider {
+      font-size: 12px;
+      opacity: 0.5;
+    }
+  }
+
+  .selected-desktop-hero{
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+  }
+
+  .selected-desktop-hero-bg{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+
+  .selected-desktop-hero #selectedDesktopBubbleCanvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .selected-desktop-logo{
+    position: absolute;
+    top: 18px;
+    left: 24px;
+    z-index: 3;
+
+    img{
+      display: block;
+      width: 40px;
+      height: auto;
+    }
+  }
+
+  .selected-desktop-hero h1{
+    position: absolute;
+    z-index: 2;
+    left: 20%;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+  }
+
+  /* De tre telefoner i hero */
+
+  .selected-desktop-hero-images {
+    position: absolute;
+    z-index: 2;
+    right: 17%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .selected-desktop-hero-images img {
+    display: block;
+    width: 180px;
+    height: auto;
+  }
+
+  /* PROJEKTOMRÅDE */
+
+  .selected-desktop-projects{
+    position: relative;
+    min-height: 760px;
+    padding: 90px 3% 120px;
+    background: $bg-white;
+  }
+
+  /* FANER */
+
+  .selected-desktop-tabs{
+    width: 92%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+  }
+
+  .selected-desktop-tab {
+    min-width: 120px;
+    padding: 11px 24px;
+    border: 0;
+    border-radius: 10px 10px 0 0;
+    background: #efc4ea;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .selected-desktop-tab.active {
+    background: $white;
+    position: relative;
+    z-index: 4;
+  }
+
+  /* KORT */
+
+  .selected-desktop-card-stack {
+    position: relative;
+    width: 92%;
+    max-width: 1200px;
+    height: 690px;
+    margin: 0 auto;
+  }
+
+  .selected-desktop-project-card {
+    position: absolute;
+    inset: 0;
+    background: $white;
+    border: 2px solid #efc4ea;
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.14);
+    box-sizing: border-box;
+    padding: 34px 38px 28px;
+    opacity: 0.75;
+    pointer-events: none;
+    transition: transform 0.25s ease, opacity 0.35s ease, border-color 0.25s ease, box-shadow 0.35s ease;
+  }
+
+  /* Kortet lige bag det aktive */
+  .selected-desktop-project-card.stack-1 {
+    transform: translateX(18px);
+    z-index: 2;
+  }
+
+  /* Kortet længst bagved */
+  .selected-desktop-project-card.stack-2 {
+    transform: translateX(36px);
+    z-index: 1;
+  }
+
+  /* Det aktive kort */
+  .selected-desktop-project-card.active {
+    transform: translateX(0);
+    z-index: 5;
+    pointer-events: auto;
+  }
+
+  .selected-desktop-project-card[data-project-card="spotless"].active {
+    border-color: #1c2541;
+  }
+
+  .selected-desktop-project-card[data-project-card="waybly"].active {
+    border-color: #17277a;
+  }
+
+  .selected-desktop-project-card[data-project-card="semesterproeve"].active {
+    border-color: rgba(78, 158, 78, 0.73);
+  }
+
+  .selected-desktop-project-card.active {
+    pointer-events: auto;
+    opacity: 1;
+    z-index: 5;
+    transform: translateX(0);
+    box-shadow: 0 8px 20px rgba(0, 0, 0.18);
+  }
+
+  .selected-desktop-project-card[data-project-card="spotless"]
+  .selected-desktop-website-btn {
+    background-color: #1c2541;
+  }
+
+  .selected-desktop-project-card[data-project-card="waybly"]
+  .selected-desktop-website-btn {
+    background-color: #17277a;
+  }
+
+  .selected-desktop-project-card[data-project-card="semesterproeve"]
+  .selected-desktop-website-btn {
+    background-color: rgba(78, 158, 78, 0.73);
+  }
+
+  /* =========================
+     INDHOLD I PROJEKTKORTET
+  ========================= */
+
+  .selected-desktop-card-inner {
+    display: grid;
+    grid-template-columns: 42% 58%;
+    gap: 45px;
+    height: calc(100% - 60px);
+  }
+
+  /* VENSTRE SIDE */
+
+  .selected-desktop-card-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .selected-desktop-main-image {
+    width: 190px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    border-radius: 5px;
+    flex-shrink: 0;
+  }
+
+  .selected-desktop-main-image img {
+    width: 75%;
+    height: 75%;
+    object-fit: contain;
+  }
+
+  .selected-desktop-logo-label {
+    display: block;
+    width: 190px;
+    text-align: center;
+    margin: -10px 0 4px;
+    font-size: 10px;
+    font-weight: 600;
+  }
+
+
+  .selected-desktop-main-image.dark-blue-bg {
+    background: #14295a;
+  }
+
+  .selected-desktop-main-image.blue-bg {
+    background: #17277a;
+  }
+
+  .selected-desktop-main-image.green-bg {
+    background: #5eb35d;
+  }
+
+  .selected-desktop-gallery-row {
+    display: grid;
+    grid-template-columns: 145px 1fr;
+    align-items: start;
+    gap: 18px;
+    width: 100%;
+  }
+
+  .selected-desktop-gallery-row img {
+    display: block;
+    width: 145px;
+    height: 90px;
+    object-fit: contain;
+    object-position: left top;
+  }
+
+  .selected-desktop-gallery-caption {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    align-self: start;
+    font-size: 10px;
+    line-height: 1.45;
+    font-weight: 600;
+  }
+
+  .selected-desktop-project-card[data-project-card="semesterproeve"]{
+
+    .selected-desktop-card-gallery {
+      display: grid;
+      grid-template-columns: 130px 130px;
+      column-gap: 3px;
+      row-gap: 18px;
+      align-items: start;
+    }
+
+    /* Logo + label fylder hele rækken */
+    .selected-desktop-main-image,
+    .selected-desktop-logo-label {
+      grid-column: 1 / -1;
+    }
+
+    /* De almindelige billeder fylder også hele rækken */
+    .selected-desktop-gallery-row:not(.semester-bottom-image) {
+      grid-column: 1 / -1;
+    }
+
+    /* De to sidste billeder står ved siden af hinanden */
+    .semester-bottom-image {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      width: 100%;
+    }
+
+    .semester-bottom-image img {
+      width: 100%;
+      height: 90px;
+      object-fit: contain;
+      object-position: left top;
+    }
+
+    .semester-bottom-image .selected-desktop-gallery-caption {
+      width: 100%;
+      text-align: left;
+      font-size: 10px;
+      font-weight: 600;
+      line-height: 1.45;
+    }
+  }
+
+  /* HØJRE SIDE */
+
+  .selected-desktop-card-content {
+    position: relative;
+    z-index: 2;
+    min-width: 0;
+    width: 85%;
+    max-width: 500px;
+    transform: translateY(-19px);
+  }
+
+  .selected-desktop-card-content::before,
+  .selected-desktop-card-content::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Stor boble øverst */
+  .selected-desktop-card-content::before {
+    width: 270px;
+    height: 270px;
+    top: 10px;
+    right: 150px;
+  }
+
+  /* Boble længere nede */
+  .selected-desktop-card-content::after {
+    width: 180px;
+    height: 180px;
+    top: 234px;
+    right: 60px;
+
+  }
+
+  .selected-desktop-text-bubble {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    right: 110px;
+    top: 410px;
+    border-radius: 50%;
+    background: rgba(220, 220, 220, 0.45);
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .selected-desktop-project-card[data-project-card="spotless"] {
+
+    .selected-desktop-card-content::before,
+    .selected-desktop-card-content::after,
+    .selected-desktop-text-bubble {
+      background: rgba(28, 37, 65, 0.10);
+    }
+  }
+
+  .selected-desktop-project-card[data-project-card="waybly"] {
+
+    .selected-desktop-card-content::before,
+    .selected-desktop-card-content::after,
+    .selected-desktop-text-bubble {
+      background: rgba(23, 39, 122, 0.10);
+    }
+  }
+
+  .selected-desktop-project-card[data-project-card="semesterproeve"] {
+
+    .selected-desktop-card-content::before,
+    .selected-desktop-card-content::after,
+    .selected-desktop-text-bubble {
+      background: rgba(78, 158, 78, 0.10);
+    }
+  }
+
+
+  .selected-desktop-text-block {
+    position: relative;
+    z-index: 1;
+  }
+
+  .selected-desktop-card-text {
+    position: relative;
+    z-index: 2;
+    display: block;
+
+  }
+
+  .selected-desktop-text-block:last-child {
+    margin-bottom: 0;
+  }
+
+  .selected-desktop-text-block h3 {
+    margin: 18px 0 8px ;
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  .selected-desktop-text-block p {
+    margin: 0;
+    font-size: 10px;
+    line-height: 1.8;
+  }
+
+
+  /* BUNDEN AF KORTET */
+
+  .selected-desktop-card-bottom {
+    position: absolute;
+    left: 30px;
+    right: 30px;
+    bottom: 20px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 24px;
+  }
+
+  .selected-desktop-login {
+    display: flex;
+    flex-direction: column;
+    font-size: 9px;
+    line-height: 1.4;
+  }
+
+  .selected-desktop-login strong {
+    margin-bottom: 3px;
+  }
+
+  .selected-desktop-website-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 74px;
+    height: 32px;
+    padding: 0 16px;
+
+    background: $black;
+    color: $white;
+    border-radius: 10px;
+
+    font-size: 10px;
+    font-weight: 600;
+    text-decoration: none;
+
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.22);
+  }
+
+  .selected-desktop-website-btn:hover,
+  .selected-desktop-website-btn:focus,
+  .selected-desktop-website-btn:visited {
+    color: $white;
+    text-decoration: none;
+  }
+
 }
