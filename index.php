@@ -163,7 +163,7 @@ $statusMsg = "";
 
         <!-- Fælles knap på desktop PLACERET UDEN FOR bjælken -->
         <div class="projects-desktop-btn-wrap d-none d-lg-flex">
-            <a href="Andre-projekter.php" class="btn-projects-all">Se mere....</a>
+            <a href="Udvalgte-projekter.php" class="btn-projects-all">Se mere....</a>
         </div>
 
         <!-- Indikator prikker (Mobil & Tablet) -->
