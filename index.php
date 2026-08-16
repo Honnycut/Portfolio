@@ -80,7 +80,7 @@ $statusMsg = "";
 
         <div class="modal-header-info">
             <p><strong>Du kan komme i kontakt med mig på flere måder:</strong></p>
-            <p>📞 +45 4266074</p>
+            <p>📞 +45 42660794</p>
             <p>✉️ piapetersen1979@live.dk</p>
             <small>Eller du kan udfylde nedenstående formular. Jeg glæder mig til at høre fra dig!</small>
         </div>

@@ -2382,9 +2382,13 @@ h3, .card-title {
 
   /* POPUP – DESKTOP / LG → XXXL */
 
-    .global-modal-overlay{
+  .global-modal-overlay {
+    z-index: 1000 !important;
+  }
 
-      .global-modal-content{
+    .global-modal-overlay {
+
+      .global-modal-content {
         width: min(900px, calc(100vw - 80px)) !important;
         max-width: 900px !important;
         height: 410px !important;
@@ -2423,71 +2427,14 @@ h3, .card-title {
         overflow-x: hidden !important;
         scrollbar-width: none !important;
 
-        img{
+        img {
           cursor: zoom-in !important;
           transition: transform 0.2s ease, opacity 0.2s ease;
 
-          &:hover{
+          &:hover {
             transform: scale(1.03);
             opacity: 0.9;
           }
-        }
-      }
-
-      .image-lightbox{
-        position: fixed;
-        inset: 0;
-        width: 100vw;
-        height: 100vh;
-        background-color: rgba(0, 0, 0, 0.82);
-        z-index: 99999;
-        display: none;
-        align-items: center;
-        justify-content: center;
-        padding: 60px;
-        box-sizing: border-box;
-
-
-        /* Når den er åben */
-
-        &.active{
-          display: flex;
-        }
-
-        /* Det store billede */
-
-        img{
-          display: block;
-          width: auto;
-          height: auto;
-          max-width: 90vw;
-          max-height: 85vh;
-          object-fit: contain;
-          border-radius: 0;
-          cursor: zoom-out;
-        }
-
-
-        /* Luk-knap */
-
-        .image-lightbox-close{
-          position: absolute;
-          top: 30px;
-          right: 40px;
-          width: 48px;
-          height: 48px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          padding: 0;
-          background-color: $white;
-          border: 3px solid $black;
-          border-radius: 50%;
-          color: $black;
-          font-size: 30px;
-          line-height: 1;
-          cursor: pointer;
-          z-index: 2;
         }
       }
 
@@ -2590,6 +2537,60 @@ h3, .card-title {
         box-sizing: border-box !important;
       }
     }
+
+  .image-lightbox {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.82);
+    z-index: 2000 !important; // <-- ÆNDR TIL DEN HER
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+    box-sizing: border-box;
+  }
+
+  .image-lightbox.active {
+    display: flex !important;
+  }
+
+  /* Det store billede */
+  #imageLightboxImg {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: auto !important;
+    height:auto !important;
+    max-width: 90vw !important;
+    max-height: 85vh !important;
+    object-fit: contain;
+    border-radius: 0;
+    cursor: zoom-out;
+  }
+
+
+  /* Luk-knap */
+  .image-lightbox-close {
+    position: absolute;
+    z-index: 2;
+    top: 30px;
+    right: 40px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background-color: $white;
+    border: 3px solid $black;
+    border-radius: 50%;
+    color: $black;
+    font-size: 30px;
+    line-height: 1;
+    cursor: pointer;
+  }
 
   /* GRØN FOOTER - KUN LG OG OP */
 
@@ -3770,6 +3771,14 @@ h3, .card-title {
   display: none;
 }
 
+.selected-image-lightbox {
+  display: none;
+}
+
+.selected-image-lightbox.active {
+  display: flex !important;
+}
+
 @include media-breakpoint-up(lg) {
 
   $spotless-color: #1c2541;
@@ -4095,6 +4104,7 @@ h3, .card-title {
     height: 90px;
     object-fit: contain;
     object-position: left top;
+    cursor: zoom-in;
   }
 
   .selected-desktop-gallery-caption {
@@ -4153,6 +4163,71 @@ h3, .card-title {
     }
   }
 
+  .selected-image-lightbox {
+    position: fixed;
+    inset: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgba(0, 0, 0, 0.82);
+
+    z-index: 2000 !important;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 60px;
+    box-sizing: border-box;
+  }
+
+
+  #selectedImageLightboxImg {
+    position: relative;
+    z-index: 1;
+
+    display: block;
+
+    width: auto !important;
+    height: auto !important;
+
+    max-width: 90vw !important;
+    max-height: 85vh !important;
+
+    object-fit: contain;
+
+    cursor: zoom-out;
+  }
+
+
+  .selected-image-lightbox-close {
+    position: absolute;
+
+    top: 30px;
+    right: 40px;
+
+    z-index: 2;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    background: $white;
+    border: 3px solid $black;
+    border-radius: 50%;
+
+    color: $black;
+    font-size: 30px;
+    line-height: 1;
+
+    cursor: pointer;
+  }
+
   /* HØJRE SIDE */
 
   .selected-desktop-card-content {
@@ -4200,6 +4275,10 @@ h3, .card-title {
     background: rgba(220, 220, 220, 0.45);
     z-index: 0;
     pointer-events: none;
+  }
+
+  .selected-desktop-text-bubble-small {
+    display: none;
   }
 
   .selected-desktop-project-card[data-project-card="spotless"] {
@@ -4391,6 +4470,50 @@ h3, .card-title {
   .selected-desktop-text-bubble {
     left: 190px !important;
     right: auto !important;
+    top: 413px;
+  }
+
+  .selected-desktop-text-bubble-small {
+    display: block;
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    z-index: 0;
+    pointer-events: none;
+    left: 320px;
+    top: 500px;
+  }
+
+
+  .selected-desktop-project-card[data-project-card="spotless"] {
+
+    .selected-desktop-card-content::before,
+    .selected-desktop-card-content::after,
+    .selected-desktop-text-bubble,
+    .selected-desktop-text-bubble-small {
+      background: rgba(28, 37, 65, 0.10);
+    }
+  }
+
+  .selected-desktop-project-card[data-project-card="waybly"] {
+
+    .selected-desktop-card-content::before,
+    .selected-desktop-card-content::after,
+    .selected-desktop-text-bubble,
+    .selected-desktop-text-bubble-small {
+      background: rgba(23, 39, 122, 0.10);
+    }
+  }
+
+  .selected-desktop-project-card[data-project-card="semesterproeve"] {
+
+    .selected-desktop-card-content::before,
+    .selected-desktop-card-content::after,
+    .selected-desktop-text-bubble,
+    .selected-desktop-text-bubble-small {
+      background: rgba(78, 158, 78, 0.10);
+    }
   }
 
   .selected-desktop-text-block {
@@ -4442,9 +4565,30 @@ h3, .card-title {
 
 @include media-breakpoint-up(xxl) {
 
+  .selected-desktop-card-stack {
+    height: 800px;
+  }
+
+  .selected-desktop-hero h1 {
+    left: 22%;
+    font-size: 28px;
+  }
+
+  .selected-desktop-hero-images {
+    right: 20%;
+  }
+
+  .selected-desktop-hero-images img {
+    width: 220px;
+  }
+
+  .selected-desktop-projects {
+    padding-top: 55px;
+  }
+
   // KORT
   .selected-desktop-project-card {
-    max-width: 1200px;
+    max-width: 1600px;
   }
 
   // HØJRE SIDE / TEKST
@@ -4493,53 +4637,88 @@ h3, .card-title {
 
   // STOR ØVERSTE BOBLE
   .selected-desktop-card-content::before {
-    width: 290px;
-    height: 290px;
+    width: 295px;
+    height: 295px;
     left: -25px !important;
     right: auto !important;
   }
 
   // MELLEMSTE BOBLE
   .selected-desktop-card-content::after {
-    width: 190px;
-    height: 190px;
+    width: 195px;
+    height: 195px;
     left: 190px !important;
     right: auto !important;
+    top: 240px;
   }
 
   // NEDERSTE BOBLE
   .selected-desktop-text-bubble {
-    width: 150px;
-    height: 150px;
+    width: 155px;
+    height: 155px;
     left: 225px !important;
     right: auto !important;
-    top: 423px;
+    top: 427px;
+  }
+
+  .selected-desktop-text-bubble-small {
+    width: 100px;
+    height: 100px;
+    left: 350px;
+    top: 535px;
   }
 
   // WEBSITE + LOGIN
   .selected-desktop-login {
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .selected-desktop-website-btn {
-    font-size: 11px;
+    font-size: 12px;
+    transform: translateY(-15px);
   }
 }
 
 @include media-breakpoint-up(xxxl) {
 
   .selected-desktop-card-stack {
-    height: 890px;
+    height: 940px;
+  }
+
+  .selected-desktop-hero {
+    height: 390px;
+  }
+
+  .selected-desktop-hero-bg {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .selected-desktop-hero h1 {
+    left: 24%;
+    font-size: 30px;
+  }
+
+  .selected-desktop-hero-images {
+    right: 24%;
+  }
+
+  .selected-desktop-hero-images img {
+    width: 250px;
+  }
+
+  .selected-desktop-projects {
+    padding-top: 45px;
   }
 
   // SELVE KORTET
   .selected-desktop-project-card {
-    max-width: 1450px;
-    height: 900px;
+    max-width: 1550px;
+    height: 930px;
   }
 
   .selected-desktop-hero {
-    height: 360px;
+    height: 390px;
   }
 
   .selected-desktop-hero-bg {
@@ -4549,24 +4728,24 @@ h3, .card-title {
 
   // HØJRE TEKSTSIDE
   .selected-desktop-card-content {
-    max-width: 700px;
+    max-width: 760px;
   }
 
   // TEKST
   .selected-desktop-text-block h3 {
-    font-size: 24px;
-    margin: 24px 0 10px;
+    font-size: 25px;
+    margin: 25px 0 11px;
   }
 
   .selected-desktop-text-block p {
     font-size: 15px;
-    line-height: 1.65;
+    line-height: 1.7;
   }
 
   // STORT LOGO
   .selected-desktop-main-image {
-    width: 300px;
-    height: 230px;
+    width: 320px;
+    height: 245px;
 
     img {
       width: 80%;
@@ -4575,18 +4754,18 @@ h3, .card-title {
   }
 
   .selected-desktop-logo-label {
-    width: 300px;
-    font-size: 13px;
+    width: 320px;
+    font-size: 14px;
   }
 
   // GALLERI
   .selected-desktop-gallery-row {
-    grid-template-columns: 220px 1fr;
-    gap: 28px;
+    grid-template-columns: 230px 1fr;
+    gap: 30px;
 
     img {
-      width: 205px;
-      height: 125px;
+      width: 215px;
+      height: 130px;
     }
   }
 
@@ -4616,12 +4795,19 @@ h3, .card-title {
     right: auto !important;
   }
 
+  .selected-desktop-text-bubble-small {
+    width: 150px;
+    height: 150px;
+    left: 310px;
+    top: 583px;
+  }
+
   // KNAP + LOGIN
   .selected-desktop-website-btn {
-    font-size: 13px;
+    font-size: 14px;
   }
 
   .selected-desktop-login {
-    font-size: 12px;
+    font-size: 14px;
   }
 }

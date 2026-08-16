@@ -391,6 +391,7 @@ if (!$currentProject) {
                         <div class="selected-desktop-card-content">
 
                             <span class="selected-desktop-text-bubble"></span>
+                            <span class="selected-desktop-text-bubble-small"></span>
 
                             <div class="selected-desktop-text-block">
                                 <h3>Projekt</h3>
@@ -506,6 +507,15 @@ if (!$currentProject) {
     </a>
 </div>
 </footer>
+
+<div id="imageLightbox" class="image-lightbox">
+    <button class="image-lightbox-close" aria-label="Luk billede">
+        &times;
+    </button>
+
+    <img id="imageLightboxImg" src="" alt="">
+</div>
+
 
 <?php include "components/navbar.php"; ?>
 

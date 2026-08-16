@@ -660,9 +660,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     /* =====================================================
-       FORSTØR BILLEDE I POPUP
-       KUN LG / DESKTOP 992px+
-       ===================================================== */
+       FORSTØR BILLEDE
+       ANDRE PROJEKTER + UDVALGTE PROJEKTER
+       KUN 992px+
+    ===================================================== */
 
     const imageLightbox =
         document.getElementById("imageLightbox");
@@ -671,74 +672,35 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("imageLightboxImg");
 
     const imageLightboxClose =
-        document.querySelector(
-            ".image-lightbox-close"
+        document.querySelector(".image-lightbox-close");
+
+
+    document.addEventListener("click", function (e) {
+
+        if (window.innerWidth < 992) {
+            return;
+        }
+
+        const clickedImage = e.target.closest(
+            ".global-modal-gallery img, " +
+            ".selected-desktop-gallery-row img"
         );
 
+        if (!clickedImage) {
+            return;
+        }
 
-    /*
-     * lytter på selve gallery-containeren.
-     *
-     * Det fungerer selvom billederne først
-     * bliver oprettet dynamisk ovenfor.
-     */
-    if (
-        globalModalGallery &&
-        imageLightbox &&
-        imageLightboxImg
-    ) {
+        if (!imageLightbox || !imageLightboxImg) {
+            return;
+        }
 
-        globalModalGallery.addEventListener(
-            "click",
-            function (e) {
+        imageLightboxImg.src = clickedImage.src;
+        imageLightboxImg.alt = clickedImage.alt || "";
 
-                /*
-                 * Tjek om brugeren klikkede
-                 * direkte på et billede.
-                 */
-                const clickedImage =
-                    e.target.closest("img");
+        imageLightbox.classList.add("active");
+    });
 
-
-                if (!clickedImage) {
-                    return;
-                }
-
-
-                /*
-                 * KUN LG OG OP.
-                 *
-                 * Under 992px sker der ingenting,
-                 * så mobil/tablet forbliver som nu.
-                 */
-                if (window.innerWidth < 992) {
-                    return;
-                }
-
-
-                /*
-                 * Brug præcis det billede,
-                 * der blev klikket på.
-                 */
-                imageLightboxImg.src =
-                    clickedImage.src;
-
-                imageLightboxImg.alt =
-                    clickedImage.alt || "";
-
-
-                /* Åbn forstørret billede */
-                imageLightbox.classList.add(
-                    "active"
-                );
-
-            }
-        );
-    }
-
-    /* =====================================================
-       LUK FORSTØRRET BILLEDE MED X
-       ===================================================== */
+    /* Luk Andre projekter lightbox */
 
     if (
         imageLightboxClose &&
@@ -750,77 +712,173 @@ document.addEventListener("DOMContentLoaded", function () {
             "click",
             function (e) {
 
-                /*
-                 * Stop klik fra at fortsætte
-                 * til elementerne bagved.
-                 */
                 e.stopPropagation();
 
-                imageLightbox.classList.remove(
-                    "active"
-                );
-
+                imageLightbox.classList.remove("active");
                 imageLightboxImg.src = "";
-
             }
         );
     }
 
-    /* =====================================================
-       LUK VED KLIK PÅ MØRK BAGGRUND
-       ===================================================== */
 
     if (
         imageLightbox &&
         imageLightboxImg
     ) {
+
         imageLightbox.addEventListener(
             "click",
             function (e) {
 
-                /*
-                 * Luk kun hvis brugeren klikker
-                 * på selve baggrunden.
-                 *
-                 * Klik på billedet lukker derfor
-                 * ikke lightboxen.
-                 */
                 if (e.target === imageLightbox) {
-                    imageLightbox.classList.remove(
-                        "active"
-                    );
+
+                    imageLightbox.classList.remove("active");
                     imageLightboxImg.src = "";
                 }
             }
         );
     }
 
+
+
     /* =====================================================
-       LUK FORSTØRRET BILLEDE MED ESC
-       ===================================================== */
+       UDVALGTE PROJEKTER
+    ===================================================== */
+
+    const selectedImageLightbox =
+        document.getElementById("selectedImageLightbox");
+
+    const selectedImageLightboxImg =
+        document.getElementById("selectedImageLightboxImg");
+
+    const selectedImageLightboxClose =
+        document.querySelector(
+            ".selected-image-lightbox-close"
+        );
+
+
+    if (
+        selectedImageLightbox &&
+        selectedImageLightboxImg
+    ) {
+
+        document.addEventListener(
+            "click",
+            function (e) {
+
+                const clickedImage =
+                    e.target.closest(
+                        ".selected-desktop-gallery-row img"
+                    );
+
+                if (!clickedImage) {
+                    return;
+                }
+
+                if (window.innerWidth < 992) {
+                    return;
+                }
+
+                selectedImageLightboxImg.src =
+                    clickedImage.src;
+
+                selectedImageLightboxImg.alt =
+                    clickedImage.alt || "";
+
+                selectedImageLightbox.classList.add(
+                    "active"
+                );
+            }
+        );
+    }
+
+
+    /* Luk Udvalgte projekter lightbox */
+
+    if (
+        selectedImageLightboxClose &&
+        selectedImageLightbox &&
+        selectedImageLightboxImg
+    ) {
+
+        selectedImageLightboxClose.addEventListener(
+            "click",
+            function (e) {
+
+                e.stopPropagation();
+
+                selectedImageLightbox.classList.remove(
+                    "active"
+                );
+
+                selectedImageLightboxImg.src = "";
+            }
+        );
+    }
+
+
+    if (
+        selectedImageLightbox &&
+        selectedImageLightboxImg
+    ) {
+
+        selectedImageLightbox.addEventListener(
+            "click",
+            function (e) {
+
+                if (e.target === selectedImageLightbox) {
+
+                    selectedImageLightbox.classList.remove(
+                        "active"
+                    );
+
+                    selectedImageLightboxImg.src = "";
+                }
+            }
+        );
+    }
+
+
+
+    /* =====================================================
+       ESC LUKKER DEN LIGHTBOX DER ER ÅBEN
+    ===================================================== */
 
     document.addEventListener(
         "keydown",
         function (e) {
 
+            if (e.key !== "Escape") {
+                return;
+            }
+
+
             if (
-                e.key === "Escape" &&
                 imageLightbox &&
-                imageLightbox.classList.contains(
-                    "active"
-                )
+                imageLightbox.classList.contains("active")
             ) {
 
-                imageLightbox.classList.remove(
-                    "active"
-                );
+                imageLightbox.classList.remove("active");
+
                 if (imageLightboxImg) {
                     imageLightboxImg.src = "";
                 }
             }
+
+
+            if (
+                selectedImageLightbox &&
+                selectedImageLightbox.classList.contains("active")
+            ) {
+
+                selectedImageLightbox.classList.remove("active");
+
+                if (selectedImageLightboxImg) {
+                    selectedImageLightboxImg.src = "";
+                }
+            }
         }
     );
-
 });
 
 function connectScrollIndicator(trackSelector, handleSelector) {
