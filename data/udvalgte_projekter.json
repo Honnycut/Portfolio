@@ -92,9 +92,9 @@
 
       "content": {
         "projekt": "Udvikling af Waybly, en webapp der hjælper gangbesværede og kørestolsbrugere med at finde og dele information om tilgængelighed i Nykøbing Falster. Projektet blev udviklet i samarbejde med RulMed med fokus på UX og tilgængelighed.",
-        "proces": "Vi arbejdede brugercentreret med persona, user journey, brugertest og research. Test med kørestolsbruger gav konkrete indsigter, som blev omsat til kategorier og funktioner. Designet blev udviklet i Figma og struktureret med moodboard, styleguide, gestaltlove og designprincipper.",
+        "proces": "Jeg arbejdede brugercentreret med persona, user journey, brugertest og research. Test med kørestolsbruger gav konkrete indsigter, som blev omsat til kategorier og funktioner. Designet blev udviklet i Figma og struktureret med moodboard, styleguide, gestaltlove og designprincipper.",
         "resultat": "En overskuelig webapp med kort, søgning og tilgængelighedsdata, udviklet og forbedret gennem brugerfeedback.",
-        "rolle": "Jeg stod for udviklingen af rapport siden, samt for at gøre løsningen responsiv på tværs af skærmstørrelser. Selve siden er opbygget til at vise funktionerne og er ikke gjort aktiv til at arbejde sammen med databasen, som ville bidrag til at opdatere anmeldelser under beskrivelsen for en lokation."
+        "rolle": "Jeg stod for udviklingen af rapport siden, samt for at gøre denne side responsiv på tværs af skærmstørrelser. Selve siden er opbygget til at vise funktionerne og er ikke gjort aktiv til at arbejde sammen med databasen, som ville bidrag til at opdatere anmeldelser under beskrivelsen for en lokation."
       },
 
       "gallery": [
@@ -164,7 +164,7 @@
         "projekt": "Selve opgave bestod i at udvikling en webapp for NHLS (Neohumanist Lifestyle), som ønskede at styrke deres digitale tilstedeværelse under navnet Førstehjælpseksperten.dk. Løsningen blev udviklet til unge køreskoleelever med fokus på UI/UX og interaktiv læring.",
         "proces": "Design Thinking, målgruppeanalyse, Figma, brugertest, SoMe strategi og udvikling i HTML, SCSS, JavaScript, PHP, JSON og Bootstrap.",
         "resultat": "En brugervenlig webapp med guides, quizzer og gamification, der hjælper brugerne med at genopfriske deres førstehjælpsviden, samt at blive guidede i nødsituation, udover dette kan app'en også bruges til undervisning.",
-        "rolle": "Jeg stod for udviklingen af guidesiden og siden, hvor brugeren kan vælge mellem de forskellige guides, samt for at gøre løsningen responsiv på tværs af skærmstørrelser. Som en del af gruppearbejdet bidrog vi alle til udarbejdelsen af de samlede leverancer, herunder rapport, styleguide, kodning og short-form videoer til sociale medier."
+        "rolle": "Jeg stod for udviklingen af guidesiden og siden, hvor brugeren kan vælge mellem de forskellige guides, samt for at gøre disse sider responsiv på tværs af skærmstørrelser. Som en del af gruppearbejdet bidrog jeg til udarbejdelsen af de samlede leverancer, herunder rapport, styleguide, kodning og short-form videoer til sociale medier."
       },
 
       "gallery": [
