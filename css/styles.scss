@@ -40,7 +40,7 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 // 5. Du kan lave styling her...
 
 //--------------- BODY ---------------//
-body {
+body{
   font-family: "Roboto", sans-serif;
   font-size: 12px;
   line-height: normal;
@@ -54,7 +54,7 @@ body {
 
 
 /* Hero Header */
-.hero-header {
+.hero-header{
   position: relative;
   width: 100%;
   display: flex;
@@ -63,7 +63,7 @@ body {
   overflow: hidden;
 }
 
-.hero-bg-img {
+.hero-bg-img{
   position: absolute;
   top: 0;
   left: 0;
@@ -74,7 +74,7 @@ body {
   opacity: 60%;
 }
 
-#bubbleCanvas {
+#bubbleCanvas{
   position: absolute;
   top: 0;
   left: 0;
@@ -85,7 +85,7 @@ body {
   opacity: 50%;
 }
 
-.navbar {
+.navbar{
   display: flex;
   justify-content: flex-end;
   width: 100%;
@@ -95,7 +95,7 @@ body {
   box-sizing: border-box;
 }
 
-.logo img {
+.logo img{
   height: 25px;
   width: auto;
   display: block;
@@ -103,7 +103,7 @@ body {
 
 
 /* Hero layout: Tekst til venstre, billede i højre side */
-.hero-main-layout {
+.hero-main-layout{
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -114,7 +114,7 @@ body {
   z-index: 10;
 }
 
-.hero-content {
+.hero-content{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -122,7 +122,7 @@ body {
   flex: 1;
   padding-left: 20px;
 
-  h1 {
+  h1{
     font-size: clamp(32px, 3vw, 56px);
     letter-spacing: 1px !important;
     font-weight: 800;
@@ -131,7 +131,7 @@ body {
     margin-bottom: 1rem;
   }
 
-  .hero-subtitle {
+  .hero-subtitle{
     font-size: clamp(16px, 1.3vw, 22px) !important;
     letter-spacing: 0.5px !important;
     color: $black;
@@ -142,13 +142,13 @@ body {
   }
 }
 
-.hero-image-side {
+.hero-image-side{
   flex: 0 0 45%;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  .hero-side-img {
+  .hero-side-img{
     width: clamp(320px, 42vw, 600px);
     max-width: 600px;
     height: auto;
@@ -159,7 +159,7 @@ body {
   }
 }
 
-.hero-buttons {
+.hero-buttons{
   display: flex;
   flex-direction: row;
   gap: clamp(0.75rem, 1.8vw, 1.75rem);
@@ -167,7 +167,7 @@ body {
   margin-top: 1rem;
 }
 
-.btn-custom {
+.btn-custom{
   display: inline-flex !important;
   justify-content: center !important;
   align-items: center !important;
@@ -186,20 +186,20 @@ body {
   transition: transform 0.2s ease, opacity 0.2s ease !important;
 }
 
-.btn-custom-primary {
+.btn-custom-primary{
   background-color: $black !important;
   color: $primary !important;
   border: 2px solid $black !important;
   box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25) !important;
 }
 
-.btn-custom-secondary {
+.btn-custom-secondary{
   background-color: rgba(255, 255, 255, 0.5) !important;
   color: #000000 !important;
   border: 2px solid #000000 !important;
   box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.25) !important;
 
-  &:hover, &:focus, &:active {
+  &:hover, &:focus, &:active{
     background-color: rgba(255, 255, 255, 0.7) !important;
     color: #000000 !important;
     border: 2px solid #000000 !important;
@@ -211,7 +211,7 @@ body {
    MODAL / POP-UP STYLES
    ===================== */
 
-.modal-overlay {
+.modal-overlay{
   display: none !important;
   position: fixed;
   top: 0;
@@ -225,12 +225,12 @@ body {
   align-items: center;
   padding: 1rem;
 
-  &.active {
+  &.active{
     display: flex !important;
   }
 }
 
-.modal-card {
+.modal-card{
   background: #ffffff;
   border-radius: 24px;
   width: 100%;
@@ -243,7 +243,7 @@ body {
   transition: all 0.3s ease;
 }
 
-.modal-close {
+.modal-close{
   position: absolute;
   top: 18px;
   right: 22px;
@@ -256,13 +256,13 @@ body {
   padding: 5px;
   transition: transform 0.2s ease, color 0.2s ease;
 
-  &:hover {
+  &:hover{
     color: #000;
     transform: scale(1.1);
   }
 }
 
-.modal-header-info {
+.modal-header-info{
   font-size: clamp(15px, 1.1vw, 17px) !important;
   letter-spacing: 0.5px !important;
   color: #333;
@@ -271,11 +271,11 @@ body {
   font-weight: 600;
   padding-right: 1.5rem;
 
-  p {
+  p{
     margin-bottom: 0.4rem;
   }
 
-  small {
+  small{
     display: block;
     margin-top: 0.8rem;
     color: #666;
@@ -285,11 +285,11 @@ body {
   }
 }
 
-.contact-form {
+.contact-form{
   display: flex;
   flex-direction: column;
 
-  label {
+  label{
     font-size: clamp(14px, 1vw, 16px) !important;
     line-height: 1.4 !important;
     letter-spacing: 0.5px !important;
@@ -298,7 +298,7 @@ body {
     color: #333;
   }
 
-  input, textarea {
+  input, textarea{
     width: 100%;
     padding: 0.75rem 0.9rem;
     margin-bottom: 1.2rem;
@@ -309,14 +309,14 @@ body {
     box-sizing: border-box;
     transition: border-color 0.2s ease;
 
-    &:focus {
+    &:focus{
       outline: none;
       border-color: #000;
     }
   }
 }
 
-.btn-send {
+.btn-send{
   background-color: $black !important;
   color: $white !important;
   border: 1px solid #000;
@@ -329,19 +329,19 @@ body {
   margin-top: 0.5rem;
   transition: all 0.2s;
 
-  &:hover {
+  &:hover{
     background-color: lighten(#000, 15%) !important;
     transform: translateY(-2px);
   }
 }
 
 /* Succes Modal Kort */
-.success-card {
+.success-card{
   text-align: center;
   padding: 3rem 2rem;
   max-width: 400px;
 
-  h2 {
+  h2{
     font-size: clamp(20px, 1.8vw, 28px) !important;
     letter-spacing: 1px !important;
     line-height: 1.3 !important;
@@ -350,7 +350,7 @@ body {
     color: $black;
   }
 
-  p {
+  p{
     font-size: clamp(15px, 1.1vw, 17px) !important;
     letter-spacing: 0.5px !important;
     line-height: 1.5 !important;
@@ -359,7 +359,7 @@ body {
   }
 }
 
-.btn-luk {
+.btn-luk{
   background-color: $black !important;
   color: $white !important;
   border: 1px solid $black;
@@ -370,7 +370,7 @@ body {
   cursor: pointer;
   transition: all 0.2s ease;
 
-  &:hover {
+  &:hover{
     background-color: lighten(#000, 15%) !important;
     transform: translateY(-2px);
   }
@@ -378,14 +378,14 @@ body {
 
 /* Udvalgte Projekter Sektion */
 
-.projects-section {
+.projects-section{
   background-color: transparent;
   padding: 2.5rem 0 2rem;
   width: 100%;
   text-align: center;
 }
 
-.section-title {
+.section-title{
   font-size: 25px !important;
   line-height: 1.2rem !important;
   letter-spacing: 3px !important;
@@ -394,7 +394,7 @@ body {
   margin-bottom: 1.2rem;
 }
 
-.projects-slider {
+.projects-slider{
   display: flex;
   gap: 1rem;
   overflow-x: auto;
@@ -409,7 +409,7 @@ body {
   scrollbar-width: none;
 }
 
-.project-card {
+.project-card{
   font-size: 16px;
   flex: 0 0 calc(100vw - 3rem);
   max-width: 420px;
@@ -426,14 +426,14 @@ body {
   justify-content: flex-start;
   gap: 0.4rem;
 
-  p, span, h3, div {
+  p, span, h3, div{
     width: 100% !important;
     text-align: left !important;
     line-height: 1.5rem !important;
   }
 }
 
-.card-img-wrapper {
+.card-img-wrapper{
   width: 100%;
   height: 210px;
   border-radius: 15px;
@@ -454,14 +454,15 @@ body {
 .card-img-wrapper.dark-blue-bg { background-color: #0D2344; }
 .card-img-wrapper.green-bg {
   background-color: rgba(140, 224, 144, 0.55);
-  img {
+
+  img{
     transform: scale(1.25);
     max-width: 100%;
     max-height: 100%;
   }
 }
 
-h3, .card-title {
+h3, .card-title{
   font-size: clamp(18px, 1.8vw, 26px) !important;
   line-height: 1.3 !important;
   font-weight: 700;
@@ -475,7 +476,7 @@ h3, .card-title {
   align-items: center;
 }
 
-.card-desc-title {
+.card-desc-title{
   font-size: clamp(13px, 1.1vw, 16px) !important;
   font-weight: 700;
   color: $black;
@@ -484,7 +485,7 @@ h3, .card-title {
 }
 
 /* Brødtekst (Paragraphs & beskrivelser) */
-.card-desc, .about-intro, .about-more-text p {
+.card-desc, .about-intro, .about-more-text p{
   font-size: clamp(14px, 1.1vw, 18px) !important;
   line-height: 1.6 !important;
   letter-spacing: 0.5px !important;
@@ -493,7 +494,7 @@ h3, .card-title {
 }
 
 
-.btn-card {
+.btn-card{
   background-color: $black !important;
   color: $white !important;
   font-size: 14px !important;
@@ -509,25 +510,25 @@ h3, .card-title {
   &:hover { transform: translateY(-2px); }
 }
 
-.slider-dots {
+.slider-dots{
   display: flex;
   justify-content: center;
   gap: 0.6rem;
   margin-top: 1rem;
 
-  .dot {
+  .dot{
     width: 8px;
     height: 8px;
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 50%;
     display: inline-block;
 
-    &.active { background-color: $black; }
+    &.active{ background-color: $black; }
   }
 }
 
 /* About Sektion */
-.about-section {
+.about-section{
   width: 100%;
   background-color: $white;
   padding: 2.5rem 1rem 2rem 1rem;
@@ -535,7 +536,7 @@ h3, .card-title {
   justify-content: center;
 }
 
-.about-container {
+.about-container{
   width: 100%;
   max-width: 100%;
   padding: 0 0.5rem;
@@ -545,7 +546,7 @@ h3, .card-title {
   align-items: center;
 }
 
-.profile-img-wrapper {
+.profile-img-wrapper{
   width: 130px;
   height: 130px;
   border-radius: 50%;
@@ -553,7 +554,7 @@ h3, .card-title {
   margin-bottom: 0.8rem;
 }
 
-.profile-img {
+.profile-img{
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -561,7 +562,7 @@ h3, .card-title {
   object-position: bottom center;
 }
 
-.about-title {
+.about-title{
   font-size: 1.5rem !important;
   font-weight: 800;
   margin-bottom: 1.5rem;
@@ -571,7 +572,7 @@ h3, .card-title {
   margin-left: 0;
 }
 
-.about-intro {
+.about-intro{
   font-size: 16px !important;
   line-height: 1.6rem !important;
   letter-spacing: 0.5px !important;
@@ -583,13 +584,13 @@ h3, .card-title {
   font-weight: 400;
 }
 
-.about-more-text {
+.about-more-text{
   display: none;
   width: 100%;
   max-width: 100%;
   margin: 0 auto 1.2rem auto;
 
-  p {
+  p{
     font-size: 16px !important;
     line-height: 1.6 !important;
     letter-spacing: 0.5px !important;
@@ -602,7 +603,7 @@ h3, .card-title {
   &.show { display: block; }
 }
 
-.toggle-btn {
+.toggle-btn{
   background-color: $black;
   color: $white;
   border: none;
@@ -624,7 +625,7 @@ h3, .card-title {
 }
 
 /* Skills Sektion */
-.skills-section {
+.skills-section{
   position: relative;
   width: 100%;
   background-color: #bce3b5;
@@ -632,7 +633,7 @@ h3, .card-title {
   box-sizing: border-box;
 }
 
-.skills-container {
+.skills-container{
   position: relative;
   max-width: 1000px;
   margin: 0 auto;
@@ -640,7 +641,7 @@ h3, .card-title {
   box-sizing: border-box;
 }
 
-.skills-title {
+.skills-title{
   font-size: 1.25rem;
   font-weight: 700;
   color: #121212;
@@ -648,14 +649,14 @@ h3, .card-title {
   text-align: left;
 }
 
-.skills-grid {
+.skills-grid{
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
   margin-bottom: 2rem;
 }
 
-.skill-badge {
+.skill-badge{
   display: inline-flex;
   align-items: center;
   justify-content: flex-start;
@@ -669,14 +670,14 @@ h3, .card-title {
   border-radius: 15px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 
-  .skill-icon {
+  .skill-icon{
     width: 26px !important;
     height: 26px !important;
     object-fit: contain;
     flex-shrink: 0;
   }
 
-  span {
+  span{
     font-size: 14px !important;
     font-weight: 600 !important;
     color: $black;
@@ -687,18 +688,18 @@ h3, .card-title {
   }
 }
 
-.skills-socials {
+.skills-socials{
   display: flex;
   justify-content: flex-end;
   gap: 1rem;
   transform: translateY(15px);
 
-  a {
+  a{
     color: #121212;
     font-size: 1.8rem;
     transition: transform 0.2s ease, opacity 0.2s ease;
 
-    &:hover {
+    &:hover{
       opacity: 0.7;
       transform: translateY(-2px);
     }
@@ -710,68 +711,68 @@ h3, .card-title {
   Breakpoint styling
    ================= */
 
-@include media-breakpoint-up(sm) {
+@include media-breakpoint-up(sm){
 
-  .project-card {
+  .project-card{
     flex: 0 0 78vw;
     max-width: 470px;
     min-height: 360px;
   }
 
-  .card-img-wrapper {
+  .card-img-wrapper{
     height: 240px;
   }
 
-  .section-title {
+  .section-title{
     font-size: 27px !important;
   }
 }
 
-@include media-breakpoint-up(md) {
+@include media-breakpoint-up(md){
 
-  .project-card {
+  .project-card{
     flex: 0 0 75vw;
     max-width: 560px;
     min-height: 375px;
   }
 
-  .card-img-wrapper {
+  .card-img-wrapper{
     height: 250px;
   }
 
-  .section-title {
+  .section-title{
     font-size: 29px !important;
   }
 }
 
-@include media-breakpoint-up(mg) {
+@include media-breakpoint-up(mg){
 
-  .project-card {
+  .project-card{
     flex: 0 0 72vw;
     max-width: 600px;
     min-height: 390px;
   }
 
-  .card-img-wrapper {
+  .card-img-wrapper{
     height: 260px;
   }
 
-  .section-title {
+  .section-title{
     font-size: 30px !important;
   }
 }
 
 
 
-@include media-breakpoint-up(lg) {
+@include media-breakpoint-up(lg){
 
-  .projects-desktop-btn-wrap {
+  .projects-desktop-btn-wrap{
     display: flex;
     justify-content: center;
     margin-top: clamp(2.5rem, 4vw, 4rem) !important;
   }
 
-  .card-title {
+  .card-title{
     font-size: clamp(20px, 1.8vw, 26px);
     text-align: left !important;
     width: 100%;
@@ -780,41 +781,41 @@ h3, .card-title {
     align-items: center;
   }
 
-  .hero-content {
+  .hero-content{
     h1 {
       font-size: clamp(28px, 2.8vw, 48px) !important;
       line-height: 1.2 !important;
     }
 
-    .hero-subtitle {
+    .hero-subtitle{
       font-size: clamp(16px, 1.3vw, 22px) !important;
       line-height: 1.5 !important;
     }
   }
 
-  .modal-card {
+  .modal-card{
     max-width: 500px;
     padding: 3rem 2.5rem 2.5rem 2.5rem;
   }
 
-  .modal-close {
+  .modal-close{
     top: 22px;
     right: 25px;
     font-size: 2rem;
   }
 
-  .section-title {
+  .section-title{
     font-size: clamp(24px, 2.2vw, 36px) !important;
     margin-bottom: 2.5rem;
   }
 
-  .projects-titel {
+  .projects-titel{
     overflow-x: hidden;
   }
 
   /* --- 1. UDVALGTE PROJEKTER & ROSA BJÆLKE --- */
 
-  .projects-container {
+  .projects-container{
     background-color: transparent;
     width: 96% !important;
     max-width: 1250px !important;
@@ -823,14 +824,14 @@ h3, .card-title {
     box-sizing: border-box;
   }
 
-  .projects-cards-wrap {
+  .projects-cards-wrap{
     position: relative;
     width: 100%;
     overflow: visible;
     border-radius: 15px;
   }
 
-  .projects-bg-bar {
+  .projects-bg-bar{
     position: absolute;
     left: -15px !important;
     top: 380px;
@@ -841,7 +842,7 @@ h3, .card-title {
     z-index: 1;
   }
 
-  .projects-slider {
+  .projects-slider{
     position: relative;
     z-index: 2;
     display: grid;
@@ -852,7 +853,7 @@ h3, .card-title {
     padding: 0;
   }
 
-  .project-card {
+  .project-card{
     position: relative;
     flex: none;
     width: 100%;
@@ -864,30 +865,28 @@ h3, .card-title {
     flex-direction: column;
     z-index: 2;
 
-    .btn-card {
+    .btn-card{
       margin-top: auto;
     }
   }
 
   /* Første kort - venstre */
-  .project-card:nth-child(1) {
+  .project-card:nth-child(1){
     grid-column: 1 / 3;
   }
 
 
   /* Andet kort - højre */
-  .project-card:nth-child(2) {
+  .project-card:nth-child(2){
     grid-column: 3 / 5;
   }
 
-  .project-card:nth-child(3) {
+  .project-card:nth-child(3){
     grid-column: 2 / 4;
   }
 
-  .projects-bg-bar-bottom {
+  .projects-bg-bar-bottom{
     position: absolute;
-
-    /* samme bredde som det midterste kort */
     width: calc(53% - 0.75rem);
     height: 140px;
     left: 50%;
@@ -898,7 +897,7 @@ h3, .card-title {
     z-index: 1;
   }
 
-  .card-desc-title {
+  .card-desc-title{
     font-size: clamp(13px, 1.1vw, 16px) !important;
     font-weight: 700;
     color: $black;
@@ -911,7 +910,7 @@ h3, .card-title {
     align-items: flex-end;
   }
 
-  .card-desc {
+  .card-desc{
     font-size: clamp(14px, 1.05vw, 17px) !important;
     color: $black;
     line-height: 1.5;
@@ -921,7 +920,7 @@ h3, .card-title {
     margin-top: 0;
   }
 
-  .btn-projects-all {
+  .btn-projects-all{
     display: inline-block;
     background-color: #eb96de;
     color: $white;
@@ -934,7 +933,7 @@ h3, .card-title {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: all 0.2s ease;
 
-    &:hover {
+    &:hover{
       background-color: darken(#E288D4, 8%);
       color: $white;
       transform: translateY(-2px);
@@ -942,11 +941,11 @@ h3, .card-title {
   }
 
   /* --- 2. HVEM ER JEG? (3 Kolonner) --- */
-  .about-section {
+  .about-section{
     padding: 3rem 1rem;
   }
 
-  .about-container {
+  .about-container{
     display: grid;
     grid-template-columns: 200px auto 1fr;
     column-gap: 2.5rem;
@@ -956,20 +955,20 @@ h3, .card-title {
     text-align: left;
   }
 
-  .profile-img-wrapper {
+  .profile-img-wrapper{
     width: 170px;
     height: 170px;
     margin-bottom: 0;
   }
 
-  .about-header-col {
+  .about-header-col{
     display: flex;
     align-items: center;
     gap: 2.5rem;
     height: 100%;
   }
 
-  .about-title {
+  .about-title{
     font-size: clamp(24px, 2.2vw, 36px) !important;
     font-weight: 800;
     white-space: nowrap;
@@ -977,17 +976,17 @@ h3, .card-title {
     color: $black;
   }
 
-  .about-divider {
+  .about-divider{
     width: 2px;
     height: 180px;
     background-color: $black;
   }
 
-  .about-text-wrapper {
+  .about-text-wrapper{
     text-align: left;
   }
 
-  .about-intro, .about-more-text p {
+  .about-intro, .about-more-text p{
     text-align: left !important;
     font-size: clamp(15px, 1.1vw, 18px) !important;
     line-height: 1.6 !important;
@@ -995,32 +994,32 @@ h3, .card-title {
     font-weight: 400 !important;
   }
 
-  .about-more-text {
+  .about-more-text{
     display: block !important;
   }
 
 
   /* --- 3. MINE KOMPETENCER --- */
 
-  .skills-title {
+  .skills-title{
     font-size: clamp(24px, 2.2vw, 36px) !important;
     line-height: 1.3 !important;
   }
 
-  .skills-grid {
+  .skills-grid{
     display: grid !important;
     grid-template-columns: repeat(6, 1fr) !important;
     gap: 0.6rem !important;
   }
 
-  .skill-badge {
+  .skill-badge{
     max-width: 100% !important;
     min-width: 44px !important;
     padding: 0.3rem 0.4rem !important;
     justify-content: flex-start;
     font-size: 11.5px !important;
 
-    span {
+    span{
       font-size: 11.5px !important;
     }
   }
@@ -1029,31 +1028,31 @@ h3, .card-title {
 /* ==========================================
    XL: Large Desktop (1200px +)
    ========================================== */
-@include media-breakpoint-up(xl) {
+@include media-breakpoint-up(xl){
 
-  .modal-card {
+  .modal-card{
     max-width: 550px;
     padding: 3.2rem 2.8rem 2.5rem 2.8rem;
     border-radius: 28px;
   }
 
-  .about-container {
+  .about-container{
     max-width: 1150px;
     column-gap: 3.5rem;
   }
 
-  .projects-container {
+  .projects-container{
     width: 95% !important;
     max-width: 1250px !important;
     margin: 0 auto !important;
     padding: 0 1.5rem !important;
   }
 
-  .project-card {
+  .project-card{
     padding: 1rem !important;
   }
 
-  .projects-slider {
+  .projects-slider{
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1.5rem !important;
@@ -1062,69 +1061,67 @@ h3, .card-title {
   /* Nulstil LG-placeringen */
   .project-card:nth-child(1),
   .project-card:nth-child(2),
-  .project-card:nth-child(3) {
+  .project-card:nth-child(3){
     grid-column: auto;
   }
 
   /* Den ekstra nederste rosa bjælke skal væk */
-  .projects-bg-bar-bottom {
+  .projects-bg-bar-bottom{
     display: none;
   }
 
   /* Den normale rosa bjælke tilbage til bunden */
-  .projects-bg-bar {
+  .projects-bg-bar{
     top: auto;
     bottom: -30px;
-
     left: -20px !important;
     width: calc(100% + 40px) !important;
-
     height: 150px;
   }
 
-  .projects-bg-bar {
+  .projects-bg-bar{
     left: -20px !important;
     width: calc(100% + 40px) !important;
     height: 150px;
     bottom: -30px;
   }
 
-  .card-img-wrapper img {
+  .card-img-wrapper img{
     max-width: 88%;
     max-height: 88%;
   }
 
   // Lidt mindre luft omkring overskriften
   .card-title,
-  .project-card h3 {
+  .project-card h3{
     margin-top: 0.65rem;
     margin-bottom: 0.25rem;
   }
 
-  .card-desc-title {
+  .card-desc-title{
     margin-top: 0.2rem;
     margin-bottom: 0.2rem;
     min-height: auto;
   }
 
-  .card-desc {
+  .card-desc{
     line-height: 1.4 !important;
     margin-top: 0;
     margin-bottom: 0;
   }
 
-  .about-container {
+  .about-container{
     max-width: 1150px;
     column-gap: 3.5rem;
   }
 
   /* --- MINE KOMPETENCER --- */
 
-  .skills-section {
+  .skills-section{
     width: 100%;
   }
 
-  .skills-container {
+  .skills-container{
     width: 100% !important;
     max-width: 100% !important;
     padding: 0 24px !important;
@@ -1132,13 +1129,13 @@ h3, .card-title {
     box-sizing: border-box;
   }
 
-  .skills-title {
+  .skills-title{
     text-align: left !important;
     margin-left: 0 !important;
     margin-bottom: 1.5rem;
   }
 
-  .skills-wrapper {
+  .skills-wrapper{
     display: flex !important;
     flex-direction: row !important;
     justify-content: space-between !important;
@@ -1147,7 +1144,7 @@ h3, .card-title {
     gap: 1.5rem;
   }
 
-  .skills-grid {
+  .skills-grid{
     display: grid !important;
     grid-template-columns: repeat(6, minmax(105px, 1fr)) !important;
     gap: 0.75rem 0.75rem !important;
@@ -1155,7 +1152,7 @@ h3, .card-title {
     max-width: 820px !important;
   }
 
-  .skill-badge {
+  .skill-badge{
     width: 100% !important;
     min-height: 44px !important;
     padding: 0 0.5rem !important;
@@ -1173,7 +1170,7 @@ h3, .card-title {
 
   .skills-socials,
   .social-icons,
-  .some-icons {
+  .some-icons{
     position: static !important;
     display: flex !important;
     justify-content: flex-end !important;
@@ -1182,12 +1179,12 @@ h3, .card-title {
     margin: 0 0 0 auto !important;
     padding: 0 0 0.2rem 0 !important;
 
-    a, i {
+    a, i{
       font-size: 1.5rem !important;
       color: $black !important;
       transition: transform 0.2s ease, color 0.2s ease;
 
-      &:hover {
+      &:hover{
         transform: translateY(-3px);
         color: #eb96de !important;
       }
@@ -1199,74 +1196,74 @@ h3, .card-title {
 /* ==========================================
    XXL: Very Large Desktop (1400px +)
    ========================================== */
-@include media-breakpoint-up(xxl) {
+@include media-breakpoint-up(xxl){
 
-  .hero-content h1 {
+  .hero-content h1{
     font-size: 52px !important;
   }
 
-  .section-title, .about-title {
+  .section-title, .about-title{
     font-size: 38px !important;
   }
 
-  .about-intro, .about-more-text p {
+  .about-intro, .about-more-text p{
     font-size: 19px !important;
   }
 
-    .modal-card {
+    .modal-card{
       max-width: 600px;
       padding: 3.5rem 3rem 3rem 3rem;
     }
 
-    .modal-close {
+    .modal-close{
       top: 25px;
       right: 28px;
       font-size: 2.2rem;
     }
 
-  .projects-container {
+  .projects-container{
     width: 95% !important;
     max-width: 1350px !important;
     padding: 0 2rem !important;
   }
 
-  .projects-slider {
+  .projects-slider{
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1.75rem !important;
   }
 
   .project-card:nth-child(1),
   .project-card:nth-child(2),
-  .project-card:nth-child(3) {
+  .project-card:nth-child(3){
     grid-column: auto;
   }
 
-  .projects-bg-bar {
+  .projects-bg-bar{
     left: -25px !important;
     width: calc(100% + 50px) !important;
     height: 160px;
     bottom: -32px;
   }
 
-  .project-card {
+  .project-card{
     padding: 2rem 1.8rem !important;
     border-radius: 32px;
   }
 
-  .about-container {
+  .about-container{
     max-width: 1250px;
     grid-template-columns: 220px auto 1fr;
   }
 
-  .about-divider {
+  .about-divider{
     height: 200px;
   }
 
-  .skills-section {
+  .skills-section{
     width: 100%;
   }
 
-  .skills-container {
+  .skills-container{
     width: 100% !important;
     max-width: 100% !important;
     margin: 0 !important;
@@ -1274,12 +1271,12 @@ h3, .card-title {
     box-sizing: border-box;
   }
 
-  .skills-title {
+  .skills-title{
     text-align: left !important;
     margin-bottom: 1.5rem;
   }
 
-  .skills-wrapper {
+  .skills-wrapper{
     display: flex !important;
     flex-direction: row !important;
     justify-content: space-between !important;
@@ -1288,7 +1285,7 @@ h3, .card-title {
     gap: 1.5rem;
   }
 
-  .skills-grid {
+  .skills-grid{
     display: grid !important;
     grid-template-columns: repeat(6, minmax(115px, 1fr)) !important;
     gap: 0.8rem 0.8rem !important;
@@ -1296,7 +1293,7 @@ h3, .card-title {
     max-width: 900px !important;
   }
 
-  .skill-badge {
+  .skill-badge{
     width: 100% !important;
     min-height: 46px !important;
     padding: 0 0.6rem !important;
@@ -1313,19 +1310,19 @@ h3, .card-title {
   }
 
   .social-icons,
-  .some-icons {
+  .some-icons{
     display: flex !important;
     align-items: center !important;
     gap: 1.2rem !important;
     margin-left: auto !important;
     padding-bottom: 0.2rem;
 
-    a, i {
+    a, i{
       font-size: 1.5rem !important;
       color: $black !important;
       transition: transform 0.2s ease, color 0.2s ease;
 
-      &:hover {
+      &:hover{
         transform: translateY(-3px);
         color: #eb96de !important;
       }
@@ -1337,38 +1334,38 @@ h3, .card-title {
 /* ==========================================
    XXXL: Ultra-wide / 4K (1950px +)
    ========================================== */
-@include media-breakpoint-up(xxxl) {
+@include media-breakpoint-up(xxxl){
 
 
-  .projects-container {
+  .projects-container{
     width: 96% !important;
     max-width: 1850px !important;
     padding: 0 1rem !important;
   }
 
-  .projects-slider {
+  .projects-slider{
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 2rem !important;
   }
 
   .project-card:nth-child(1),
   .project-card:nth-child(2),
-  .project-card:nth-child(3) {
+  .project-card:nth-child(3){
     grid-column: auto;
   }
 
-  .project-card {
+  .project-card{
     width: 100%;
     max-width: none;
     padding: 1.4rem 1.3rem !important;
     border-radius: 28px;
   }
 
-  .card-img-wrapper {
+  .card-img-wrapper{
     height: 300px;
   }
 
-  .projects-bg-bar {
+  .projects-bg-bar{
     left: -30px !important;
     width: calc(100% + 60px) !important;
     height: 170px;
@@ -1376,27 +1373,27 @@ h3, .card-title {
     border-radius: 15px;
   }
 
-  .about-container {
+  .about-container{
     max-width: 1500px;
     column-gap: 4.5rem;
   }
 
-  .skills-section {
+  .skills-section{
     width: 100%;
   }
 
-    .skills-container {
+    .skills-container{
       max-width: 1600px !important;
       margin: 0 auto !important;
       padding: 0 3rem !important;
     }
 
-  .skills-title {
+  .skills-title{
     text-align: left !important;
     margin-bottom: 1.5rem;
   }
 
-  .skills-wrapper {
+  .skills-wrapper{
     display: flex !important;
     flex-direction: row !important;
     justify-content: space-between !important;
@@ -1405,7 +1402,7 @@ h3, .card-title {
     gap: 2rem;
   }
 
-  .skills-grid {
+  .skills-grid{
     display: grid !important;
     grid-template-columns: repeat(6, minmax(130px, 1fr)) !important;
     gap: 0.9rem 1rem !important;
@@ -1413,7 +1410,7 @@ h3, .card-title {
     max-width: 1050px !important;
   }
 
-  .skill-badge {
+  .skill-badge{
     width: 100% !important;
     height: 48px !important;
     padding: 0 1rem !important;
@@ -1426,19 +1423,19 @@ h3, .card-title {
   }
 
   .social-icons,
-  .some-icons {
+  .some-icons{
     display: flex !important;
     align-items: center !important;
     gap: 1.4rem !important;
     margin-left: auto !important;
     padding-bottom: 0.2rem;
 
-    a, i {
+    a, i{
       font-size: 1.6rem !important;
       color: $black !important;
       transition: transform 0.2s ease, color 0.2s ease;
 
-      &:hover {
+      &:hover{
         transform: translateY(-3px);
         color: #eb96de !important;
       }
@@ -1448,7 +1445,7 @@ h3, .card-title {
 
 /* ---- Andre Projekter ---- */
 
-.sub-hero-header {
+.sub-hero-header{
   position: relative;
   width: 100%;
   display: flex;
@@ -1457,7 +1454,7 @@ h3, .card-title {
   overflow: hidden;
   box-sizing: border-box;
 
-  .sub-hero-bg-img {
+  .sub-hero-bg-img{
     position: absolute;
     top: 0;
     left: 0;
@@ -1469,7 +1466,7 @@ h3, .card-title {
 
   /* Top bar / Logo */
 
-  .sub-navbar {
+  .sub-navbar{
     position: relative;
     z-index: 2;
     width: 100%;
@@ -1481,9 +1478,9 @@ h3, .card-title {
     margin-top: -15px;
 
 
-    .sub-logo {
+    .sub-logo{
 
-      a {
+      a{
         display: flex;
         align-items: center;
         justify-content: center;
@@ -1492,7 +1489,7 @@ h3, .card-title {
       }
 
 
-      img {
+      img{
         height: 25px !important;
         width: auto !important;
         display: block;
@@ -1502,7 +1499,7 @@ h3, .card-title {
 
   /* Indhold i midten */
 
-  .sub-hero-layout {
+  .sub-hero-layout{
     position: relative;
     z-index: 2;
     display: flex;
@@ -1513,12 +1510,12 @@ h3, .card-title {
     margin-top: 1rem;
     box-sizing: border-box;
 
-    .sub-hero-text {
+    .sub-hero-text{
       flex: 1;
       display: flex;
       justify-content: center;
 
-      .sub-hero-title {
+      .sub-hero-title{
         font-size: 29.4px;
         font-weight: 800;
         color: $black;
@@ -1530,12 +1527,12 @@ h3, .card-title {
       }
     }
 
-    .sub-hero-img-box {
+    .sub-hero-img-box{
       flex: 1;
       display: flex;
       justify-content: flex-end;
 
-      .sub-hero-img {
+      .sub-hero-img{
         width: 100%;
         max-width: 170px;
         height: auto;
@@ -1547,17 +1544,17 @@ h3, .card-title {
 
 /* SEKTIONS- & KORT-STYLING */
 
-.page-projects-wrapper {
+.page-projects-wrapper{
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
   padding: 1.5rem 0.6rem 120px;
 }
 
-.section-card-group {
+.section-card-group{
   width: 100%;
 
-  .section-card-container {
+  .section-card-container{
     width: 100%;
     max-width: 420px;
     margin: 0 auto;
@@ -1569,7 +1566,7 @@ h3, .card-title {
     transition: max-width 0.3s ease;
   }
 
-  .section-title {
+  .section-title{
     font-size: 20px;
     font-weight: 800;
     color: $black;
@@ -1578,7 +1575,7 @@ h3, .card-title {
     line-height: 1.3 !important;
   }
 
-  .section-subtitle {
+  .section-subtitle{
     font-size: 11px;
     color: $black;
     line-height: 1.4;
@@ -1588,7 +1585,7 @@ h3, .card-title {
 
   /* GRID - MASSIVE AFSTAND NED IGENNEM MIDTEN */
 
-  .section-grid {
+  .section-grid{
     display: grid;
     grid-template-columns: repeat(2, 127px);
     justify-content: center;
@@ -1598,7 +1595,7 @@ h3, .card-title {
 
   /* UNIVERSAL KORT */
 
-  .universal-card {
+  .universal-card{
     position: relative;
     width: 127px;
     height: 159px;
@@ -1610,19 +1607,19 @@ h3, .card-title {
     box-sizing: border-box;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 
-    &:hover {
+    &:hover{
       transform: translateY(-3px);
       box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.22);
     }
 
-    .card-bg {
+    .card-bg{
       width: 100%;
       height: 100%;
       background-size: cover;
       background-position: center;
     }
 
-    .card-badge {
+    .card-badge{
       position: absolute;
       bottom: -1px;
       left: -1px;
@@ -1636,7 +1633,7 @@ h3, .card-title {
       align-items: center;
       border-top: 2px solid #000000;
 
-      .universal-card-title {
+      .universal-card-title{
         display: block;
         font-size: 10px;
         font-weight: 900;
@@ -1652,7 +1649,7 @@ h3, .card-title {
 
 /* POP-UP MODAL & GALLERI */
 
-.global-modal-overlay {
+.global-modal-overlay{
   display: none;
   position: fixed;
   top: 0;
@@ -1673,7 +1670,7 @@ h3, .card-title {
     display: flex !important;
   }
 
-  .global-modal-content {
+  .global-modal-content{
     position: relative;
     background: $white;
     width: 100%;
@@ -1688,7 +1685,7 @@ h3, .card-title {
 
     /* Luk-knap (X) */
 
-    .global-modal-close {
+    .global-modal-close{
       position: absolute;
       top: 14px;
       right: 18px;
@@ -1707,7 +1704,7 @@ h3, .card-title {
       line-height: 1;
     }
 
-    .global-modal-title {
+    .global-modal-title{
       font-size: 20px;
       font-weight: 800;
       text-transform: uppercase;
@@ -1716,7 +1713,7 @@ h3, .card-title {
       letter-spacing: 0.5px;
     }
 
-    .global-modal-gallery {
+    .global-modal-gallery{
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
@@ -1724,7 +1721,7 @@ h3, .card-title {
       gap: 0.8rem;
       margin-bottom: 1.2rem;
 
-      img {
+      img{
         width: 127px;
         height: 80px;
         object-fit: contain;
@@ -1732,7 +1729,7 @@ h3, .card-title {
       }
     }
 
-    .global-modal-desc {
+    .global-modal-desc{
       font-size: 12px;
       color: #333333;
       line-height: 1.6;
@@ -1744,7 +1741,7 @@ h3, .card-title {
 
 /* --- BUND NAVBAR --- */
 
-.bottom-nav {
+.bottom-nav{
   position: fixed;
   bottom: 0;
   left: 0;
@@ -1762,7 +1759,7 @@ h3, .card-title {
   z-index: 1000;
   box-sizing: border-box;
 
-  .nav-item {
+  .nav-item{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1775,7 +1772,7 @@ h3, .card-title {
     gap: 5px;
     transition: color 0.2s ease, transform 0.2s ease;
 
-    i {
+    i{
       font-size: 38px;
       line-height: 38px;
       width: 38px;
@@ -1785,7 +1782,7 @@ h3, .card-title {
       justify-content: center;
     }
 
-    .nav-icon-img {
+    .nav-icon-img{
       width: 38px;
       height: 38px;
       object-fit: contain;
@@ -1793,7 +1790,7 @@ h3, .card-title {
       opacity: 0.55;
     }
 
-    .nav-label {
+    .nav-label{
       font-size: 10px;
       font-weight: 500;
       line-height: 1;
@@ -1804,20 +1801,20 @@ h3, .card-title {
       white-space: nowrap;
     }
 
-    &.active {
+    &.active{
       color: $black;
 
-      .nav-label {
+      .nav-label{
         font-weight: 800;
       }
 
-      .nav-icon-img {
+      .nav-icon-img{
         opacity: 1;
         filter: brightness(0);
       }
     }
 
-    &:hover {
+    &:hover{
       opacity: 0.8;
     }
   }
@@ -1825,29 +1822,29 @@ h3, .card-title {
 
 /* Desktop footer er skjult på mobil/tablet */
 
-.site-footer {
+.site-footer{
   display: none;
 }
 
-.desktop-nav-links {
+.desktop-nav-links{
   display: none !important;
 }
 
-.image-lightbox {
+.image-lightbox{
   display: none;
 }
 
 /* breakpoint styling */
 
-@media (min-width: 440px) and (max-width: 575.98px) {
+@media (min-width: 440px) and (max-width: 575.98px){
 
-  .sub-hero-header {
+  .sub-hero-header{
 
-    .sub-hero-layout {
+    .sub-hero-layout{
 
-      .sub-hero-text {
+      .sub-hero-text{
 
-        .sub-hero-title {
+        .sub-hero-title{
           font-size: clamp(24px, 6vw, 29px);
           line-height: 1.15;
           letter-spacing: 1.5px;
@@ -1855,7 +1852,7 @@ h3, .card-title {
           white-space: normal;
           margin: 0;
 
-          .hero-title-break {
+          .hero-title-break{
             display: block;
           }
         }
@@ -1864,15 +1861,15 @@ h3, .card-title {
   }
 }
 
-@include media-breakpoint-up(sm) {
+@include media-breakpoint-up(sm){
 
-    .sub-hero-header {
+    .sub-hero-header{
 
-      .sub-hero-layout {
+      .sub-hero-layout{
 
-        .sub-hero-text {
+        .sub-hero-text{
 
-          .sub-hero-title {
+          .sub-hero-title{
             font-size: 31px;
             line-height: 1.2;
             letter-spacing: 1.5px;
@@ -1882,7 +1879,7 @@ h3, .card-title {
             white-space: nowrap;
             margin: 0;
 
-            .hero-title-break {
+            .hero-title-break{
               display: inline;
             }
           }
@@ -1890,85 +1887,85 @@ h3, .card-title {
       }
     }
 
-  .sub-hero-header {
+  .sub-hero-header{
     padding: 2.2rem 2rem 4rem 2rem;
 
-    .sub-hero-layout {
+    .sub-hero-layout{
       gap: 2rem;
 
-      .sub-hero-text {
+      .sub-hero-text{
 
-        .sub-hero-title {
+        .sub-hero-title{
           font-size: 31px;
           line-height: 1.2;
         }
       }
 
-      .sub-hero-img-box {
+      .sub-hero-img-box{
 
-        .sub-hero-img {
+        .sub-hero-img{
           max-width: 190px;
         }
       }
     }
   }
 
-  .page-projects-wrapper {
+  .page-projects-wrapper{
     padding: 1.8rem 1.5rem 120px;
     gap: 2.7rem;
   }
 
-  .section-card-group {
+  .section-card-group{
 
-    .section-card-container {
+    .section-card-container{
       max-width: 520px;
       padding: 2rem 2rem;
       border-radius: 24px;
     }
 
-    .section-title {
+    .section-title{
       font-size: 21px;
     }
 
-    .section-subtitle {
+    .section-subtitle{
       font-size: 11.5px;
       margin-bottom: 1.8rem;
     }
 
-    .section-grid {
+    .section-grid{
       grid-template-columns: repeat(2, 145px);
       column-gap: 3rem;
       row-gap: 2.2rem;
     }
 
-    .universal-card {
+    .universal-card{
       width: 145px;
       height: 181px;
       border-radius: 16px;
 
-      .card-badge {
+      .card-badge{
         height: 68px;
         padding: 0.7rem 0.7rem 0.7rem 0.9rem;
 
-        .universal-card-title {
+        .universal-card-title{
           font-size: 11px;
         }
       }
     }
   }
 
-  .global-modal-overlay {
+  .global-modal-overlay{
 
-    .global-modal-content {
+    .global-modal-content{
       max-width: 460px;
       padding: 2.2rem 1.8rem;
     }
 
-    .global-modal-title {
+    .global-modal-title{
       font-size: 21px;
     }
 
-    .global-modal-gallery {
+    .global-modal-gallery{
       gap: 1rem;
 
       img {
@@ -1980,7 +1977,7 @@ h3, .card-title {
       }
     }
 
-    .global-modal-desc {
+    .global-modal-desc{
       font-size: 12.5px;
       line-height: 1.65;
       text-align: center !important;
@@ -1989,7 +1986,7 @@ h3, .card-title {
       margin-right: auto !important;
     }
 
-    .global-modal-close {
+    .global-modal-close{
       width: 34px;
       height: 34px;
       font-size: 19px;
@@ -1997,22 +1994,22 @@ h3, .card-title {
   }
 }
 
-@include media-breakpoint-up(md) {
+@include media-breakpoint-up(md){
 
-  .sub-hero-header {
+  .sub-hero-header{
 
-    .sub-hero-layout {
+    .sub-hero-layout{
       gap: 2.5rem;
 
-      .sub-hero-text {
+      .sub-hero-text{
 
-        .sub-hero-title {
+        .sub-hero-title{
           font-size: 34px;
           line-height: 1.2;
         }
       }
 
-      .sub-hero-img-box {
+      .sub-hero-img-box{
         .sub-hero-img {
           max-width: 220px;
         }
@@ -2020,65 +2017,65 @@ h3, .card-title {
     }
   }
 
-  .page-projects-wrapper {
+  .page-projects-wrapper{
     gap: 3rem;
     padding: 2rem 2rem 120px;
   }
 
-  .section-card-group {
+  .section-card-group{
 
-    .section-card-container {
+    .section-card-container{
       max-width: 650px;
       padding: 2.2rem 2rem;
     }
 
-    .section-title {
+    .section-title{
       font-size: 23px;
     }
 
-    .section-subtitle {
+    .section-subtitle{
       font-size: 12px;
       margin-bottom: 2rem;
     }
 
-    .section-grid {
+    .section-grid{
       grid-template-columns: repeat(2, 165px);
       column-gap: 4rem;
       row-gap: 2.5rem;
     }
 
-    .universal-card {
+    .universal-card{
       width: 165px;
       height: 206px;
       border-radius: 18px;
 
-      .card-badge {
+      .card-badge{
         height: 76px;
         padding: 0.8rem 0.8rem 0.8rem 1rem;
 
-        .universal-card-title {
+        .universal-card-title{
           font-size: 12px;
         }
       }
     }
   }
 
-  .global-modal-overlay {
+  .global-modal-overlay{
 
-    .global-modal-content {
+    .global-modal-content{
       max-width: 560px;
       padding: 2.4rem 2rem;
     }
 
-    .global-modal-title {
+    .global-modal-title{
       font-size: 22px;
       margin-bottom: 1.4rem;
     }
 
-    .global-modal-gallery {
+    .global-modal-gallery{
       gap: 1.2rem;
 
-      img {
+      img{
         width: auto;
         height: auto;
         max-width: 165px;
@@ -2087,7 +2084,7 @@ h3, .card-title {
       }
     }
 
-    .global-modal-desc {
+    .global-modal-desc{
       font-size: 13px;
       line-height: 1.7;
       text-align: center !important;
@@ -2096,7 +2093,7 @@ h3, .card-title {
       margin-right: auto !important;
     }
 
-    .global-modal-close {
+    .global-modal-close{
       width: 36px;
       height: 36px;
       font-size: 20px;
@@ -2104,20 +2101,20 @@ h3, .card-title {
   }
 }
 
-@include media-breakpoint-up(mg) {
+@include media-breakpoint-up(mg){
 
-  .sub-hero-header {
-    .sub-hero-layout {
+  .sub-hero-header{
+    .sub-hero-layout{
       gap: 3rem;
 
-      .sub-hero-text {
-        .sub-hero-title {
+      .sub-hero-text{
+        .sub-hero-title{
           font-size: 36px;
         }
       }
 
-      .sub-hero-img-box {
-        .sub-hero-img {
+      .sub-hero-img-box{
+        .sub-hero-img{
           max-width: 260px;
         }
       }
@@ -2125,66 +2122,66 @@ h3, .card-title {
   }
 
 
-  .page-projects-wrapper {
+  .page-projects-wrapper{
     padding-left: 2.5rem;
     padding-right: 2.5rem;
   }
 
 
-  .section-card-group {
+  .section-card-group{
 
-    .section-card-container {
+    .section-card-container{
       max-width: 760px;
       padding: 2.5rem 3rem;
     }
 
-    .section-title {
+    .section-title{
       font-size: 24px;
     }
 
-    .section-subtitle {
+    .section-subtitle{
       font-size: 13px;
     }
 
     /* stadig 2 kort */
-    .section-grid {
+    .section-grid{
       grid-template-columns: repeat(2, 185px);
       column-gap: 6rem;
       row-gap: 2.8rem;
     }
 
-    .universal-card {
+    .universal-card{
       width: 185px;
       height: 231px;
       border-radius: 20px;
 
-      .card-badge {
+      .card-badge{
         height: 84px;
         padding: 0.9rem 0.9rem 0.9rem 1.1rem;
 
-        .universal-card-title {
+        .universal-card-title{
           font-size: 13px;
         }
       }
     }
   }
 
-  .global-modal-overlay {
+  .global-modal-overlay{
 
-    .global-modal-content {
+    .global-modal-content{
       max-width: 640px;
       padding: 2.7rem 2.4rem;
     }
 
-    .global-modal-title {
+    .global-modal-title{
       font-size: 24px;
       margin-bottom: 1.6rem;
     }
 
-    .global-modal-gallery {
+    .global-modal-gallery{
       gap: 1.5rem;
 
-      img {
+      img{
         width: auto;
         height: auto;
         max-width: 190px;
@@ -2193,7 +2190,7 @@ h3, .card-title {
       }
     }
 
-    .global-modal-desc {
+    .global-modal-desc{
       font-size: 14px;
       line-height: 1.8;
       text-align: center !important;
@@ -2202,7 +2199,7 @@ h3, .card-title {
       margin-right: auto !important;
     }
 
-    .global-modal-close {
+    .global-modal-close{
       width: 40px;
       height: 40px;
       font-size: 22px;
@@ -2315,7 +2312,7 @@ h3, .card-title {
         text-align: left !important;
         flex: 1 !important;
 
-        h1 {
+        h1{
           font-size: 36px !important;
           font-weight: 900 !important;
           letter-spacing: 3px !important;
@@ -2325,7 +2322,7 @@ h3, .card-title {
           margin: 0 !important;
           white-space: nowrap !important;
 
-          br {
+          br{
             display: none !important;
           }
         }
@@ -2382,13 +2379,13 @@ h3, .card-title {
 
   /* POPUP – DESKTOP / LG → XXXL */
 
-  .global-modal-overlay {
+  .global-modal-overlay{
     z-index: 1000 !important;
   }
 
-    .global-modal-overlay {
+    .global-modal-overlay{
 
-      .global-modal-content {
+      .global-modal-content{
         width: min(900px, calc(100vw - 80px)) !important;
         max-width: 900px !important;
         height: 410px !important;
@@ -2408,7 +2405,7 @@ h3, .card-title {
 
       /* GALLERY – VENSTRE SIDE */
 
-      .global-modal-gallery {
+      .global-modal-gallery{
         grid-area: gallery !important;
         width: 100% !important;
         height: 100% !important;
@@ -2427,11 +2424,11 @@ h3, .card-title {
         overflow-x: hidden !important;
         scrollbar-width: none !important;
 
-        img {
+        img{
           cursor: zoom-in !important;
           transition: transform 0.2s ease, opacity 0.2s ease;
 
-          &:hover {
+          &:hover{
             transform: scale(1.03);
             opacity: 0.9;
           }
@@ -2460,7 +2457,7 @@ h3, .card-title {
       }
 
       .global-modal-gallery:has(img:nth-child(3):last-child){
-        img:nth-child(3) {
+        img:nth-child(3){
           grid-column: 1 / -1 !important;
           justify-self: center !important;
         }
@@ -2501,7 +2498,7 @@ h3, .card-title {
 
       /* HØJRE SIDE – BESKRIVELSE */
 
-      .global-modal-desc {
+      .global-modal-desc{
         grid-area: info !important;
         width: 100% !important;
         height: 100% !important;
@@ -2538,7 +2535,7 @@ h3, .card-title {
       }
     }
 
-  .image-lightbox {
+  .image-lightbox{
     position: fixed;
     inset: 0;
     width: 100vw;
@@ -2552,12 +2549,12 @@ h3, .card-title {
     box-sizing: border-box;
   }
 
-  .image-lightbox.active {
+  .image-lightbox.active{
     display: flex !important;
   }
 
   /* Det store billede */
-  #imageLightboxImg {
+  #imageLightboxImg{
     position: relative;
     z-index: 1;
     display: block;
@@ -2572,7 +2569,7 @@ h3, .card-title {
 
 
   /* Luk-knap */
-  .image-lightbox-close {
+  .image-lightbox-close{
     position: absolute;
     z-index: 2;
     top: 30px;
@@ -2703,7 +2700,7 @@ h3, .card-title {
     }
 
 
-    .global-modal-gallery img {
+    .global-modal-gallery img{
       max-width: 170px !important;
       max-height: 145px !important;
     }
@@ -2780,13 +2777,13 @@ h3, .card-title {
 
 @include media-breakpoint-up(xxxl){
 
-  .sub-hero-header {
-    .sub-navbar {
+  .sub-hero-header{
+    .sub-navbar{
       height: 75px !important;
       padding: 0 5rem !important;
 
-      .sub-logo {
-        img {
+      .sub-logo{
+        img{
           height: 36px !important;
         }
       }
@@ -2794,8 +2791,8 @@ h3, .card-title {
       .desktop-nav-links{
         gap: 2rem !important;
 
-        li {
-          a {
+        li{
+          a{
             font-size: 17px !important;
           }
         }
@@ -2817,7 +2814,7 @@ h3, .card-title {
         display: flex;
         justify-content: center;
 
-        h1 {
+        h1{
           font-size: 48px !important;
         }
       }
@@ -2862,9 +2859,9 @@ h3, .card-title {
       gap: 1.5rem !important;
     }
 
-    .universal-card {
-      .card-badge {
-        .universal-card-title {
+    .universal-card{
+      .card-badge{
+        .universal-card-title{
           font-size: 13px !important;
         }
       }
@@ -3048,7 +3045,7 @@ h3, .card-title {
   gap: 20px;
 }
 
-.selected-mobile-title {
+.selected-mobile-title{
    margin-left: 20px;
   font-size: 30px;
   line-height: 1.15;
@@ -3115,13 +3112,13 @@ h3, .card-title {
   border-right: 1px solid #555;
   box-sizing: border-box;
 
-  h2 {
+  h2{
     margin: 0 0 12px;
     font-size: 16px;
     font-weight: 700;
   }
 
-  p {
+  p{
     margin: 0;
     font-size: 14px;
     font-weight: 500;
@@ -3130,12 +3127,12 @@ h3, .card-title {
 }
 
 /* SPOTLESS */
-.project-theme-spotless {
+.project-theme-spotless{
   --project-bubble-color: #0f2d52;
 }
 
 /* WAYBLY */
-.project-theme-waybly {
+.project-theme-waybly{
   --project-bubble-color: #294d87;
 }
 
@@ -3166,7 +3163,7 @@ h3, .card-title {
    BOBLER I HVER SLIDE
 ========================= */
 
-.selected-slide-bubbles {
+.selected-slide-bubbles{
   position: absolute;
   inset: 0;
   z-index: 1;
@@ -3213,7 +3210,7 @@ h3, .card-title {
   border-right: 0;
 }
 
-.selected-mobile-skills {
+.selected-mobile-skills{
   line-height: 1.7 !important;
 }
 
@@ -3353,13 +3350,13 @@ h3, .card-title {
 }
 
 .selected-mobile-login{
-  h2 {
+  h2{
     margin: 0 0 5px;
     font-size: 13px;
     font-weight: 700;
   }
 
-  p {
+  p{
     margin: 0;
     font-size: 11px;
     line-height: 1.5;
@@ -3431,11 +3428,11 @@ h3, .card-title {
     flex-basis: 56%;
     padding: 5px 24px;
 
-    h2 {
+    h2{
       font-size: 16px;
     }
 
-    p {
+    p{
       font-size: 13px;
       line-height: 1.65;
     }
@@ -3466,7 +3463,7 @@ h3, .card-title {
     margin-top: 32px;
     margin-bottom: -18px;
 
-    span {
+    span{
       font-size: 14px;
       padding: 7px 18px;
     }
@@ -3500,11 +3497,11 @@ h3, .card-title {
 
   .selected-mobile-login{
 
-    h2 {
+    h2{
       font-size: 14px;
     }
 
-    p {
+    p{
       font-size: 12px;
     }
   }
@@ -3562,12 +3559,12 @@ h3, .card-title {
     flex-basis: 46%;
     padding: 8px 28px;
 
-    h2 {
+    h2{
       font-size: 18px;
       margin-bottom: 12px;
     }
 
-    p {
+    p{
       font-size: 14px;
       line-height: 1.65;
     }
@@ -3598,7 +3595,7 @@ h3, .card-title {
     margin-top: 30px;
     margin-bottom: -18px;
 
-    span {
+    span{
       font-size: 14px;
       padding: 6px 18px;
     }
@@ -3630,11 +3627,11 @@ h3, .card-title {
   }
 
   .selected-mobile-login{
-    h2 {
+    h2{
       font-size: 15px;
     }
 
-    p {
+    p{
       font-size: 12px;
     }
   }
@@ -3696,11 +3693,11 @@ h3, .card-title {
     flex-basis: 44%;
     padding: 8px 30px;
 
-    h2 {
+    h2{
       font-size: 18px;
     }
 
-    p {
+    p{
       font-size: 14px;
       line-height: 1.65;
     }
@@ -3751,11 +3748,11 @@ h3, .card-title {
 
   .selected-mobile-login{
 
-    h2 {
+    h2{
       font-size: 14px;
     }
 
-    p {
+    p{
       font-size: 12px;
     }
   }
@@ -3767,30 +3764,30 @@ h3, .card-title {
   }
 }
 
-.selected-desktop-page {
+.selected-desktop-page{
   display: none;
 }
 
-.selected-image-lightbox {
+.selected-image-lightbox{
   display: none;
 }
 
-.selected-image-lightbox.active {
+.selected-image-lightbox.active{
   display: flex !important;
 }
 
-@include media-breakpoint-up(lg) {
+@include media-breakpoint-up(lg){
 
   $spotless-color: #1c2541;
   $waybly-color: #17277a;
   $semester-color: #5eb35d;
   $stack-color: #efc4ea;
 
-  .selected-mobile-page {
+  .selected-mobile-page{
     display: none;
   }
 
-  .selected-desktop-page {
+  .selected-desktop-page{
     display: block;
     min-height: calc(100vh - 65px);
     background: $bg-white;
@@ -3798,7 +3795,7 @@ h3, .card-title {
 
   /* HERO */
 
-  .sub-navbar {
+  .sub-navbar{
     height: 50px;
     padding: 0 24px;
     display: flex;
@@ -3808,18 +3805,18 @@ h3, .card-title {
     box-sizing: border-box;
   }
 
-  .sub-logo {
+  .sub-logo{
     display: flex;
     align-items: center;
 
-    img {
+    img{
       display: block;
       width: 38px;
       height: auto;
     }
   }
 
-  .desktop-nav-links {
+  .desktop-nav-links{
     display: flex !important;
     align-items: center;
     gap: 14px;
@@ -3828,25 +3825,25 @@ h3, .card-title {
     list-style: none;
     font-size: 14px;
 
-    li {
+    li{
       display: flex;
       align-items: center;
     }
 
-    a {
+    a{
       color: $black;
       text-decoration: none;
       font-size: 15px;
       font-weight: 600;
     }
 
-    a.active {
+    a.active{
       font-weight: 600;
       text-decoration: underline;
       text-underline-offset: 3px;
     }
 
-    .nav-divider {
+    .nav-divider{
       font-size: 12px;
       opacity: 0.5;
     }
@@ -3867,7 +3864,7 @@ h3, .card-title {
     z-index: 0;
   }
 
-  .selected-desktop-hero #selectedDesktopBubbleCanvas {
+  .selected-desktop-hero #selectedDesktopBubbleCanvas{
     position: absolute;
     inset: 0;
     width: 100%;
@@ -3902,7 +3899,7 @@ h3, .card-title {
 
   /* De tre telefoner i hero */
 
-  .selected-desktop-hero-images {
+  .selected-desktop-hero-images{
     position: absolute;
     z-index: 2;
     right: 17%;
@@ -3910,7 +3907,7 @@ h3, .card-title {
     transform: translateY(-50%);
   }
 
-  .selected-desktop-hero-images img {
+  .selected-desktop-hero-images img{
     display: block;
     width: 180px;
     height: auto;
@@ -3936,7 +3933,7 @@ h3, .card-title {
     gap: 8px;
   }
 
-  .selected-desktop-tab {
+  .selected-desktop-tab{
     min-width: 120px;
     padding: 11px 24px;
     border: 0;
@@ -3947,7 +3944,7 @@ h3, .card-title {
     cursor: pointer;
   }
 
-  .selected-desktop-tab.active {
+  .selected-desktop-tab.active{
     background: $white;
     position: relative;
     z-index: 4;
@@ -3955,7 +3952,7 @@ h3, .card-title {
 
   /* KORT */
 
-  .selected-desktop-card-stack {
+  .selected-desktop-card-stack{
     position: relative;
     width: 92%;
     max-width: 1200px;
@@ -3963,7 +3960,7 @@ h3, .card-title {
     margin: 0 auto;
   }
 
-  .selected-desktop-project-card {
+  .selected-desktop-project-card{
     position: absolute;
     inset: 0;
     background: $white;
@@ -3978,37 +3975,37 @@ h3, .card-title {
   }
 
   /* Kortet lige bag det aktive */
-  .selected-desktop-project-card.stack-1 {
+  .selected-desktop-project-card.stack-1{
     transform: translateX(18px);
     z-index: 2;
   }
 
   /* Kortet længst bagved */
-  .selected-desktop-project-card.stack-2 {
+  .selected-desktop-project-card.stack-2{
     transform: translateX(36px);
     z-index: 1;
   }
 
   /* Det aktive kort */
-  .selected-desktop-project-card.active {
+  .selected-desktop-project-card.active{
     transform: translateX(0);
     z-index: 5;
     pointer-events: auto;
   }
 
-  .selected-desktop-project-card[data-project-card="spotless"].active {
+  .selected-desktop-project-card[data-project-card="spotless"].active{
     border-color: #1c2541;
   }
 
-  .selected-desktop-project-card[data-project-card="waybly"].active {
+  .selected-desktop-project-card[data-project-card="waybly"].active{
     border-color: #17277a;
   }
 
-  .selected-desktop-project-card[data-project-card="semesterproeve"].active {
+  .selected-desktop-project-card[data-project-card="semesterproeve"].active{
     border-color: rgba(78, 158, 78, 0.73);
   }
 
-  .selected-desktop-project-card.active {
+  .selected-desktop-project-card.active{
     pointer-events: auto;
     opacity: 1;
     z-index: 5;
@@ -4017,17 +4014,17 @@ h3, .card-title {
   }
 
   .selected-desktop-project-card[data-project-card="spotless"]
-  .selected-desktop-website-btn {
+  .selected-desktop-website-btn{
     background-color: #1c2541;
   }
 
   .selected-desktop-project-card[data-project-card="waybly"]
-  .selected-desktop-website-btn {
+  .selected-desktop-website-btn{
     background-color: #17277a;
   }
 
   .selected-desktop-project-card[data-project-card="semesterproeve"]
-  .selected-desktop-website-btn {
+  .selected-desktop-website-btn{
     background-color: rgba(78, 158, 78, 0.73);
   }
 
@@ -4035,7 +4032,7 @@ h3, .card-title {
      INDHOLD I PROJEKTKORTET
   ========================= */
 
-  .selected-desktop-card-inner {
+  .selected-desktop-card-inner{
     display: grid;
     grid-template-columns: 42% 58%;
     gap: 45px;
@@ -4044,14 +4041,14 @@ h3, .card-title {
 
   /* VENSTRE SIDE */
 
-  .selected-desktop-card-gallery {
+  .selected-desktop-card-gallery{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 18px;
   }
 
-  .selected-desktop-main-image {
+  .selected-desktop-main-image{
     width: 190px;
     height: 150px;
     display: flex;
@@ -4062,13 +4059,13 @@ h3, .card-title {
     flex-shrink: 0;
   }
 
-  .selected-desktop-main-image img {
+  .selected-desktop-main-image img{
     width: 75%;
     height: 75%;
     object-fit: contain;
   }
 
-  .selected-desktop-logo-label {
+  .selected-desktop-logo-label{
     display: block;
     width: 190px;
     text-align: center;
@@ -4078,19 +4075,19 @@ h3, .card-title {
   }
 
 
-  .selected-desktop-main-image.dark-blue-bg {
+  .selected-desktop-main-image.dark-blue-bg{
     background: #14295a;
   }
 
-  .selected-desktop-main-image.blue-bg {
+  .selected-desktop-main-image.blue-bg{
     background: #17277a;
   }
 
-  .selected-desktop-main-image.green-bg {
+  .selected-desktop-main-image.green-bg{
     background: #5eb35d;
   }
 
-  .selected-desktop-gallery-row {
+  .selected-desktop-gallery-row{
     display: grid;
     grid-template-columns: 145px 1fr;
     align-items: start;
@@ -4098,7 +4095,7 @@ h3, .card-title {
     width: 100%;
   }
 
-  .selected-desktop-gallery-row img {
+  .selected-desktop-gallery-row img{
     display: block;
     width: 145px;
     height: 90px;
@@ -4107,7 +4104,7 @@ h3, .card-title {
     cursor: zoom-in;
   }
 
-  .selected-desktop-gallery-caption {
+  .selected-desktop-gallery-caption{
     margin: 0;
     padding: 0;
     text-align: left;
@@ -4119,7 +4116,7 @@ h3, .card-title {
 
   .selected-desktop-project-card[data-project-card="semesterproeve"]{
 
-    .selected-desktop-card-gallery {
+    .selected-desktop-card-gallery{
       display: grid;
       grid-template-columns: 130px 130px;
       column-gap: 3px;
@@ -4129,17 +4126,17 @@ h3, .card-title {
 
     /* Logo + label fylder hele rækken */
     .selected-desktop-main-image,
-    .selected-desktop-logo-label {
+    .selected-desktop-logo-label{
       grid-column: 1 / -1;
     }
 
     /* De almindelige billeder fylder også hele rækken */
-    .selected-desktop-gallery-row:not(.semester-bottom-image) {
+    .selected-desktop-gallery-row:not(.semester-bottom-image){
       grid-column: 1 / -1;
     }
 
     /* De to sidste billeder står ved siden af hinanden */
-    .semester-bottom-image {
+    .semester-bottom-image{
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -4147,14 +4144,14 @@ h3, .card-title {
       width: 100%;
     }
 
-    .semester-bottom-image img {
+    .semester-bottom-image img{
       width: 100%;
       height: 90px;
       object-fit: contain;
       object-position: left top;
     }
 
-    .semester-bottom-image .selected-desktop-gallery-caption {
+    .semester-bottom-image .selected-desktop-gallery-caption{
       width: 100%;
       text-align: left;
       font-size: 10px;
@@ -4163,74 +4160,56 @@ h3, .card-title {
     }
   }
 
-  .selected-image-lightbox {
+  .selected-image-lightbox{
     position: fixed;
     inset: 0;
-
     width: 100vw;
     height: 100vh;
-
     background-color: rgba(0, 0, 0, 0.82);
-
     z-index: 2000 !important;
-
     align-items: center;
     justify-content: center;
-
     padding: 60px;
     box-sizing: border-box;
   }
 
 
-  #selectedImageLightboxImg {
+  #selectedImageLightboxImg{
     position: relative;
     z-index: 1;
-
     display: block;
-
     width: auto !important;
     height: auto !important;
-
     max-width: 90vw !important;
     max-height: 85vh !important;
-
     object-fit: contain;
-
     cursor: zoom-out;
   }
 
 
-  .selected-image-lightbox-close {
+  .selected-image-lightbox-close{
     position: absolute;
-
     top: 30px;
     right: 40px;
-
     z-index: 2;
-
     width: 48px;
     height: 48px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     padding: 0;
-
     background: $white;
     border: 3px solid $black;
     border-radius: 50%;
-
     color: $black;
     font-size: 30px;
     line-height: 1;
-
     cursor: pointer;
   }
 
   /* HØJRE SIDE */
 
-  .selected-desktop-card-content {
+  .selected-desktop-card-content{
     position: relative;
     z-index: 2;
     min-width: 0;
@@ -4240,7 +4219,7 @@ h3, .card-title {
   }
 
   .selected-desktop-card-content::before,
-  .selected-desktop-card-content::after {
+  .selected-desktop-card-content::after{
     content: "";
     position: absolute;
     border-radius: 50%;
@@ -4249,7 +4228,7 @@ h3, .card-title {
   }
 
   /* Stor boble øverst */
-  .selected-desktop-card-content::before {
+  .selected-desktop-card-content::before{
     width: 270px;
     height: 270px;
     top: 10px;
@@ -4257,7 +4236,7 @@ h3, .card-title {
   }
 
   /* Boble længere nede */
-  .selected-desktop-card-content::after {
+  .selected-desktop-card-content::after{
     width: 180px;
     height: 180px;
     top: 234px;
@@ -4265,7 +4244,7 @@ h3, .card-title {
 
   }
 
-  .selected-desktop-text-bubble {
+  .selected-desktop-text-bubble{
     position: absolute;
     width: 150px;
     height: 150px;
@@ -4277,11 +4256,11 @@ h3, .card-title {
     pointer-events: none;
   }
 
-  .selected-desktop-text-bubble-small {
+  .selected-desktop-text-bubble-small{
     display: none;
   }
 
-  .selected-desktop-project-card[data-project-card="spotless"] {
+  .selected-desktop-project-card[data-project-card="spotless"]{
 
     .selected-desktop-card-content::before,
     .selected-desktop-card-content::after,
@@ -4290,7 +4269,7 @@ h3, .card-title {
     }
   }
 
-  .selected-desktop-project-card[data-project-card="waybly"] {
+  .selected-desktop-project-card[data-project-card="waybly"]{
 
     .selected-desktop-card-content::before,
     .selected-desktop-card-content::after,
@@ -4299,7 +4278,7 @@ h3, .card-title {
     }
   }
 
-  .selected-desktop-project-card[data-project-card="semesterproeve"] {
+  .selected-desktop-project-card[data-project-card="semesterproeve"]{
 
     .selected-desktop-card-content::before,
     .selected-desktop-card-content::after,
@@ -4309,29 +4288,29 @@ h3, .card-title {
   }
 
 
-  .selected-desktop-text-block {
+  .selected-desktop-text-block{
     position: relative;
     z-index: 1;
   }
 
-  .selected-desktop-card-text {
+  .selected-desktop-card-text{
     position: relative;
     z-index: 2;
     display: block;
 
   }
 
-  .selected-desktop-text-block:last-child {
+  .selected-desktop-text-block:last-child{
     margin-bottom: 0;
   }
 
-  .selected-desktop-text-block h3 {
+  .selected-desktop-text-block h3{
     margin: 18px 0 8px ;
     font-size: 14px;
     font-weight: 700;
   }
 
-  .selected-desktop-text-block p {
+  .selected-desktop-text-block p{
     margin: 0;
     font-size: 10px;
     line-height: 1.8;
@@ -4340,52 +4319,47 @@ h3, .card-title {
 
   /* BUNDEN AF KORTET */
 
-  .selected-desktop-card-bottom {
+  .selected-desktop-card-bottom{
     position: absolute;
     left: 30px;
     right: 30px;
     bottom: 20px;
-
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
     gap: 24px;
   }
 
-  .selected-desktop-login {
+  .selected-desktop-login{
     display: flex;
     flex-direction: column;
     font-size: 9px;
     line-height: 1.4;
   }
 
-  .selected-desktop-login strong {
+  .selected-desktop-login strong{
     margin-bottom: 3px;
   }
 
-  .selected-desktop-website-btn {
+  .selected-desktop-website-btn{
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
     min-width: 74px;
     height: 32px;
     padding: 0 16px;
-
     background: $black;
     color: $white;
     border-radius: 10px;
-
     font-size: 10px;
     font-weight: 600;
     text-decoration: none;
-
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.22);
   }
 
   .selected-desktop-website-btn:hover,
   .selected-desktop-website-btn:focus,
-  .selected-desktop-website-btn:visited {
+  .selected-desktop-website-btn:visited{
     color: $white;
     text-decoration: none;
   }
@@ -4399,32 +4373,32 @@ h3, .card-title {
 @include media-breakpoint-up(xl){
 
 
-  .selected-desktop-hero {
+  .selected-desktop-hero{
     height: 300px;
   }
 
-  .selected-desktop-hero h1 {
+  .selected-desktop-hero h1{
     left: 20%;
     font-size: 28px;
   }
 
-  .selected-desktop-hero-images {
+  .selected-desktop-hero-images{
     right: 17%;
   }
 
-  .selected-desktop-hero-images img {
+  .selected-desktop-hero-images img{
     width: 180px;
   }
 
 
   /* OMRÅDET UNDER HERO */
-  .selected-desktop-projects {
+  .selected-desktop-projects{
     padding: 90px 0 45px;
   }
 
 
   /* TABS */
-  .selected-desktop-tabs {
+  .selected-desktop-tabs{
     width: 92%;
     max-width: 1200px;
     margin: 0 auto;
@@ -4432,48 +4406,48 @@ h3, .card-title {
 
 
   /* KORT */
-  .selected-desktop-card-stack {
+  .selected-desktop-card-stack{
     width: 92%;
     max-width: 1200px;
     height: 740px;
     margin: 0 auto;
   }
 
-  .selected-desktop-project-card {
+  .selected-desktop-project-card{
     padding: 34px 38px 28px;
   }
 
 
   /* VENSTRE SIDE */
-  .selected-desktop-card-media {
+  .selected-desktop-card-media{
     width: 42%;
   }
 
 
   /* HØJRE SIDE */
-  .selected-desktop-card-content {
+  .selected-desktop-card-content{
     width: 90%;
     max-width: 540px;
     transform: translateY(-19px);
   }
 
-  .selected-desktop-card-content::before {
+  .selected-desktop-card-content::before{
     left: -20px !important;
     right: auto !important;
   }
 
-  .selected-desktop-card-content::after {
+  .selected-desktop-card-content::after{
     left: 160px !important;
     right: auto !important;
   }
 
-  .selected-desktop-text-bubble {
+  .selected-desktop-text-bubble{
     left: 190px !important;
     right: auto !important;
     top: 413px;
   }
 
-  .selected-desktop-text-bubble-small {
+  .selected-desktop-text-bubble-small{
     display: block;
     position: absolute;
     width: 110px;
@@ -4486,130 +4460,130 @@ h3, .card-title {
   }
 
 
-  .selected-desktop-project-card[data-project-card="spotless"] {
+  .selected-desktop-project-card[data-project-card="spotless"]{
 
     .selected-desktop-card-content::before,
     .selected-desktop-card-content::after,
     .selected-desktop-text-bubble,
-    .selected-desktop-text-bubble-small {
+    .selected-desktop-text-bubble-small{
       background: rgba(28, 37, 65, 0.10);
     }
   }
 
-  .selected-desktop-project-card[data-project-card="waybly"] {
+  .selected-desktop-project-card[data-project-card="waybly"]{
 
     .selected-desktop-card-content::before,
     .selected-desktop-card-content::after,
     .selected-desktop-text-bubble,
-    .selected-desktop-text-bubble-small {
+    .selected-desktop-text-bubble-small{
       background: rgba(23, 39, 122, 0.10);
     }
   }
 
-  .selected-desktop-project-card[data-project-card="semesterproeve"] {
+  .selected-desktop-project-card[data-project-card="semesterproeve"]{
 
     .selected-desktop-card-content::before,
     .selected-desktop-card-content::after,
     .selected-desktop-text-bubble,
-    .selected-desktop-text-bubble-small {
+    .selected-desktop-text-bubble-small{
       background: rgba(78, 158, 78, 0.10);
     }
   }
 
-  .selected-desktop-text-block {
+  .selected-desktop-text-block{
     padding-left: 15px;
   }
 
-  .selected-desktop-text-block h3 {
+  .selected-desktop-text-block h3{
     font-size: 18px;
     margin: 20px 0 9px;
   }
 
-  .selected-desktop-text-block p {
+  .selected-desktop-text-block p{
     font-size: 12px;
     line-height: 1.65;
   }
 
-  .selected-desktop-login {
+  .selected-desktop-login{
     font-size: 10px;
   }
 
-  .selected-desktop-website-btn {
+  .selected-desktop-website-btn{
     font-size: 11px;
   }
 
-  .selected-desktop-main-image {
+  .selected-desktop-main-image{
     width: 220px;
     height: 170px;
   }
 
-  .selected-desktop-main-image img {
+  .selected-desktop-main-image img{
     width: 80%;
     height: 80%;
   }
 
-  .selected-desktop-logo-label {
+  .selected-desktop-logo-label{
     width: 230px;
   }
 
-  .selected-desktop-gallery-row {
+  .selected-desktop-gallery-row{
     grid-template-columns: 175px 1fr;
     gap: 22px;
   }
 
-  .selected-desktop-gallery-row img {
+  .selected-desktop-gallery-row img{
     width: 165px;
     height: 100px;
   }
 }
 
-@include media-breakpoint-up(xxl) {
+@include media-breakpoint-up(xxl){
 
-  .selected-desktop-card-stack {
+  .selected-desktop-card-stack{
     height: 800px;
   }
 
-  .selected-desktop-hero h1 {
+  .selected-desktop-hero h1{
     left: 22%;
     font-size: 28px;
   }
 
-  .selected-desktop-hero-images {
+  .selected-desktop-hero-images{
     right: 20%;
   }
 
-  .selected-desktop-hero-images img {
+  .selected-desktop-hero-images img{
     width: 220px;
   }
 
-  .selected-desktop-projects {
+  .selected-desktop-projects{
     padding-top: 55px;
   }
 
   // KORT
-  .selected-desktop-project-card {
+  .selected-desktop-project-card{
     max-width: 1600px;
   }
 
   // HØJRE SIDE / TEKST
-  .selected-desktop-card-content {
+  .selected-desktop-card-content{
     max-width: 590px;
   }
 
   // OVERSKRIFTER
-  .selected-desktop-text-block h3 {
+  .selected-desktop-text-block h3{
     font-size: 20px;
     margin: 20px 0 9px;
   }
 
   // BRØDTEKST
-  .selected-desktop-text-block p {
+  .selected-desktop-text-block p{
     font-size: 13px;
     line-height: 1.65;
   }
 
   // STORT LOGO
-  .selected-desktop-main-image {
+  .selected-desktop-main-image{
     width: 240px;
     height: 185px;
 
@@ -4620,12 +4594,12 @@ h3, .card-title {
   }
 
   // TEKST UNDER LOGO
-  .selected-desktop-logo-label {
+  .selected-desktop-logo-label{
     width: 250px;
   }
 
   // GALLERI
-  .selected-desktop-gallery-row {
+  .selected-desktop-gallery-row{
     grid-template-columns: 185px 1fr;
     gap: 24px;
 
@@ -4636,7 +4610,7 @@ h3, .card-title {
   }
 
   // STOR ØVERSTE BOBLE
-  .selected-desktop-card-content::before {
+  .selected-desktop-card-content::before{
     width: 295px;
     height: 295px;
     left: -25px !important;
@@ -4644,7 +4618,7 @@ h3, .card-title {
   }
 
   // MELLEMSTE BOBLE
-  .selected-desktop-card-content::after {
+  .selected-desktop-card-content::after{
     width: 195px;
     height: 195px;
     left: 190px !important;
@@ -4653,7 +4627,7 @@ h3, .card-title {
   }
 
   // NEDERSTE BOBLE
-  .selected-desktop-text-bubble {
+  .selected-desktop-text-bubble{
     width: 155px;
     height: 155px;
     left: 225px !important;
@@ -4661,7 +4635,7 @@ h3, .card-title {
     top: 427px;
   }
 
-  .selected-desktop-text-bubble-small {
+  .selected-desktop-text-bubble-small{
     width: 100px;
     height: 100px;
     left: 350px;
@@ -4669,81 +4643,81 @@ h3, .card-title {
   }
 
   // WEBSITE + LOGIN
-  .selected-desktop-login {
+  .selected-desktop-login{
     font-size: 12px;
   }
 
-  .selected-desktop-website-btn {
+  .selected-desktop-website-btn{
     font-size: 12px;
     transform: translateY(-15px);
   }
 }
 
-@include media-breakpoint-up(xxxl) {
+@include media-breakpoint-up(xxxl){
 
-  .selected-desktop-card-stack {
+  .selected-desktop-card-stack{
     height: 940px;
   }
 
-  .selected-desktop-hero {
+  .selected-desktop-hero{
     height: 390px;
   }
 
-  .selected-desktop-hero-bg {
+  .selected-desktop-hero-bg{
     height: 100%;
     object-fit: cover;
   }
 
-  .selected-desktop-hero h1 {
+  .selected-desktop-hero h1{
     left: 24%;
     font-size: 30px;
   }
 
-  .selected-desktop-hero-images {
+  .selected-desktop-hero-images{
     right: 24%;
   }
 
-  .selected-desktop-hero-images img {
+  .selected-desktop-hero-images img{
     width: 250px;
   }
 
-  .selected-desktop-projects {
+  .selected-desktop-projects{
     padding-top: 45px;
   }
 
   // SELVE KORTET
-  .selected-desktop-project-card {
+  .selected-desktop-project-card{
     max-width: 1550px;
     height: 930px;
   }
 
-  .selected-desktop-hero {
+  .selected-desktop-hero{
     height: 390px;
   }
 
-  .selected-desktop-hero-bg {
+  .selected-desktop-hero-bg{
     height: 100%;
     object-fit: cover;
   }
 
   // HØJRE TEKSTSIDE
-  .selected-desktop-card-content {
+  .selected-desktop-card-content{
     max-width: 760px;
   }
 
   // TEKST
-  .selected-desktop-text-block h3 {
+  .selected-desktop-text-block h3{
     font-size: 25px;
     margin: 25px 0 11px;
   }
 
-  .selected-desktop-text-block p {
+  .selected-desktop-text-block p{
     font-size: 15px;
     line-height: 1.7;
   }
 
   // STORT LOGO
-  .selected-desktop-main-image {
+  .selected-desktop-main-image{
     width: 320px;
     height: 245px;
 
@@ -4753,49 +4727,49 @@ h3, .card-title {
     }
   }
 
-  .selected-desktop-logo-label {
+  .selected-desktop-logo-label{
     width: 320px;
     font-size: 14px;
   }
 
   // GALLERI
-  .selected-desktop-gallery-row {
+  .selected-desktop-gallery-row{
     grid-template-columns: 230px 1fr;
     gap: 30px;
 
-    img {
+    img{
       width: 215px;
       height: 130px;
     }
   }
 
-  .selected-desktop-gallery-caption {
+  .selected-desktop-gallery-caption{
     font-size: 13px;
   }
 
   // BOBLER
-  .selected-desktop-card-content::before {
+  .selected-desktop-card-content::before{
     width: 330px;
     height: 330px;
     left: -10px !important;
     right: auto !important;
   }
 
-  .selected-desktop-card-content::after {
+  .selected-desktop-card-content::after{
     width: 200px;
     height: 200px;
     left: 263px !important;
     right: auto !important;
   }
 
-  .selected-desktop-text-bubble {
+  .selected-desktop-text-bubble{
     width: 180px;
     height: 180px;
     left: 210px !important;
     right: auto !important;
   }
 
-  .selected-desktop-text-bubble-small {
+  .selected-desktop-text-bubble-small{
     width: 150px;
     height: 150px;
     left: 310px;
@@ -4803,11 +4777,11 @@ h3, .card-title {
   }
 
   // KNAP + LOGIN
-  .selected-desktop-website-btn {
+  .selected-desktop-website-btn{
     font-size: 14px;
   }
 
-  .selected-desktop-login {
+  .selected-desktop-login{
     font-size: 14px;
   }
 }

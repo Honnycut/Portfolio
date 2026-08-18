@@ -226,7 +226,7 @@ $statusMsg = "";
                 <span>Figma</span>
             </div>
             <div class="skill-badge">
-                <img src="img/icon/image (7-1).png" class="skill-icon" alt="UI/UX">
+                <img src="img/icon/image-7-1.png" class="skill-icon" alt="UI/UX">
                 <span>UI/UX</span>
             </div>
             <div class="skill-badge">

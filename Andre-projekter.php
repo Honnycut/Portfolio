@@ -13,7 +13,7 @@ if (file_exists($json_path)) {
     $all_projects = json_decode($json_data, true) ?? [];
 }
 
-// Konfiguration af de 3 sektioner nøjagtigt fra din Figma
+// Konfiguration af de 3 sektioner
 $sektioner = [
         [
                 'category' => 'tema',
@@ -72,7 +72,7 @@ $sektioner = [
             </a>
         </div>
 
-        <!-- NYT DESKTOP MENU-LINKS (Bevarer din sub-navbar og aktiveres på desktop via SCSS) -->
+        <!-- DESKTOP MENU-LINKS -->
         <ul class="desktop-nav-links">
             <li><a href="index.php">Forside</a></li>
             <li class="nav-divider">|</li>

@@ -215,7 +215,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const canvas = document.getElementById("selectedDesktopBubbleCanvas");
 
-    // Hvis canvas ikke findes på siden, gør vi ingenting
+    // Hvis canvas ikke findes på siden, gøres der ingenting
     if (!canvas) return;
 
     const ctx = canvas.getContext("2d");

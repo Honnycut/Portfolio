@@ -1,5 +1,5 @@
 <?php
-// Slå fejlvisning til, så vi kan se hvis noget går galt
+// Slå fejlvisning til, så jeg kan se hvis noget går galt
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
