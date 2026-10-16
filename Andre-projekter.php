@@ -23,7 +23,7 @@ $sektioner = [
         [
                 'category' => 'valgfag',
                 'title'    => 'Visuel design og layout til digitale platforme',
-                'subtitle' => 'Projekter og opgaver lavet i forbindelse med valgfaget.'
+                'subtitle' => 'Projekter og opgaver lavet i forbindelse med valgfaget. Du kan læse min artikel her på side 124-133: <a href="https://heyzine.com/flip-book/0e4570bdf7.html" target="_blank" rel="noopener noreferrer" class="sektion-link">Besøg GESTALT Magasinet &rarr;</a>'
         ],
         [
                 'category' => 'projekter',
@@ -115,7 +115,7 @@ $sektioner = [
             <div class="section-card-container">
 
                 <h2 class="section-title"><?php echo htmlspecialchars($sektion['title']); ?></h2>
-                <p class="section-subtitle"><?php echo htmlspecialchars($sektion['subtitle']); ?></p>
+                <p class="section-subtitle"><?php echo $sektion['subtitle']; ?></p>
 
                 <!-- Grid -->
                 <div class="section-grid">
