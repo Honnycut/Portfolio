@@ -234,6 +234,18 @@ $statusMsg = "";
                 <span>Adobe Illustrator</span>
             </div>
             <div class="skill-badge">
+                <img src="img/icon/adobe-indesign-software-icon_539007-184.avif" class="skill-icon" alt="Adobe InDesign">
+                <span>Adobe InDesign</span>
+            </div>
+            <div class="skill-badge">
+                <img src="img/icon/adobe-after-effect-logo-icon-free-vector.jpg" class="skill-icon" alt="Adobe After Effect">
+                <span>Adobe After Effect</span>
+            </div>
+            <div class="skill-badge">
+                <img src="img/icon/adobe-premier-pro-logo-icon-free-vector.jpg" class="skill-icon" alt="Præmiere Pro">
+                <span>Premiere Pro</span>
+            </div>
+            <div class="skill-badge">
                 <img src="img/icon/Logo-Adobe-Photoshop-CC-Vector-PNG.png" class="skill-icon" alt="Photoshop">
                 <span>Photoshop</span>
             </div>
