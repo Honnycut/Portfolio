@@ -21,6 +21,11 @@ $sektioner = [
                 'subtitle' => 'Herunder ses og beskrives nogle af de temaer vi har været igennem under 1. og 2. semester.'
         ],
         [
+                'category' => 'valgfag',
+                'title'    => 'Visuel design og layout til digitale platforme',
+                'subtitle' => 'Projekter og opgaver lavet i forbindelse med valgfaget.'
+        ],
+        [
                 'category' => 'projekter',
                 'title'    => 'Andet skolearbejde',
                 'subtitle' => 'Korte projekter, øvelser og idegenerering lavet i løbet af uddannelsen.'

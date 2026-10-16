@@ -55,6 +55,42 @@
     "description": "I dette projekt lavede jeg et re-design af nfh.dk, med fokus på mobil- og tablet-UX. Gennem analyse, gestaltlove og designprincipper prøvede jeg at løse udfordringer med uoverskuelig navigation og manglede hierarki"
   },
   {
+    "id": "valgfag-plakat",
+    "category": "valgfag",
+    "title": "Plakat",
+    "thumbnail": "img/billeder/Plakat-design.jpg",
+    "images": [
+      "img/billeder/Moodboard-plakat.png",
+      "img/billeder/Visuel valg.png",
+      "img/billeder/plakat.png"
+    ],
+    "description": "Plakatdesign under temaet Planetary Future udarbejdet i Adobe Illustrator med fokus på moodboard, visuelt hierarki, komposition og grid. Plakaten er udvalgt til udstilling på Zealands afdelinger i hele landet."
+  },
+  {
+    "id": "valgfag-visuel-identitet",
+    "category": "valgfag",
+    "title": "Visuel identitet",
+    "thumbnail": "img/billeder/visuel identitet.png",
+    "images": [
+      "img/billeder/Moodboard-BAD.jpg",
+      "img/billeder/cover.png",
+      "img/billeder/contentplan.png"
+    ],
+    "description": "Visuel identitet for bandet BAD med fokus på singlecover, SoMe-strategi, målgrupper, en månedlig content plan samt videoklipning af reels og teaser i Premiere Pro."
+  },
+  {
+    "id": "valgfag-magasin",
+    "category": "valgfag",
+    "title": "Magasin artikel: gestalt",
+    "thumbnail": "img/billeder/magasin.png",
+    "images": [
+      "img/billeder/Moodboard-magasin.png",
+      "img/billeder/Layout.png",
+      "img/billeder/artikel.png"
+    ],
+    "description": "Magasinartikel om min personlige rejse med AI under temaet Planetary Future. Artiklen bygger videre på mit plakatdesign og er opsat i InDesign med animerede GIF'er lavet i After Effects."
+  },
+  {
     "id": "Clemens",
     "category": "projekter",
     "title": "Clemens",
